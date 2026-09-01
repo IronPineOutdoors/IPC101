@@ -1,0 +1,13 @@
+Reference,Qty,Function,Manufacturer,MPN,Supplier,Supplier_SKU,Package_or_Form,Unit_USD_2026-09-01,Lifecycle,Footprint,Datasheet,Notes
+U1,1,Keypad scanner,Texas Instruments,TCA8418RTWR,DigiKey,TCA8418RTWR-ND,WQFN-24 4x4 exposed pad,1.50,Active,Package_DFN_QFN:WQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm,https://www.ti.com/lit/ds/symlink/tca8418.pdf,Fixed 7-bit address 0x34; stencil/reflow
+SW1 SW2,2,START and PULL tactile,Omron/Aratas,B3F-4055,DigiKey,SW414-ND,12x12 mm THT projected plunger,0.52,Active,Button_Switch_THT:SW_PUSH_12mm_H7.3mm,https://components.omron.com/us-en/datasheet_pdf/A070-E1.pdf,260 gf; cap ordered separately
+SW3,1,Five-way navigation,Adafruit,504,Adafruit,504,Through-hole six-pin,1.95,Active supplier item,IPC101:Adafruit_504_VERIFY,https://www.adafruit.com/product/504,FAB HOLD: verify footprint against received sample
+J1,1,IPC-100 J10 input,JST,SM04B-GHS-TB(LF)(SN),DigiKey,455-1567-1-ND,JST GH horizontal SMT 4-pin 1.25mm,1.10,Active,Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal,https://www.jst-mfg.com/product/pdf/eng/eGH.pdf,Mate GHR-04V-S and SSHL-002T-P0.2
+J3,1,STOP isolated pass-through,Phoenix Contact,MC 1/ 2-G-3.81,Phoenix Contact,VERIFY_AT_PO,2-pin 3.81mm header,2.50,Active,TerminalBlock_Phoenix:PhoenixContact_MC_1.5_2-G-3.81_1x02_P3.81mm_Horizontal,https://www.phoenixcontact.com/,Final order code/mate must match harness release
+C1,1,Local bypass,TDK,C2012X7R1H104K125AA,DigiKey,445-1345-1-ND,0805 X7R 100nF 50V,0.10,Active,Capacitor_SMD:C_0805_2012Metric,https://product.tdk.com/,At U1 VCC
+C2,1,Bulk bypass,TDK,C2012X5R1A475K125AB,DigiKey,445-1412-1-ND,0805 X5R 4.7uF 10V,0.18,Active,Capacitor_SMD:C_0805_2012Metric,https://product.tdk.com/,Near J1
+R1,1,RESET pull-up,Panasonic,ERJ-6ENF1002V,DigiKey,P10.0KCCT-ND,0805 10k 1%,0.10,Active,Resistor_SMD:R_0805_2012Metric,https://industrial.panasonic.com/,No I2C pull-ups fitted
+TP1 TP2 TP3 TP4,4,Test points,Keystone,5015,DigiKey,36-5015-ND,1mm THT loop,0.45,Active,TestPoint:TestPoint_Loop_D1.0mm_Drill0.5mm,https://www.keyelco.com/,3V3 GND SDA SCL
+DS1,1,OLED module,Adafruit,938,Adafruit,938,1.3in 128x64 SSD1306 breakout,24.95,Active supplier item,MECHANICAL_ONLY,https://www.adafruit.com/product/938,Direct IPC-100 J6 harness; holes 30.5x28mm
+SSTOP,1,Panel STOP operator,Omron,A22NE-M-PD01-N,Mouser,VERIFY_AT_PO,22mm push-lock turn-reset NC,35.00,Verify order code,PANEL_MOUNT,https://components.omron.com/,System safety review and exact contact block required
+H1 H2 H3 H4,4,PCB mounting,Generic,M3 hardware,McMaster-Carr,APPLICATION_SPECIFIC,M3 standoff/fastener,TBD,Active,MountingHole:MountingHole_3.2mm_M3,NA,Metalwork outside copper keepout
