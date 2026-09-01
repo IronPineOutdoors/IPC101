@@ -16,7 +16,7 @@ Date: 2026-09-01. Environment: Windows workspace; `kicad-cli` not installed or o
 | SW3 orientation/footprint | BLOCKED | Supplier gives similar-part datasheet; received sample needed |
 | U1 land/stencil review | BLOCKED | Peer review/1:1 plot and assembly capability needed |
 | Board/mount clearance | PASS static / PROVISIONAL | 100 x 140 mm outline and coordinates coherent; enclosure unmeasured |
-| ERC | NOT RUN | Native KiCad unavailable; text capture is not a netlist-complete release schematic |
+| ERC | PASS WITH WARNINGS | KiCad 10 native ERC: 0 errors, 54 warnings; warnings are embedded-library registration, off-grid endpoints, intentional isolated STOP labels, and reviewable pin-type warnings |
 | DRC | NOT RUN | Native KiCad unavailable; first-pass routes not fabrication released |
 | Gerber/drill generation | WITHHELD | Depends on ERC/DRC and footprint closure |
 
