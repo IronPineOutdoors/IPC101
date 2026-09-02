@@ -1,4 +1,4 @@
-ERC report (2026-09-01T19:53:14, Encoding UTF8)
+ERC report (2026-09-01T20:17:08, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -16,13 +16,13 @@ Report includes: Errors, Warnings
     @(35.00 mm, 35.00 mm): Symbol J1 [CONN4]
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(35.00 mm, 153.73 mm): Label 'STOP_IN_RAW'
+    @(35.00 mm, 153.73 mm): Label 'STOP_RETURN'
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(35.00 mm, 156.27 mm): Symbol J3 Pin 1 [1, Passive, Line]
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(35.00 mm, 156.27 mm): Label 'STOP_RETURN'
+    @(35.00 mm, 156.27 mm): Label 'STOP_IN_RAW'
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(37.38 mm, 105.00 mm): Symbol SW1 Pin 1 [1, Passive, Line]
@@ -66,6 +66,9 @@ Report includes: Errors, Warnings
 [lib_symbol_issues]: The current configuration does not include the symbol library 'IPC101'
     ; warning
     @(105.00 mm, 75.00 mm): Symbol U1 [TCA8418]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(122.78 mm, 47.06 mm): Label 'INT_TEST'
 [pin_to_pin]: Pins of type Bidirectional and Power output are connected
     ; warning
     @(122.78 mm, 52.14 mm): Symbol U1 Pin 10 [COL1, Bidirectional, Line]
@@ -141,9 +144,6 @@ Report includes: Errors, Warnings
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(169.92 mm, 75.00 mm): Symbol TP3 Pin 1 [1, Passive, Line]
-[endpoint_off_grid]: Symbol pin or wire end off connection grid
-    ; warning
-    @(169.92 mm, 95.00 mm): Symbol TP5 Pin 1 [1, Passive, Line]
 [footprint_link_issues]: The current configuration does not include the footprint library 'IPC101'
     ; warning
     @(175.00 mm, 45.00 mm): Symbol C2 [C]
@@ -159,12 +159,6 @@ Report includes: Errors, Warnings
 [lib_symbol_issues]: The current configuration does not include the symbol library 'IPC101'
     ; warning
     @(175.00 mm, 75.00 mm): Symbol TP3 [TP]
-[footprint_link_issues]: The current configuration does not include the footprint library 'IPC101'
-    ; warning
-    @(175.00 mm, 95.00 mm): Symbol TP5 [TP]
-[lib_symbol_issues]: The current configuration does not include the symbol library 'IPC101'
-    ; warning
-    @(175.00 mm, 95.00 mm): Symbol TP5 [TP]
 [endpoint_off_grid]: Symbol pin or wire end off connection grid
     ; warning
     @(184.92 mm, 75.00 mm): Symbol TP4 Pin 1 [1, Passive, Line]
@@ -175,7 +169,7 @@ Report includes: Errors, Warnings
     ; warning
     @(190.00 mm, 75.00 mm): Symbol TP4 [TP]
 
- ** ERC messages: 54  Errors 0  Warnings 54
+ ** ERC messages: 52  Errors 0  Warnings 52
 
  ** Ignored checks:
     - Global label only appears once in the schematic
