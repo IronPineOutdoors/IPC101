@@ -6,7 +6,7 @@ Source reviewed: sibling `IPC100` Rev A documentation and preliminary Sheet 09 c
 |---|---|---|
 | 7 ordinary keys | J8B exposes only encoder A/B/SW and ARM/FIRE | J8B inadequate; do not overload semantics |
 | 3.3 V peripheral + I2C | J10: EXPANSION_VCC, GND, SDA, SCL | Use J10; exact fit after population/firmware enable |
-| OLED | J6: OLED_VCC, GND, SDA, SCL, RESET | Use direct dedicated harness to Adafruit 938 |
+| OLED | J6: OLED_VCC, GND, SDA, SCL, RESET | Use dedicated harness to separately panel-mounted Hosyond 2.42-inch SSD1309 prototype module, ASIN B0G2RFLG1L |
 | Hardware STOP | J8A: STOP_IN_RAW, STOP_RETURN | Use isolated NC switch pair |
 
 ## J1 — ordinary controls (IPC-100 J10)
@@ -24,7 +24,7 @@ Maximum harness length 0.30 m. Power-off mating only. No external power/backfeed
 
 ## OLED harness
 
-IPC-100 J6 is JST `SM05B-GHS-TB(LF)(SN)`: pin 1 OLED_VCC, 2 GND, 3 SDA, 4 SCL, 5 OLED_RESET. The Adafruit 938 has auto-reset and a four-wire STEMMA QT input; P0 leaves J6 pin 5 insulated/unconnected at the module end. Confirm this behavior on the received current PCB revision. Limit branch to 0.20 m/50 pF and address 0x3C. Review the module's onboard pull-ups against IPC-100's bus pull-up ownership before release.
+IPC-100 J6 is JST `SM05B-GHS-TB(LF)(SN)`: pin 1 OLED_VCC, 2 GND, 3 SDA, 4 SCL, 5 active-low OLED_RESET. The module end is a 5-pin 2.54 mm header according to the supplier listing, so a keyed J6-to-module harness is required. Do not assume module pin order: inspect the received board markings and continuity-check the harness before power is applied. Limit the branch to 0.20 m/50 pF and use address 0x3C or 0x3D. The selected module must operate from 3.0–3.45 V, draw no more than 100 mA continuously/150 mA for 20 ms, have no fixed I2C pull-up below 47 kΩ, meet the released unpowered leakage/backfeed limits, and expose active-low RESET. The listing's statement that `RES` is not soldered by default must be resolved on the received sample; a functional reset conductor is required by the J6 contract.
 
 ## J3 — STOP pass-through
 

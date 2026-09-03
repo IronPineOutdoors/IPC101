@@ -60,7 +60,7 @@
   (text "IPC-100 J10 — 3.3 V / 100 kHz I2C / NO LOCAL BUS PULL-UPS" (at 20 20 0) (effects (font (size 1.27 1.27) (bold yes)) (justify left bottom)) (uuid 10100000-0000-4000-8000-000000000100))
   (text "U1 unused ROW7/COL1..COL9 held at +3V3 for defined reset state. Review whether 100 kΩ series pull-ups are required before PCB release." (at 80 120 0) (effects (font (size 1 1) (italic yes)) (justify left bottom)) (uuid 10100000-0000-4000-8000-000000000101))
   (text "SAFETY STOP: J3 is IPC-100 J8A only. Neither pin connects to logic GND or +3V3." (at 20 175 0) (effects (font (size 1.27 1.27) (bold yes)) (justify left bottom)) (uuid 10100000-0000-4000-8000-000000000102))
-  (text "OLED is mechanically mounted on IPC-101 but electrically connects directly to IPC-100 J6; no OLED circuit is present here." (at 20 190 0) (effects (font (size 1 1)) (justify left bottom)) (uuid 10100000-0000-4000-8000-000000000103))
+  (text "Hosyond 2.42-inch SSD1309 OLED (B0G2RFLG1L) is separately panel mounted on IPC-100 J6; qualify sample and measure mechanics." (at 20 190 0) (effects (font (size 1 1)) (justify left bottom)) (uuid 10100000-0000-4000-8000-000000000103))
 
   (symbol (lib_id "IPC101:CONN4") (at 35 35 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid 10100000-0000-4000-8000-000000000110)
     (property "Reference" "J1" (at 35 27 0) (effects (font (size 1 1)))) (property "Value" "IPC-100 J10" (at 35 43 0) (effects (font (size 1 1)))) (property "Footprint" "IPC101:JST_GH_04" (at 35 35 0) (effects (font (size 1 1)) hide)) (property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf" (at 35 35 0) (effects (font (size 1 1)) hide))

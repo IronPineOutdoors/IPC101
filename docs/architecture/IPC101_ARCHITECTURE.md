@@ -14,7 +14,7 @@ IPC-101 is a passive/keypad-peripheral panel. Seven ordinary keys form a 7-row b
 
 Unused TCA8418 GPIOs are pulled to 3.3 V as required by the datasheet. RESET is pulled high. INT is available at a test pad and polling is mandatory.
 
-The display is intentionally not placed on J10. It remains an IPC-100 J6 peripheral at address 0x3C, preserving J10's one-accessory/address contract. IPC-101 provides the physical mounting pattern, while a short dedicated J6-to-OLED harness serves the module.
+The display is intentionally not placed on J10. It remains an IPC-100 J6 peripheral at address 0x3C or 0x3D, preserving J10's one-accessory/address contract. The prototype candidate is the Hosyond 2.42-inch 128x64 I2C SSD1309 module sold as Amazon ASIN B0G2RFLG1L. P0 removes the obsolete small-display holes and treats the display as a separately panel-mounted harness device. Its mounting pattern is derived from measurements of the received sample, not from a generic 2.42-inch module drawing.
 
 STOP is a panel-mounted normally-closed switch on its own two-conductor harness. J3 is only a mechanically convenient pass-through/termination point; neither conductor connects to GND, copper pours, U1, or J1.
 
@@ -27,7 +27,7 @@ STOP is a panel-mounted normally-closed switch on its own two-conductor harness.
 | Margin | 8 mA |
 | IPC-101 J10 design target | 10 mA maximum |
 
-The OLED is powered from J6 and is not included in J10 current. Adafruit reports roughly 25 mA typical depending on lit pixels; IPC-100 allocates 150 mA to OLED_VCC.
+The OLED is powered from J6 and is not included in J10 current. The selected module must remain within IPC-100's released limit of 100 mA continuous and 150 mA for no more than 20 ms at startup.
 
 ## Firmware contract
 

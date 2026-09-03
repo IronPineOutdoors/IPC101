@@ -8,6 +8,6 @@ C1,1,Local bypass,TDK,C2012X7R1H104K125AA,DigiKey,445-1345-1-ND,0805 X7R 100nF 5
 C2,1,Bulk bypass,TDK,C2012X5R1A475K125AB,DigiKey,445-1412-1-ND,0805 X5R 4.7uF 10V,0.18,Active,Capacitor_SMD:C_0805_2012Metric,https://product.tdk.com/,Near J1
 R1,1,RESET pull-up,Panasonic,ERJ-6ENF1002V,DigiKey,P10.0KCCT-ND,0805 10k 1%,0.10,Active,Resistor_SMD:R_0805_2012Metric,https://industrial.panasonic.com/,No I2C pull-ups fitted
 TP1 TP2 TP3 TP4,4,Test points,Keystone,5015,DigiKey,36-5015-ND,1mm THT loop,0.45,Active,TestPoint:TestPoint_Loop_D1.0mm_Drill0.5mm,https://www.keyelco.com/,3V3 GND SDA SCL
-DS1,1,OLED module,Adafruit,938,Adafruit,938,1.3in 128x64 SSD1306 breakout,24.95,Active supplier item,MECHANICAL_ONLY,https://www.adafruit.com/product/938,Direct IPC-100 J6 harness; holes 30.5x28mm
+DS1,1,OLED prototype module,Hosyond,B0G2RFLG1L,Amazon,B0G2RFLG1L,2.42in 128x64 I2C SSD1309; 5-pin 2.54mm header,TBD,Prototype candidate,EXTERNAL PANEL MOUNT,https://www.amazon.com/dp/B0G2RFLG1L,UPC 712490971844; listing claims 3.3/5V and 52mA max; qualify reset/pinout/pullups/backfeed and measure mounting before panel release
 SSTOP,1,Panel STOP operator,Omron,A22NE-M-PD01-N,Mouser,VERIFY_AT_PO,22mm push-lock turn-reset NC,35.00,Verify order code,PANEL_MOUNT,https://components.omron.com/,System safety review and exact contact block required
 H1 H2 H3 H4,4,PCB mounting,Generic,M3 hardware,McMaster-Carr,APPLICATION_SPECIFIC,M3 standoff/fastener,TBD,Active,MountingHole:MountingHole_3.2mm_M3,NA,Metalwork outside copper keepout
