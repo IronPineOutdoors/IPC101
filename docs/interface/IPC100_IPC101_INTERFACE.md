@@ -6,7 +6,7 @@ Source reviewed: sibling `IPC100` Rev A documentation and preliminary Sheet 09 c
 |---|---|---|
 | 7 ordinary keys | J8B exposes only encoder A/B/SW and ARM/FIRE | J8B inadequate; do not overload semantics |
 | 3.3 V peripheral + I2C | J10: EXPANSION_VCC, GND, SDA, SCL | Use J10; exact fit after population/firmware enable |
-| OLED | J6: OLED_VCC, GND, SDA, SCL, RESET | Use dedicated harness to separately panel-mounted Hosyond 2.42-inch SSD1309 prototype module, ASIN B0G2RFLG1L |
+| OLED | J6: OLED_VCC, GND, SDA, SCL, RESET | Mount Hosyond 2.42-inch SSD1309 module on IPC-101 and use a dedicated five-wire harness to IPC-100 J6 |
 | Hardware STOP | J8A: STOP_IN_RAW, STOP_RETURN | Use isolated NC switch pair |
 
 ## J1 — ordinary controls (IPC-100 J10)

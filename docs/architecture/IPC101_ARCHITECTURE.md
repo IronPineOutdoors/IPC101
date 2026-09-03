@@ -14,7 +14,7 @@ IPC-101 is a passive/keypad-peripheral panel. Seven ordinary keys form a 7-row b
 
 Unused TCA8418 GPIOs are pulled to 3.3 V as required by the datasheet. RESET is pulled high. INT is available at a test pad and polling is mandatory.
 
-The display is intentionally not placed on J10. It remains an IPC-100 J6 peripheral at address 0x3C or 0x3D, preserving J10's one-accessory/address contract. The prototype candidate is the Hosyond 2.42-inch 128x64 I2C SSD1309 module sold as Amazon ASIN B0G2RFLG1L. P0 removes the obsolete small-display holes and treats the display as a separately panel-mounted harness device. Its mounting pattern is derived from measurements of the received sample, not from a generic 2.42-inch module drawing.
+The display is intentionally not placed on J10. It remains an IPC-100 J6 peripheral at address 0x3C or 0x3D, preserving J10's one-accessory/address contract. The Hosyond 2.42-inch 128x64 I2C SSD1309 module (Amazon ASIN B0G2RFLG1L) is physically mounted on IPC-101 with a dedicated five-wire harness back to IPC-100 J6. The obsolete small-display pattern is not used.
 
 STOP is a panel-mounted normally-closed switch on its own two-conductor harness. J3 is only a mechanically convenient pass-through/termination point; neither conductor connects to GND, copper pours, U1, or J1.
 
