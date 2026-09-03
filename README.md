@@ -14,7 +14,7 @@ The PCB outline and control coordinates are provisional until an enclosure and f
 - Navigation: Adafruit 504 five-way through-hole switch (LEFT/RIGHT/UP/DOWN/SELECT).
 - STOP: Omron A22NE-M-PD01-N, normally-closed contact, panel mounted; its two wires remain isolated from PCB logic and pass through dedicated connector J3.
 - Key scanner: TI TCA8418RTWR at fixed I2C address `0x34`, polled by IPC-100; 7x1 matrix.
-- Display: Hosyond 2.42-inch 128x64 I2C SSD1309 module (Amazon ASIN B0G2RFLG1L), mounted on IPC-101 and connected directly to IPC-100 J6 by five wires. Verify the received module against the provisional mounting pattern before fabrication.
+- Display: Hosyond 2.42-inch 128x64 I2C SSD1309 module (Amazon ASIN B0G2RFLG1L), mounted on IPC-101 using the corrected Crosswind control-panel fit-print geometry and connected directly to IPC-100 J6 by five wires.
 - IPC-100 ordinary-control link: J10, JST GH 4-pin, 3.3 V / 100 mA / 100 kHz I2C.
 
 ## Repository map
