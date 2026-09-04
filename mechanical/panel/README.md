@@ -12,4 +12,6 @@ Run `python generate_ipc101_rev_c.py` to regenerate the models. Dimensions are m
 
 Use `CrossWind_ARM_Button_Cap_RevC_IPC101.stl` and `CrossWind_PULL_Button_Cap_RevC_IPC101.stl` for the installed controls. They retain the verified generic tactile-cap fit and add 0.45 mm raised lettering on the operator-facing surface. `CrossWind_Tactile_Button_Cap_RevC_IPC101.stl` remains available as an unlabeled spare.
 
+The Adafruit 504 navigation cap uses the proven TrailBoss P504 receptacle: a 3.30 x 3.30 mm square socket, 3.50 mm deep, with a 1.80 mm face floor. Its 5.0 mm rear hub clears the faceplate's revised 8.0 mm opening.
+
 The power-switch region is reserved but is intentionally not cut until its exact rated part and mounting geometry are selected. Print a faceplate and both caps for fit verification before production fabrication.

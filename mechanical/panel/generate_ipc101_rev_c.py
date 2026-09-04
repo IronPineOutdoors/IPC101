@@ -142,8 +142,10 @@ def build_tactile_cap(label: str | None = None) -> m3d.Manifold:
 def build_nav_cap() -> m3d.Manifold:
     horizontal = rounded_box(18.0, 7.2, 1.8, 2.8).translate((-9.0, -3.6, 0))
     vertical = rounded_box(7.2, 18.0, 1.8, 2.8).translate((-3.6, -9.0, 0))
-    hub = m3d.Manifold.cylinder(1.0, 5.0, circular_segments=SEGMENTS).translate((0, 0, 2.8))
-    socket = m3d.Manifold.cylinder(1.5, 3.1, circular_segments=SEGMENTS).translate((0, 0, 2.6))
+    # Receptacle copied from TrailBoss trailboss_p1_p504_thumb_cap.stl:
+    # 3.30 mm square x 3.50 mm deep with a 1.80 mm face floor.
+    hub = m3d.Manifold.cylinder(2.5, 5.0, circular_segments=SEGMENTS).translate((0, 0, 2.8))
+    socket = m3d.Manifold.cube((3.3, 3.3, 3.6)).translate((-1.65, -1.65, 1.8))
     return horizontal + vertical + hub - socket
 
 
