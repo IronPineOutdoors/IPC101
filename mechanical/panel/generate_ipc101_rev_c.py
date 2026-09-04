@@ -2,7 +2,7 @@
 """Generate the IPC-101 Rev C faceplate and operator caps in millimetres.
 
 The 150 x 100 mm faceplate geometry is derived from the supplied CrossWind
-Rev B test-fit model.  Rev C swaps the display and navigation positions so the
+Rev B test-fit model.  When viewed from the branded/front surface, the
 2.42-inch OLED is on the operator's left and the Adafruit 504 control is on the
 right.  ARM/PULL and the centered RGB aperture retain the verified Rev B
 centres.
@@ -26,6 +26,26 @@ NAV_CENTRE = (105.0, 63.5)
 ARM_CENTRE = (33.5, 20.75)
 PULL_CENTRE = (103.5, 20.75)
 LED_CENTRE = (68.5, 31.0)
+NAV_APERTURE = 8.0
+
+# Compact 5x7 block font used for recessed, printable product branding.  This
+# keeps the source model self-contained rather than depending on a workstation
+# font that might change between exports.
+FONT = {
+    "A": ("01110", "10001", "10001", "11111", "10001", "10001", "10001"),
+    "C": ("01111", "10000", "10000", "10000", "10000", "10000", "01111"),
+    "D": ("11110", "10001", "10001", "10001", "10001", "10001", "11110"),
+    "E": ("11111", "10000", "10000", "11110", "10000", "10000", "11111"),
+    "I": ("11111", "00100", "00100", "00100", "00100", "00100", "11111"),
+    "N": ("10001", "11001", "11001", "10101", "10011", "10011", "10001"),
+    "O": ("01110", "10001", "10001", "10001", "10001", "10001", "01110"),
+    "P": ("11110", "10001", "10001", "11110", "10000", "10000", "10000"),
+    "R": ("11110", "10001", "10001", "11110", "10100", "10010", "10001"),
+    "S": ("01111", "10000", "10000", "01110", "00001", "00001", "11110"),
+    "T": ("11111", "00100", "00100", "00100", "00100", "00100", "00100"),
+    "U": ("10001", "10001", "10001", "10001", "10001", "10001", "01110"),
+    "W": ("10001", "10001", "10001", "10101", "10101", "10101", "01010"),
+}
 
 
 def cylinder(diameter: float, height: float, centre: tuple[float, float], z: float = -0.5) -> m3d.Manifold:
@@ -42,6 +62,28 @@ def rounded_box(width: float, height: float, radius: float, depth: float) -> m3d
     return core_x + core_y + m3d.Manifold.batch_boolean(corners, m3d.OpType.Add)
 
 
+def engraved_text(text: str, centre_x: float, baseline_y: float, pixel: float,
+                  depth: float = 0.65) -> m3d.Manifold:
+    advance = 6 * pixel
+    width = max(0.0, len(text) * advance - pixel)
+    origin_x = centre_x - width / 2
+    pixels = []
+    cell = pixel * 0.82
+    inset = (pixel - cell) / 2
+    for index, character in enumerate(text):
+        if character == " ":
+            continue
+        for row, pattern in enumerate(FONT[character]):
+            for column, enabled in enumerate(pattern):
+                if enabled == "1":
+                    pixels.append(m3d.Manifold.cube((cell, cell, depth + 0.1)).translate((
+                        origin_x + index * advance + column * pixel + inset,
+                        baseline_y + (6 - row) * pixel + inset,
+                        PANEL[2] - depth,
+                    )))
+    return m3d.Manifold.batch_boolean(pixels, m3d.OpType.Add)
+
+
 def build_faceplate() -> m3d.Manifold:
     plate = m3d.Manifold.cube(PANEL)
     cuts = [cylinder(3.2, 3.0, centre) for centre in MOUNT_CENTRES]
@@ -54,13 +96,15 @@ def build_faceplate() -> m3d.Manifold:
         for dy in (-OLED_HOLE_SPAN[1] / 2, OLED_HOLE_SPAN[1] / 2):
             cuts.append(cylinder(3.2, 3.0, (OLED_CENTRE[0] + dx, OLED_CENTRE[1] + dy)))
     cuts.extend((
-        cylinder(7.0, 3.0, NAV_CENTRE),
+        cylinder(NAV_APERTURE, 3.0, NAV_CENTRE),
         cylinder(5.2, 3.0, LED_CENTRE),
     ))
     for centre in (ARM_CENTRE, PULL_CENTRE):
         aperture = rounded_box(16.0, 10.8, 2.0, 3.0).translate((centre[0] - 8.0, centre[1] - 5.4, -0.5))
         cuts.append(aperture)
-    return plate - m3d.Manifold.batch_boolean(cuts, m3d.OpType.Add)
+    branding = engraved_text("CROSSWIND", 75.0, 7.0, 0.82)
+    branding += engraved_text("IRON PINE OUTDOORS", 75.0, 4.0, 0.34)
+    return plate - m3d.Manifold.batch_boolean(cuts + [branding], m3d.OpType.Add)
 
 
 def build_tactile_cap() -> m3d.Manifold:
