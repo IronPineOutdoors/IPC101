@@ -2,6 +2,8 @@ Designator,Quantity,Part,Installation note
 SW1 SW2,2,B3F-4055 tactile switch,Verify cap reach with printed faceplate before soldering
 SW3,1,Adafruit 504 navigation switch,Verify six-pin orientation against received part before soldering
 D1,1,5mm common-anode RGB LED,Confirm lead order R-A-G-B and set faceplate height before soldering
+J2,1,JST B5B-XH-A 5-pin vertical header,OLED output; pins 1-5 VCC GND SDA SCL RESET
 J3,1,2-pin 3.81mm STOP connector,Match final IPC-100 J8A safety harness connector
+J4,1,JST SM05B-GHS-TB 5-pin horizontal SMT connector,OLED input from IPC-100 J6; hand solder carefully and continuity check
 TP1 TP2 TP3 TP4,4,1mm through-hole test loop,Optional hand install
-DS1,1,Hosyond 2.42in SSD1309 OLED,Mount to faceplate; connect directly to IPC-100 J6 with five-wire harness
+DS1,1,Hosyond 2.42in SSD1309 OLED,Mount to faceplate; connect to IPC-101 J2 with a short keyed five-wire harness

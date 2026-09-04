@@ -1,6 +1,6 @@
 PCB statistics report
 =====================
-- Date: 9/4/2026 4:56:44 AM
+- Date: 9/4/2026 5:15:32 AM
 - Project: IPC101
 - Board name: IPC101
 
@@ -9,21 +9,21 @@ Board
 - Width: 150.0000 mm
 - Height: 100.0000 mm
 - Area: 15000.00 mm²
-- Front copper area: 13301.323 mm²
-- Back copper area: 13058.473 mm²
+- Front copper area: 13256.207 mm²
+- Back copper area: 12796.258 mm²
 - Min track clearance: 0.1500 mm
 - Min track width: 0.2000 mm
 - Min drill diameter: 0.3000 mm
 - Board stackup thickness: 1.6000 mm
 
-- Front footprint area: 184.138 mm²
-- Back footprint area: 184.138 mm²
-- Front component density: 1.23 %
-- Back component density: 1.23 %
+- Front footprint area: 353.043 mm²
+- Back footprint area: 202.763 mm²
+- Front component density: 2.35 %
+- Back component density: 1.35 %
 Pads
 ----
-- Through hole: 24
-- SMD: 41
+- Through hole: 29
+- SMD: 48
 - Connector: 0
 - NPTH: 8
 - Castellated: 0
@@ -31,7 +31,7 @@ Pads
 
 Vias
 ----
-- Through vias: 51
+- Through vias: 56
 - Blind vias: 0
 - Buried vias: 0
 - Micro vias: 0
@@ -41,20 +41,21 @@ Components
 
 |              | Front Side | Back Side | Total |
 |--------------|------------|-----------|-------|
-|THT:          |          1 |         0 |     1 |
-|SMD:          |          0 |         0 |     0 |
+|THT:          |          2 |         0 |     2 |
+|SMD:          |          1 |         0 |     1 |
 |Unspecified:  |         21 |         0 |    21 |
-|Total:        |         22 |         0 |    22 |
+|Total:        |         24 |         0 |    24 |
 
 Drill holes
 -----------
 
 | Count | Shape |    X Size |    Y Size | Plated | Via/Pad | Start Layer | Stop Layer |
 |-------|-------|-----------|-----------|--------|---------|-------------|------------|
-|    51 | Round | 0.3000 mm | 0.3000 mm |    PTH |     Via |        F.Cu |       B.Cu |
+|    56 | Round | 0.3000 mm | 0.3000 mm |    PTH |     Via |        F.Cu |       B.Cu |
 |     8 | Round | 3.2000 mm | 3.2000 mm |   NPTH |     Pad |        F.Cu |       B.Cu |
 |     8 | Round | 1.2000 mm | 1.2000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
 |     6 | Round | 1.0000 mm | 1.0000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     5 | Round | 0.9500 mm | 0.9500 mm |    PTH |     Pad |        F.Cu |       B.Cu |
 |     4 | Round | 0.8000 mm | 0.8000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
 |     4 | Round | 0.6000 mm | 0.6000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
 |     2 | Round | 1.3000 mm | 1.3000 mm |    PTH |     Pad |        F.Cu |       B.Cu |

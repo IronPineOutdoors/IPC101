@@ -27,11 +27,11 @@ Upload `IPC101_RevC_Gerbers.zip` for PCB fabrication.
 - Quantity: 2 prototypes
 - Upload `IPC101_RevC_JLCPCB_BOM.csv` as the BOM.
 - Upload `IPC101_RevC_JLCPCB_CPL.csv` as the component placement file.
-- Confirm every footprint overlay in JLCPCB's viewer, especially U1 pin 1 and J1 mating direction.
+- Confirm every footprint overlay in JLCPCB's viewer, especially U1 pin 1 and J1 mating direction. J2 and J4 are hand-installed.
 - Approve any unavoidable rotation correction only after comparing the viewer with `IPC101_RevC_assembly_reference.pdf`.
 - Do not substitute U1 with a different package or suffix.
 
-SW1, SW2, SW3, D1, J3, the test loops, and the faceplate-mounted OLED are intentionally excluded from SMT assembly; see `IPC101_RevC_HAND_INSTALL.csv`.
+SW1, SW2, SW3, D1, J2, J3, J4, the test loops, and the faceplate-mounted OLED are intentionally excluded from SMT assembly; see `IPC101_RevC_HAND_INSTALL.csv`. The OLED branch enters IPC-101 at J4 and leaves at J2; continuity-check all five pins before attaching the display.
 
 ## Release checks already completed
 

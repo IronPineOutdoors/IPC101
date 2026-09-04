@@ -6,7 +6,7 @@ Status terms: **LOCKED** is supported by IPC-100 source or a selected component;
 |---|---|---|
 | FUN-001 | Provide dedicated START, PULL, and physically distinct STOP controls. | LOCKED; inspection/test |
 | FUN-002 | Provide LEFT, RIGHT, UP, DOWN, and SELECT navigation (seven ordinary inputs total with START/PULL). | LOCKED; functional test |
-| FUN-003 | Provide a phone-independent 128x64 display using the Hosyond 2.42-inch I2C SSD1309 prototype module (ASIN B0G2RFLG1L) on IPC-100 J6. | PROVISIONAL; sample qualification and measured mounting pattern required |
+| FUN-003 | Provide a phone-independent 128x64 Hosyond 2.42-inch I2C SSD1309 display (ASIN B0G2RFLG1L) connected through IPC-101 J4/J2 to IPC-100 J6. | PROVISIONAL; sample qualification and measured mounting pattern required |
 | ARC-001 | IPC-100 remains system authority; IPC-101 contains no MCU or radio. | LOCKED; schematic inspection |
 | ARC-002 | Ordinary controls use IPC-100 J10 at 3.3 V, 100 kHz, <=100 mA, <=0.30 m, no clock stretching or live mating. | LOCKED; IPC-100 contract |
 | ARC-003 | The keypad peripheral uses allowed 7-bit address 0x34. | LOCKED; TCA8418 |

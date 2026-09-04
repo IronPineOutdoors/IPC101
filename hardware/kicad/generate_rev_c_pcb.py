@@ -12,6 +12,7 @@ import pcbnew
 
 HERE = Path(__file__).resolve().parent
 BOARD_PATH = HERE / "IPC101.kicad_pcb"
+KICAD_FOOTPRINTS = Path(r"D:\KiCad\share\kicad\footprints")
 MM = pcbnew.FromMM
 
 
@@ -88,6 +89,23 @@ def add_rgb_led(board: pcbnew.BOARD) -> pcbnew.FOOTPRINT:
         item.SetLayerSet(layers)
         item.SetNet(net(board, net_name))
         footprint.Add(item)
+    board.Add(footprint)
+    return footprint
+
+
+def load_connector(board: pcbnew.BOARD, library: str, name: str, reference: str,
+                   value: str, x: float, y: float, angle: float,
+                   pin_nets: dict[str, str]) -> pcbnew.FOOTPRINT:
+    footprint = pcbnew.FootprintLoad(str(KICAD_FOOTPRINTS / f"{library}.pretty"), name)
+    if footprint is None:
+        raise FileNotFoundError(f"Unable to load {library}:{name}")
+    footprint.SetReference(reference)
+    footprint.SetValue(value)
+    footprint.SetPosition(point(x, y))
+    footprint.SetOrientationDegrees(angle)
+    make_footprint_self_contained(footprint)
+    for number, net_name in pin_nets.items():
+        pad(footprint, number).SetNet(net(board, net_name))
     board.Add(footprint)
     return footprint
 
@@ -232,6 +250,31 @@ def manual_routes(board: pcbnew.BOARD, refs: dict[str, pcbnew.FOOTPRINT]) -> Non
 
     ground = net(board, "/GND")
     polyline(board, ground, pcbnew.F_Cu, [pxy("J1", "2"), (127.0, 91.0)])
+
+    # The display remains on IPC-100's dedicated J6 electrical branch, but both
+    # ends now terminate on IPC-101 so the complete operator panel is removable.
+    # The two keyed connectors sit together at the rear edge, allowing a short,
+    # ordered fanout with no electrical connection to the J10 keypad branch.
+    oled_routes = (
+        ("/OLED_VCC", "1", "1", 0.20),
+        ("/OLED_GND", "2", "2", 0.20),
+        ("/OLED_SDA", "3", "3", 0.20),
+        ("/OLED_SCL", "4", "4", 0.20),
+        ("/OLED_RESET", "5", "5", 0.20),
+    )
+    for net_name, j2_pin, j4_pin, width in oled_routes:
+        ni = net(board, net_name)
+        j2_xy = pxy("J2", j2_pin)
+        j4_xy = pxy("J4", j4_pin)
+        via_xy = (j4_xy[0], 91.0)
+        route = [j2_xy, via_xy]
+        if j2_pin == "4":
+            route = [j2_xy, (85.5, 79.0), (86.0, 86.0), via_xy]
+        elif j2_pin == "5":
+            route = [j2_xy, (87.0, 78.0), (87.5, 87.0), via_xy]
+        polyline(board, ni, pcbnew.B_Cu, route, width)
+        add_via(board, via_xy, ni)
+        polyline(board, ni, pcbnew.F_Cu, [via_xy, j4_xy], width)
 
     # Short spokes bridge QFN power-pad islands into the surrounding F.Cu plane.
     power = net(board, "/+3V3")
@@ -534,9 +577,23 @@ def main() -> None:
         clone_resistor(board, source_resistor, "R4", "1k BLUE", 72.0, 35.5, "/RGB_B_GPIO", "/RGB_B_K"),
     )
     led = add_rgb_led(board)
+    oled_nets = {
+        "1": "/OLED_VCC", "2": "/OLED_GND", "3": "/OLED_SDA",
+        "4": "/OLED_SCL", "5": "/OLED_RESET",
+    }
+    j2 = load_connector(
+        board, "Connector_JST", "JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical",
+        "J2", "OLED HARNESS OUTPUT", 65.0, 70.0, 0, oled_nets,
+    )
+    j4 = load_connector(
+        board, "Connector_JST", "JST_GH_SM05B-GHS-TB_1x05-1MP_P1.25mm_Horizontal",
+        "J4", "IPC-100 J6 OLED INPUT", 82.0, 95.0, 0,
+        {"1": "/OLED_VCC", "2": "/OLED_GND", "3": "/OLED_SDA",
+         "4": "/OLED_SCL", "5": "/OLED_RESET"},
+    )
     print("added RGB", flush=True)
 
-    refs = existing | {fp.GetReference(): fp for fp in resistors} | {"D1": led}
+    refs = existing | {fp.GetReference(): fp for fp in resistors} | {"D1": led, "J2": j2, "J4": j4}
     print("routing", flush=True)
     manual_routes(board, refs)
     add_ground_fanout(board, refs)

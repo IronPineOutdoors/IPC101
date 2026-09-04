@@ -8,7 +8,7 @@ Date: 2026-09-01. Environment: Windows workspace; KiCad 10 CLI located at `D:\Ki
 | S-expression parenthesis balance | PASS | Schematic and PCB counts equal after correction |
 | Duplicate PCB reference names | PASS | U1, SW1–3, J1/J3, C1/C2, R1, TP1–4, DS1, H1–4 unique |
 | Unassigned footprint review | PASS for PCB study | Every PCB reference has explicit pads; panel SSTOP is intentionally off-board |
-| Connector pinout review | PASS static | J1 matches IPC-100 J10 order; J3 matches J8A pair |
+| Connector pinout review | PASS static | J1 matches IPC-100 J10; J4/J2 pass through IPC-100 J6 in identical order; J3 matches J8A pair |
 | STOP isolation review | PASS static | STOP nets occur only at J3 pads; no zone/net connection |
 | Logic-voltage review | PASS static | U1 is 1.65–3.6 V; J10 is protected 3.3 V |
 | Current budget | PASS analysis | <5 mA target versus 100 mA J10 limit; OLED separately powered |
