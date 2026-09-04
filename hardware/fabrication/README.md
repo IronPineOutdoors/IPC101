@@ -1,15 +1,18 @@
-# Fabrication Outputs — HOLD
+# Fabrication outputs
 
-Gerbers, drill, position, and IPC-356 files are intentionally not checked in because native KiCad DRC could not be run and two footprints require physical review. Generating plots before those gates would create misleading fabrication artifacts.
+The validated IPC-101 Rev C order package is in `IPC101_RevC/`.
 
-After opening/saving in KiCad 9 or newer and closing the holds:
+Use these three files for a JLCPCB PCB-plus-assembly quote:
 
-```powershell
-kicad-cli sch erc hardware/kicad/IPC101.kicad_sch -o hardware/fabrication/IPC101_ERC.rpt
-kicad-cli pcb drc hardware/kicad/IPC101.kicad_pcb -o hardware/fabrication/IPC101_DRC.rpt
-kicad-cli pcb gerbers hardware/kicad/IPC101.kicad_pcb -o hardware/fabrication/gerbers
-kicad-cli pcb drill hardware/kicad/IPC101.kicad_pcb -o hardware/fabrication/gerbers/
-kicad-cli pcb pos hardware/kicad/IPC101.kicad_pcb -o hardware/fabrication/IPC101_P0_POS.csv --format csv --units mm
-```
+- `IPC101_RevC_Gerbers.zip`
+- `IPC101_RevC_JLCPCB_BOM.csv`
+- `IPC101_RevC_JLCPCB_CPL.csv`
 
-Review output layer list, apertures, plated/non-plated drills, outline closure, solder-mask slivers, paste on U1 exposed pad, board dimensions, and 1:1 footprint plots before quoting.
+The Gerber ZIP contains both copper layers, paste, mask, silkscreen, board outline, and separate PTH/NPTH drill files. The BOM/CPL cover top-side SMT assembly only. Controls, LED, STOP connector, test loops, OLED, caps, and mechanical hardware are listed separately for hand installation.
+
+Read `IPC101_RevC/ORDER_NOTES.md` before uploading. Inspect every layer in the manufacturer's viewer and confirm U1 pin 1 and J1 mating direction before approving production.
+
+Source validation reports remain under `hardware/kicad/`:
+
+- DRC: 0 violations and 0 unconnected pads
+- ERC: 0 errors
