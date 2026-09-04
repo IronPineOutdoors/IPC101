@@ -37,6 +37,8 @@ FONT = {
     "D": ("11110", "10001", "10001", "10001", "10001", "10001", "11110"),
     "E": ("11111", "10000", "10000", "11110", "10000", "10000", "11111"),
     "I": ("11111", "00100", "00100", "00100", "00100", "00100", "11111"),
+    "L": ("10000", "10000", "10000", "10000", "10000", "10000", "11111"),
+    "M": ("10001", "11011", "10101", "10101", "10001", "10001", "10001"),
     "N": ("10001", "11001", "11001", "10101", "10011", "10011", "10001"),
     "O": ("01110", "10001", "10001", "10001", "10001", "10001", "01110"),
     "P": ("11110", "10001", "10001", "11110", "10000", "10000", "10000"),
@@ -84,6 +86,28 @@ def engraved_text(text: str, centre_x: float, baseline_y: float, pixel: float,
     return m3d.Manifold.batch_boolean(pixels, m3d.OpType.Add)
 
 
+def embossed_cap_text(text: str, pixel: float = 0.62, height: float = 0.45) -> m3d.Manifold:
+    """Raised text readable from the cap's outward-facing (negative-Z) side."""
+    advance = 6 * pixel
+    width = len(text) * advance - pixel
+    origin_x = -width / 2
+    origin_y = -7 * pixel / 2
+    cell = pixel * 0.78
+    inset = (pixel - cell) / 2
+    pixels = []
+    for index, character in enumerate(text):
+        for row, pattern in enumerate(FONT[character]):
+            # Reverse columns because the operator views the cap from -Z.
+            for column, enabled in enumerate(reversed(pattern)):
+                if enabled == "1":
+                    pixels.append(m3d.Manifold.cube((cell, cell, height + 0.08)).translate((
+                        origin_x + index * advance + column * pixel + inset,
+                        origin_y + (6 - row) * pixel + inset,
+                        -height,
+                    )))
+    return m3d.Manifold.batch_boolean(pixels, m3d.OpType.Add)
+
+
 def build_faceplate() -> m3d.Manifold:
     plate = m3d.Manifold.cube(PANEL)
     cuts = [cylinder(3.2, 3.0, centre) for centre in MOUNT_CENTRES]
@@ -107,11 +131,12 @@ def build_faceplate() -> m3d.Manifold:
     return plate - m3d.Manifold.batch_boolean(cuts + [branding], m3d.OpType.Add)
 
 
-def build_tactile_cap() -> m3d.Manifold:
+def build_tactile_cap(label: str | None = None) -> m3d.Manifold:
     top = rounded_box(15.2, 10.0, 2.0, 2.55).translate((-7.6, -5.0, 0))
     flange = rounded_box(18.0, 12.8, 2.3, 0.95).translate((-9.0, -6.4, 2.55))
     boss = m3d.Manifold.cylinder(0.65, 2.75, circular_segments=SEGMENTS).translate((0, 0, 3.5))
-    return top + flange + boss
+    cap = top + flange + boss
+    return cap + embossed_cap_text(label) if label else cap
 
 
 def build_nav_cap() -> m3d.Manifold:
@@ -145,6 +170,8 @@ if __name__ == "__main__":
     models = {
         "CrossWind_ControlPanel_RevC_IPC101.stl": (build_faceplate(), b"IPC-101 Rev C faceplate"),
         "CrossWind_Tactile_Button_Cap_RevC_IPC101.stl": (build_tactile_cap(), b"IPC-101 Rev C tactile cap"),
+        "CrossWind_ARM_Button_Cap_RevC_IPC101.stl": (build_tactile_cap("ARM"), b"IPC-101 Rev C ARM cap"),
+        "CrossWind_PULL_Button_Cap_RevC_IPC101.stl": (build_tactile_cap("PULL"), b"IPC-101 Rev C PULL cap"),
         "CrossWind_Adafruit504_Nav_Cap_RevC_IPC101.stl": (build_nav_cap(), b"IPC-101 Rev C navigation cap"),
     }
     for filename, (model, label) in models.items():
