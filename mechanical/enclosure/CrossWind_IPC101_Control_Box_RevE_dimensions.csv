@@ -4,11 +4,12 @@ faceplate,150x100x2,Centered with 3 mm side margins
 face_angle,47,Degrees upward from vertical
 nominal_wall,3,Shell wall
 face_boss,11x9,Diameter x depth
-face_screw_clearance,3.4,M3 through clearance
-face_nut_trap,5.8x2.7,Across flats x depth for captive M3 hex nut
+face_insert_pilot,4.2x6.0,Diameter x depth; front loaded M3 heat-set insert
+face_screw_relief,3.2,Blind relief beyond insert
 wood_mount_x,16 and 140,From left installed edge
-wood_mount_z,19 and 82,From bottom installed edge
+wood_mount_z,28 and 70,From bottom installed edge
 wood_screw_clearance,4.5,Four holes
 wood_screw_head_recess,9.5,Maximum head diameter
+wood_driver_access,11,Straight access tunnel from open face to each screw
 cable_exit,42x20,Centered at lower rear
 registration_rails,1.2,Left and right faceplate rails

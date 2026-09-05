@@ -27,22 +27,23 @@ WALL = 3.0
 FACE_RIM = 7.0
 SEGMENTS = 64
 
-# Faceplate/PCB mounting system.
+# Faceplate/PCB mounting system. All inserts load from the exposed face.
 PANEL_HOLES = ((5.0, 5.0), (145.0, 5.0), (5.0, 95.0), (145.0, 95.0))
 FACE_BOSS_D = 11.0
 FACE_BOSS_DEPTH = 9.0
-M3_CLEARANCE = 3.4
-M3_NUT_AF = 5.8
-M3_NUT_DEPTH = 2.7
+M3_INSERT_PILOT = 4.2
+M3_INSERT_DEPTH = 6.0
+M3_RELIEF = 3.2
 
 # Rear wood mounting pads, measured in installed coordinates.
 WOOD_HOLE_X = (16.0, BODY_W - 16.0)
-WOOD_HOLE_Z = (19.0, 82.0)
+WOOD_HOLE_Z = (28.0, 70.0)
 WOOD_PAD_W = 24.0
 WOOD_PAD_H = 20.0
 WOOD_PAD_DEPTH = 4.0
 WOOD_CLEARANCE = 4.5
 WOOD_HEAD_D = 9.5
+DRIVER_ACCESS_D = 11.0
 
 CABLE_EXIT_W = 42.0
 CABLE_EXIT_H = 20.0
@@ -98,6 +99,7 @@ def build_installed_box() -> m3d.Manifold:
     pads = []
     wood_holes = []
     counterbores = []
+    driver_tunnels = []
     for x in WOOD_HOLE_X:
         for z in WOOD_HOLE_Z:
             pads.append(m3d.Manifold.cube((WOOD_PAD_W, WOOD_PAD_DEPTH, WOOD_PAD_H)).translate((
@@ -105,26 +107,31 @@ def build_installed_box() -> m3d.Manifold:
             )))
             wood_holes.append(y_cylinder(WOOD_PAD_DEPTH + 2, WOOD_CLEARANCE, x, -1, z))
             counterbores.append(y_cylinder(WOOD_PAD_DEPTH, WOOD_HEAD_D, x, 1.4, z))
+            # Guarantee a straight screwdriver path through either transverse
+            # rim while the faceplate is removed.
+            driver_tunnels.append(y_cylinder(100, DRIVER_ACCESS_D, x, 1.4, z))
     box += m3d.Manifold.batch_boolean(pads, m3d.OpType.Add)
-    box -= m3d.Manifold.batch_boolean(wood_holes + counterbores, m3d.OpType.Add)
+    box -= m3d.Manifold.batch_boolean(wood_holes + counterbores + driver_tunnels, m3d.OpType.Add)
 
-    # Faceplate/PCB stack mounts with machine screws into captive M3 nuts.
+    # Front-loaded heat-set inserts replace Rev D's inaccessible rear nut traps.
     bosses = []
-    clearance_holes = []
-    nut_traps = []
+    insert_pockets = []
+    relief_holes = []
     for x, y in PANEL_HOLES:
         bosses.append(panel_feature(
             m3d.Manifold.cylinder(FACE_BOSS_DEPTH, FACE_BOSS_D / 2, circular_segments=SEGMENTS), x, y,
         ))
-        clearance_holes.append(panel_feature(
-            m3d.Manifold.cylinder(FACE_BOSS_DEPTH + 4, M3_CLEARANCE / 2, circular_segments=SEGMENTS), x, y, -2,
+        insert_pockets.append(panel_feature(
+            m3d.Manifold.cylinder(M3_INSERT_DEPTH + 0.2, M3_INSERT_PILOT / 2,
+                                  circular_segments=SEGMENTS), x, y, -0.1,
         ))
-        nut_traps.append(panel_feature(
-            m3d.Manifold.cylinder(M3_NUT_DEPTH + 0.3, M3_NUT_AF / math.sqrt(3), circular_segments=6),
-            x, y, FACE_BOSS_DEPTH - M3_NUT_DEPTH,
+        relief_holes.append(panel_feature(
+            m3d.Manifold.cylinder(FACE_BOSS_DEPTH - M3_INSERT_DEPTH + 0.2,
+                                  M3_RELIEF / 2, circular_segments=SEGMENTS),
+            x, y, M3_INSERT_DEPTH - 0.1,
         ))
     box += m3d.Manifold.batch_boolean(bosses, m3d.OpType.Add)
-    box -= m3d.Manifold.batch_boolean(clearance_holes + nut_traps, m3d.OpType.Add)
+    box -= m3d.Manifold.batch_boolean(insert_pockets + relief_holes, m3d.OpType.Add)
 
     # Low side rails register the faceplate laterally without trapping it.
     rail_depth = 1.2
@@ -163,7 +170,7 @@ def write_binary_stl(path: Path, solid: m3d.Manifold) -> None:
     vertices = mesh.vert_properties[:, :3]
     triangles = mesh.tri_verts
     with path.open("wb") as out:
-        out.write(b"Crosswind IPC-101 control box Rev D".ljust(80, b"\0"))
+        out.write(b"Crosswind IPC-101 control box Rev E".ljust(80, b"\0"))
         out.write(struct.pack("<I", len(triangles)))
         for indices in triangles:
             points = [vertices[int(index)] for index in indices]
@@ -178,8 +185,8 @@ def write_binary_stl(path: Path, solid: m3d.Manifold) -> None:
 if __name__ == "__main__":
     output = Path(__file__).resolve().parent
     models = {
-        "CrossWind_IPC101_Control_Box_RevD_PRINT.stl": orient_for_print(build_installed_box()),
-        "CrossWind_IPC101_Control_Box_RevD_INSTALLED.stl": build_installed_box(),
+        "CrossWind_IPC101_Control_Box_RevE_PRINT.stl": orient_for_print(build_installed_box()),
+        "CrossWind_IPC101_Control_Box_RevE_INSTALLED.stl": build_installed_box(),
     }
     for name, model in models.items():
         if model.is_empty() or model.status() != m3d.Error.NoError:
