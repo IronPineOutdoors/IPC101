@@ -1,10 +1,11 @@
 feature,value_mm,notes
-installed_envelope,156x81.954x101.6,Width x maximum projection x height
+installed_envelope,156x82.319x101.6,Width x maximum projection x height
 faceplate,150x100x2,Centered with 3 mm side margins
 face_angle,47,Degrees upward from vertical
 nominal_wall,3,Shell wall
 service_opening,136x86,Continuous opening; no transverse crosspiece
-face_boss,11x9,Diameter x depth
+face_boss,11x10.2,Diameter x total depth
+face_boss_extension,1.2,Outward to faceplate seating datum
 face_insert_pilot,4.2x6.0,Diameter x depth; front loaded M3 heat-set insert
 face_screw_relief,3.2,Blind relief beyond insert
 wood_mount_x,16 and 140,From left installed edge
@@ -13,4 +14,4 @@ wood_screw_clearance,4.5,Four holes
 wood_screw_head_recess,9.5,Maximum head diameter
 wood_driver_access,11,Straight access tunnel from open face to each screw
 cable_exit,42x20,Centered at lower rear
-registration_rails,1.2,Left and right faceplate rails
+registration_rails,1.2,Same faceplate seating datum as boss faces

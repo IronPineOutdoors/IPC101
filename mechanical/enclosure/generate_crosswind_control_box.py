@@ -31,6 +31,7 @@ SEGMENTS = 64
 PANEL_HOLES = ((5.0, 5.0), (145.0, 5.0), (5.0, 95.0), (145.0, 95.0))
 FACE_BOSS_D = 11.0
 FACE_BOSS_DEPTH = 9.0
+FACE_DATUM_OFFSET = -1.2
 M3_INSERT_PILOT = 4.2
 M3_INSERT_DEPTH = 6.0
 M3_RELIEF = 3.2
@@ -129,16 +130,18 @@ def build_installed_box() -> m3d.Manifold:
     relief_holes = []
     for x, y in PANEL_HOLES:
         bosses.append(panel_feature(
-            m3d.Manifold.cylinder(FACE_BOSS_DEPTH, FACE_BOSS_D / 2, circular_segments=SEGMENTS), x, y,
+            m3d.Manifold.cylinder(FACE_BOSS_DEPTH - FACE_DATUM_OFFSET,
+                                  FACE_BOSS_D / 2, circular_segments=SEGMENTS),
+            x, y, FACE_DATUM_OFFSET,
         ))
         insert_pockets.append(panel_feature(
             m3d.Manifold.cylinder(M3_INSERT_DEPTH + 0.2, M3_INSERT_PILOT / 2,
-                                  circular_segments=SEGMENTS), x, y, -0.1,
+                                  circular_segments=SEGMENTS), x, y, FACE_DATUM_OFFSET - 0.1,
         ))
         relief_holes.append(panel_feature(
             m3d.Manifold.cylinder(FACE_BOSS_DEPTH - M3_INSERT_DEPTH + 0.2,
                                   M3_RELIEF / 2, circular_segments=SEGMENTS),
-            x, y, M3_INSERT_DEPTH - 0.1,
+            x, y, FACE_DATUM_OFFSET + M3_INSERT_DEPTH - 0.1,
         ))
     box += m3d.Manifold.batch_boolean(bosses, m3d.OpType.Add)
     box -= m3d.Manifold.batch_boolean(insert_pockets + relief_holes, m3d.OpType.Add)
@@ -180,7 +183,7 @@ def write_binary_stl(path: Path, solid: m3d.Manifold) -> None:
     vertices = mesh.vert_properties[:, :3]
     triangles = mesh.tri_verts
     with path.open("wb") as out:
-        out.write(b"Crosswind IPC-101 control box Rev F".ljust(80, b"\0"))
+        out.write(b"Crosswind IPC-101 control box Rev G".ljust(80, b"\0"))
         out.write(struct.pack("<I", len(triangles)))
         for indices in triangles:
             points = [vertices[int(index)] for index in indices]
@@ -195,8 +198,8 @@ def write_binary_stl(path: Path, solid: m3d.Manifold) -> None:
 if __name__ == "__main__":
     output = Path(__file__).resolve().parent
     models = {
-        "CrossWind_IPC101_Control_Box_RevF_PRINT.stl": orient_for_print(build_installed_box()),
-        "CrossWind_IPC101_Control_Box_RevF_INSTALLED.stl": build_installed_box(),
+        "CrossWind_IPC101_Control_Box_RevG_PRINT.stl": orient_for_print(build_installed_box()),
+        "CrossWind_IPC101_Control_Box_RevG_INSTALLED.stl": build_installed_box(),
     }
     for name, model in models.items():
         if model.is_empty() or model.status() != m3d.Error.NoError:

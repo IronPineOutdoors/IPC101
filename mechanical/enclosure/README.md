@@ -1,8 +1,8 @@
-# Crosswind IPC-101 control box Rev F
+# Crosswind IPC-101 control box Rev G
 
 This enclosure replaces the provisional blue Crosswind control pod shown in the September 4 fit-test photos. It retains the comfortable 47-degree face angle while removing the features that made the first pod difficult to mount.
 
-Use `CrossWind_IPC101_Control_Box_RevF_PRINT.stl` for slicing. The installed-orientation STL is supplied for assembly checks and CAD visualization. Rev F removes the transverse internal wall visible behind the OLED opening in the September 5 fit-check photo; earlier enclosure STLs are obsolete.
+Use `CrossWind_IPC101_Control_Box_RevG_PRINT.stl` for slicing. The installed-orientation STL is supplied for assembly checks and CAD visualization. Rev G keeps the unobstructed service opening and extends all four faceplate bosses 1.2 mm outward so their screw-hole faces are coplanar with the faceplate seating datum. Earlier enclosure STLs are obsolete.
 
 ## Mounting improvements
 
