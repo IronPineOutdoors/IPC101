@@ -94,6 +94,16 @@ def build_installed_box() -> m3d.Manifold:
     ])
     box = outer - cavity
 
+    # The hull-derived cavity can leave transverse webs behind the inclined
+    # face.  Rev F explicitly clears one continuous service opening so the
+    # OLED fasteners, PCB, faceplate hardware, and rear wood screws are all
+    # reachable with the faceplate removed.  Corner bosses are added afterward.
+    service_opening = panel_feature(
+        m3d.Manifold.cube((PANEL_W - 2 * FACE_RIM, PANEL_H - 2 * FACE_RIM, 100)),
+        FACE_RIM, FACE_RIM, -1,
+    )
+    box -= service_opening
+
     # Four broad rear pads create a positive, flush mounting surface against
     # the wood.  Counterbored holes remain reachable with the faceplate off.
     pads = []
@@ -170,7 +180,7 @@ def write_binary_stl(path: Path, solid: m3d.Manifold) -> None:
     vertices = mesh.vert_properties[:, :3]
     triangles = mesh.tri_verts
     with path.open("wb") as out:
-        out.write(b"Crosswind IPC-101 control box Rev E".ljust(80, b"\0"))
+        out.write(b"Crosswind IPC-101 control box Rev F".ljust(80, b"\0"))
         out.write(struct.pack("<I", len(triangles)))
         for indices in triangles:
             points = [vertices[int(index)] for index in indices]
@@ -185,8 +195,8 @@ def write_binary_stl(path: Path, solid: m3d.Manifold) -> None:
 if __name__ == "__main__":
     output = Path(__file__).resolve().parent
     models = {
-        "CrossWind_IPC101_Control_Box_RevE_PRINT.stl": orient_for_print(build_installed_box()),
-        "CrossWind_IPC101_Control_Box_RevE_INSTALLED.stl": build_installed_box(),
+        "CrossWind_IPC101_Control_Box_RevF_PRINT.stl": orient_for_print(build_installed_box()),
+        "CrossWind_IPC101_Control_Box_RevF_INSTALLED.stl": build_installed_box(),
     }
     for name, model in models.items():
         if model.is_empty() or model.status() != m3d.Error.NoError:
