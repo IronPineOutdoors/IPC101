@@ -2,6 +2,16 @@
 
 Recommended first order: two assembled prototype boards. Do not order production quantity until the received Adafruit 504, OLED, caps, and faceplate have passed physical fit testing.
 
+## Solder-mask correction ? 2026-09-07
+
+Upload **`IPC101_RevC_MaskFix_Gerbers.zip`** as the replacement manufacturing file. The earlier `IPC101_RevC_Gerbers.zip` is obsolete and must not be uploaded.
+
+The original local package contained 48 top SMT mask openings but no bottom mask openings. All 29 solderable through-hole pads were missing both mask layers in the source PCB. This revision adds both layers to those pads: the corrected exports have 77 top openings and 29 bottom openings. JLCPCB reported both mask layers missing from the submitted order; the exact earlier portal upload has not been recovered, so that discrepancy cannot be resolved from the local archive alone.
+
+Solder mask is required on **both sides with openings at the solderable pads**. Neither all-over tin nor all-over mask ink is intended. In the replacement-file viewer, confirm the top and bottom mask layers are recognized and the through-hole component pads are exposed on both faces. The board dimensions, copper, drills, placement, BOM, and CPL are unchanged by this correction. The D1 reference label moved to the fabrication layer to clear the newly exposed LED pads. Continue to use the existing Rev C BOM and CPL.
+
+The package generator now checks every solderable pad for its required mask layer, verifies mask flashes at pad centres in both generated Gerbers and the ZIP, and stops on any KiCad or validation failure.
+
 ## PCB fabrication settings
 
 - Dimensions: 150 x 100 mm
@@ -9,7 +19,7 @@ Recommended first order: two assembled prototype boards. Do not order production
 - Material: FR-4
 - Finished thickness: 1.6 mm
 - Copper: 1 oz
-- Solder mask: customer preference
+- Solder mask: both sides, openings at solderable pads; color is customer preference
 - Surface finish: lead-free HASL or ENIG; ENIG is preferred for the fine-pitch U1 prototype
 - Minimum track/space: 0.20/0.15 mm
 - Minimum finished drill: 0.30 mm
@@ -19,7 +29,7 @@ Recommended first order: two assembled prototype boards. Do not order production
 - Gold fingers: no
 - Panelization: no; single design
 
-Upload `IPC101_RevC_Gerbers.zip` for PCB fabrication.
+Upload `IPC101_RevC_MaskFix_Gerbers.zip` for PCB fabrication.
 
 ## JLCPCB assembly settings
 

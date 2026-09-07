@@ -33,3 +33,7 @@ The IPC-101 board connects to IPC-100 through J1 for keypad `+3V3`, `GND`, `SDA`
 - `IPC101_RevC.net.xml`: exported schematic netlist for parity/review tooling.
 
 Before ordering a production quantity, print the Rev C faceplate and both caps, assemble one PCB, verify the Adafruit 504 physical pin orientation, and continuity-check both OLED harnesses against the received module and the documented J2/J4 pinouts.
+
+## Solder-mask correction (2026-09-07)
+
+The 29 PTH component pads now explicitly include both F.Mask and B.Mask. Copper routing and drill geometry are unchanged. `generate_rev_c_pcb.py` restores these layers for cloned as well as newly created PTH pads. Use the replacement `IPC101_RevC_MaskFix_Gerbers.zip`; the earlier package had an empty bottom mask and omitted top openings for the PTH pads. The fabrication export script audits source pad layers and every solderable pad centre in the archived mask files.

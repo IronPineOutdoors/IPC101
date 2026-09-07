@@ -4,7 +4,7 @@ The validated IPC-101 Rev C order package is in `IPC101_RevC/`.
 
 Use these three files for a JLCPCB PCB-plus-assembly quote:
 
-- `IPC101_RevC_Gerbers.zip`
+- `IPC101_RevC_MaskFix_Gerbers.zip`
 - `IPC101_RevC_JLCPCB_BOM.csv`
 - `IPC101_RevC_JLCPCB_CPL.csv`
 

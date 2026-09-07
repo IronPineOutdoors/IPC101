@@ -4,9 +4,9 @@ IPC-101 is a prototype operator-control-panel PCB for IPC-100. Revision P0 imple
 
 ## Release state
 
-**P0 engineering prototype candidate — fabrication hold.** The schematic, routed PCB, BOM, mechanical coordinates, interface reconciliation, and bench plan are captured. Static CAD checks pass. Native KiCad ERC/DRC and Gerber generation are blocked because `kicad-cli` is not installed in this environment. Fabrication also requires physical verification of the Adafruit 504 production footprint and a peer review of the TCA8418 WQFN land pattern.
+**Rev C prototype fabrication package corrected for solder mask.** Use [IPC101_RevC_MaskFix_Gerbers.zip](hardware/fabrication/IPC101_RevC/IPC101_RevC_MaskFix_Gerbers.zip) and the existing Rev C BOM/CPL. The superseded package omitted through-hole solder-mask openings; the replacement contains verified top and bottom openings. Full KiCad DRC passes with 0 violations and 0 unconnected pads. See [order notes](hardware/fabrication/IPC101_RevC/ORDER_NOTES.md) and [verification results](hardware/fabrication/IPC101_RevC/MASK_FIX_VALIDATION.md).
 
-The PCB outline and control coordinates are provisional until an enclosure and front-panel stack are measured. The bare PCB has no ingress rating.
+The Rev C board is 150 x 100 mm. Physical control/display/faceplate fit remains a prototype acceptance check; the bare PCB has no ingress rating.
 
 ## Architecture
 
@@ -22,10 +22,10 @@ The PCB outline and control coordinates are provisional until an enclosure and f
 - `docs/` — controlled requirements, decisions, interfaces, mechanics, and test plan.
 - `hardware/kicad/` — KiCad project, schematic, routed PCB, and project-local footprints.
 - `hardware/bom/` — prototype BOM.
-- `hardware/fabrication/` — release notes and generation instructions; generated plots are intentionally absent pending native DRC.
+- `hardware/fabrication/` — release notes and generation instructions; verified Gerbers, drills, and assembly outputs are included.
 - `mechanical/` — panel coordinate and cutout data.
 - `manufacturing/` — assembly and inspection notes.
 
 ## Next action
 
-Open the CAD in KiCad 9 or newer, verify U1 and SW3 footprints against received parts, run ERC/DRC, then build one hand/contract-assembled board and execute the staged bench test plan before connecting motion hardware.
+Upload the replacement Gerber ZIP to the held JLCPCB order and confirm both solder-mask layers in its viewer. Review assembly orientation before approving production, then fit-test and electrically validate the first prototype before connecting motion hardware.

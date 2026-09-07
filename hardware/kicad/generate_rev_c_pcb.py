@@ -59,6 +59,7 @@ def clone_resistor(board: pcbnew.BOARD, source: pcbnew.FOOTPRINT, reference: str
 def add_rgb_led(board: pcbnew.BOARD) -> pcbnew.FOOTPRINT:
     footprint = pcbnew.FOOTPRINT(board)
     footprint.SetReference("D1")
+    footprint.Reference().SetLayer(pcbnew.F_Fab)
     footprint.SetValue("5MM RGB COMMON ANODE")
     footprint.SetPosition(point(68.5, 31.0))
     footprint.SetFPID(pcbnew.LIB_ID())
@@ -85,7 +86,8 @@ def add_rgb_led(board: pcbnew.BOARD) -> pcbnew.FOOTPRINT:
         item.SetDrillSize(point(0.6, 0.6))
         item.SetPosition(point(68.5 + x, 31.0))
         layers = pcbnew.LSET.AllCuMask()
-        layers.AddLayerSet(pcbnew.LSET.AllTechMask())
+        layers.AddLayer(pcbnew.F_Mask)
+        layers.AddLayer(pcbnew.B_Mask)
         item.SetLayerSet(layers)
         item.SetNet(net(board, net_name))
         footprint.Add(item)
@@ -514,6 +516,17 @@ def make_footprint_self_contained(footprint: pcbnew.FOOTPRINT) -> None:
             item.SetLayer(pcbnew.F_Fab)
 
 
+def restore_through_hole_mask_openings(board: pcbnew.BOARD) -> None:
+    """Solderable PTH pads need openings on both sides, including cloned pads."""
+    for footprint in board.GetFootprints():
+        for item in footprint.Pads():
+            if item.GetAttribute() == pcbnew.PAD_ATTRIB_PTH:
+                layers = item.GetLayerSet()
+                layers.AddLayer(pcbnew.F_Mask)
+                layers.AddLayer(pcbnew.B_Mask)
+                item.SetLayerSet(layers)
+
+
 def main() -> None:
     print("load source", flush=True)
     source_board = pcbnew.LoadBoard(str(BOARD_PATH))
@@ -601,6 +614,7 @@ def main() -> None:
     add_plane(board, "/GND", pcbnew.B_Cu)
     pcbnew.ZONE_FILLER(board).Fill(board.Zones())
 
+    restore_through_hole_mask_openings(board)
     print("saving board", flush=True)
     pcbnew.SaveBoard(str(BOARD_PATH), board)
     print(f"Saved {BOARD_PATH}")
