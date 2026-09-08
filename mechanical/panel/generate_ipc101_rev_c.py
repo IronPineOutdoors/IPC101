@@ -108,17 +108,17 @@ def embossed_cap_text(text: str, pixel: float = 0.62, height: float = 0.45) -> m
     return m3d.Manifold.batch_boolean(pixels, m3d.OpType.Add)
 
 
-def build_faceplate() -> m3d.Manifold:
+def build_faceplate(oled_centre: tuple[float, float] = OLED_CENTRE) -> m3d.Manifold:
     plate = m3d.Manifold.cube(PANEL)
     cuts = [cylinder(3.2, 3.0, centre) for centre in MOUNT_CENTRES]
     cuts.append(m3d.Manifold.cube((OLED_WINDOW[0], OLED_WINDOW[1], 3.0)).translate((
-        OLED_CENTRE[0] - OLED_WINDOW[0] / 2,
-        OLED_CENTRE[1] - OLED_WINDOW[1] / 2,
+        oled_centre[0] - OLED_WINDOW[0] / 2,
+        oled_centre[1] - OLED_WINDOW[1] / 2,
         -0.5,
     )))
     for dx in (-OLED_HOLE_SPAN[0] / 2, OLED_HOLE_SPAN[0] / 2):
         for dy in (-OLED_HOLE_SPAN[1] / 2, OLED_HOLE_SPAN[1] / 2):
-            cuts.append(cylinder(3.2, 3.0, (OLED_CENTRE[0] + dx, OLED_CENTRE[1] + dy)))
+            cuts.append(cylinder(3.2, 3.0, (oled_centre[0] + dx, oled_centre[1] + dy)))
     cuts.extend((
         cylinder(NAV_APERTURE, 3.0, NAV_CENTRE),
         cylinder(5.2, 3.0, LED_CENTRE),
