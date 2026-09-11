@@ -52,7 +52,7 @@ on the faceplate/BOM also need explicit firmware-semantic reconciliation.
 - [ ] Dry-fit the Rev H enclosure, detachable bracket, retaining pin and wiring plate.
 - [ ] Use the Rev D faceplate for the next trial: its OLED is shifted 8 mm right. PCB fabrication remains Rev C. Do not force the display onto the PCB's old OLED mounting pattern.
 - [ ] Check actual PCB, display, connectors and standoffs together; envelope checks alone did not verify the complete stack.
-- [ ] Print two matching rigid clamp frames for each TPU coupon fixture now.
+- [x] Rigid TPU clamp frames printed previously (user confirmed 2026-09-11). Check that each coupon fixture has two matching frames when assembling; quantity and fit have not been independently verified.
 - [ ] When TPU arrives, start with `ARM_PULL_TPU_WEB_0.6mm.stl`, flat as exported. Follow the actual filament profile/drying guidance; ordinary TPU uses the A1 external spool, not AMS Lite.
 - [ ] Compare 0.4/0.6/0.8 mm webs and navigation coupons for return, force, defects and permanent deformation. Record material, settings and cycle count.
 - [ ] Do not drill the faceplate to the coupon's 44 x 38 mm fixture pattern. These are standalone experiments, not drop-in boots or qualified waterproof seals. Keep STOP uncovered.
