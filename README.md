@@ -28,4 +28,6 @@ The Rev C board is 150 x 100 mm. Physical control/display/faceplate fit remains 
 
 ## Next action
 
+Prepare for the incoming boards with the [Rev C arrival and first-power checklist](docs/testing/IPC101_REVC_ARRIVAL_CHECKLIST.md). It covers the actual order comparison, hand-installed parts, Rev D/Rev H mechanical fit, TPU coupons, harness verification, staged power-up, and result recording. Receipt and acceptance of the replacement manufacturing file must be confirmed against the order; the local package alone does not establish what was fabricated.
+
 Upload the replacement Gerber ZIP to the held JLCPCB order and confirm both solder-mask layers in its viewer. Review assembly orientation before approving production, then fit-test and electrically validate the first prototype before connecting motion hardware.
