@@ -1,3 +1,5 @@
+> **Current R3-compatible fit build: Rev I.1.** See [print order, hardware and assembly guide](REV_I1_ASSEMBLY.md) and [preview](RevI1_preview.png). Reuses the original R3 print. Earlier revisions below are historical; physical validation is pending.
+
 # Crosswind IPC-101 enclosure Rev H ? fit prototype
 
 Rev H keeps the existing Rev C 150 x 100 mm faceplate and 47-degree angle, raises its lower edge from 7.5 to 32 mm, and separates the Crosswind mounting bracket from the enclosure. Rev G files remain for comparison; use the Rev H files below for the next fit evaluation.

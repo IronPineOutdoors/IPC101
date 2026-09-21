@@ -1,0 +1,47 @@
+{
+  "Box_INSTALLED": [
+    174.0,
+    131.912,
+    108.384
+  ],
+  "Box_PRINT": [
+    174.0,
+    131.912,
+    108.384
+  ],
+  "Cradle_INSTALLED": [
+    168.0,
+    91.074,
+    85.595
+  ],
+  "Cradle_PRINT": [
+    168.0,
+    118.0,
+    7.0
+  ],
+  "Bezel_INSTALLED": [
+    168.0,
+    88.346,
+    82.67
+  ],
+  "Bezel_PRINT": [
+    168.0,
+    118.0,
+    22.46
+  ],
+  "bezel_to_cradle_contact_mm2": [
+    46.688,
+    46.688,
+    46.688,
+    46.688
+  ],
+  "status": "TEST-FIT / PHYSICAL VALIDATION PENDING",
+  "checks": "PASS: 6 closed connected exports; R3 placement/posts; hardware envelopes and driver access; 71 rail and 66 service positions; exact Rev H interface; front membrane; floor/rear/port; spacing",
+  "limitations": [
+    "N/M.4 rear features absent",
+    "Hardware dimensions provisional",
+    "Populated PCB and harness not modeled",
+    "Seals and structural loads unqualified",
+    "Inherited Rev H bracket pin tangency documented in README"
+  ]
+}
