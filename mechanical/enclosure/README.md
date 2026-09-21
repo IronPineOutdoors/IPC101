@@ -20,20 +20,21 @@ The current model assumes the same 101.6 mm (4 inch) wooden vertical mounting su
 
 Print the `PRINT` file with its flat wooden-mounting plane on the build plate. The rear pads and shell edges provide bed contact while the 47-degree face remains self-supporting. PETG or ASA is preferred for the outdoor prototype. Use at least four perimeters and 25 percent infill. Confirm screw length, cable bend clearance, faceplate seating, and access to all four wood screws on a fit print before outdoor service.
 
-## Current redesign direction — 2026-09-20
+## Current redesign direction — updated 2026-09-21
 
-Rev G remains the reference for the **proven mounting-bracket / wooden mounting interface**, but its upper enclosure geometry is no longer considered frozen.
+The existing physical CrossWind mount uses **channels that the enclosure fits/slides into**. This slide-channel engagement is now a **required preserved interface**.
 
-Physical IPC-101/faceplate mock-up testing found that the Rev G upper wall angle and screw-receptacle/boss geometry interfere with the PCB/control-panel stack. The next enclosure revision should therefore preserve the useful Rev G mounting-bracket interface while redesigning the enclosure body around IPC-101.
+Rev H/H1/H2 incorrectly treated the Rev G screw-hole pattern and gross rear dimensions as the complete mounting interface. That was insufficient. Rev H2 is rejected and must not be used as the mounting baseline.
 
 Current working requirements:
 
-- Preserve the Rev G mounting-bracket / wooden mounting interface unless testing identifies a problem with it.
+- Preserve the proven enclosure-to-mount **channel engagement geometry exactly** in the next revision.
+- Preserve the docking/channel region as a fixed datum; redesign the enclosure body only forward of that retained interface.
 - Preserve the established IPC-101 faceplate footprint and control layout.
 - Design the PCB carrier/chassis and enclosure as a matched assembly rather than forcing IPC-101 into the Rev G upper geometry.
 - Current nominal spacing from the **back surface of the faceplate to the top surface of IPC-101 is approximately 16.5 mm**. This is a prototype design target, not yet a fabrication-frozen dimension; it was selected to provide clearance for the OLED wiring/harness connectors.
 - The carrier/chassis should establish the PCB-to-faceplate relationship and carry the PCB mechanically. The enclosure should primarily provide structure, mounting and environmental protection.
-- Provide a rear panel connector for the IPC-101-to-CrossWind-Alpha harness. Connector family, cutout and pin count remain **TBD** until the required Alpha interface conductors are confirmed.
+- Provide a rear/upper-rear flush panel connector for the IPC-101-to-CrossWind-Alpha harness after the actual connector is selected. Connector family, cutout and pin count remain **TBD**.
 - Avoid internal screw bosses or wall slopes that intrude into the IPC-101/control-component envelope.
 - Maintain service access so the control-panel/PCB assembly can be removed without disturbing the CrossWind mounting interface.
 
