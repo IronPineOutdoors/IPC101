@@ -20,6 +20,16 @@ Use the existing faceplate for the stack test. If another print is needed, these
 
 Load them together in their original shared coordinates. Do not independently center or arrange the black lettering. N.1 changes remain deferred.
 
+## Received STOP switch — S1 side pod
+
+Keep the current cradle/bezel print sequence. The STOP accessory reuses those parts.
+
+1. [Small switch-fit coupon — print first](CrossWind_IPC101_STOP_Coupon_S1_PRINT.stl)
+2. [STOP pod](CrossWind_IPC101_STOP_Pod_S1_PRINT.stl)
+3. [Rear cover](CrossWind_IPC101_STOP_Cover_S1_PRINT.stl)
+
+See the [preview](STOP_S1_preview.png) and [S1 assembly/hardware guide](STOP_S1_ASSEMBLY.md). Requires two M3×35 replacement cassette screws and four M3×10 cover screws. Physical switch fit and mounting stiffness remain to be checked.
+
 ## Fit sequence
 
 1. Fit R3 into the cradle; check flat seating, all four bolt holes and the M3 nut pockets.

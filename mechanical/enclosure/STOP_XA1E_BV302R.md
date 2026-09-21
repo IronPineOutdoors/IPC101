@@ -1,6 +1,8 @@
 # Received STOP switch - IDEC XA1E-BV302R
 
-Status: **HARDWARE RECEIVED (user report); MOUNTING FIT PENDING**.
+Status: **HARDWARE RECEIVED; S1 SIDE POD CREATED; PHYSICAL FIT PENDING**.
+
+The [S1 accessory guide](STOP_S1_ASSEMBLY.md) now contains the verified manufacturer drawing dimensions, printable cutout coupon, pod, cover and hardware list. The pod uses two existing cassette attachment points and preserves I1/M4/R3 parts. [Preview](STOP_S1_preview.png).
 
 The user identified the received part as `XA1E BV302R`. IDEC lists `XA1E-BV302R` and the regional formatting `XA1E-BV302-R`.
 
@@ -17,14 +19,14 @@ Sources: [IDEC exact-part page](https://www.idec.com/en-eu/switches-indicator-li
 
 The old P0 layout's 22.3 mm STOP cutout is superseded for this received part. Its old panel coordinates are also not a placement decision for Rev I.1. M.4 currently has no dedicated STOP mounting opening.
 
-Before assigning a cutout or location, confirm the manufacturer's exact mounting drawing for this variant and measure the received part:
+The manufacturer drawing has now been inspected and used for S1. During physical fit, check the received part:
 
 - Panel-seating surface to rear terminal tips, including any fitted terminal cover.
 - Maximum rear body and locking-nut width/diameter.
 - Allowed panel thickness, locking/keying features, and hand/tool access for installation.
 - Additional wire/solder-joint clearance and actuator access/reset motion at the proposed location.
 
-The 16.5 mm PCB stack is not evidence that this switch fits behind the faceplate. Check the full switch and wire envelope against PCB, R3, cradle, bezel, shell and bracket withdrawal before adding geometry. The current bezel/cradle print sequence continues unchanged; no STOP hole or placeholder box has been added.
+The 16.5 mm PCB stack cannot accommodate the nominal 27.9 mm rear switch depth. S1 places the switch outside the PCB envelope with a removable rear cover. CAD clearance and bracket withdrawal checks pass; actual cable routing, tool access and mount stiffness still require physical validation. The current bezel/cradle print sequence continues unchanged.
 
 ## Electrical interface context
 

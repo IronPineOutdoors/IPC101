@@ -7,6 +7,8 @@
 - [Actual M.4 faceplate fit audit](REV_M4_FIT_AUDIT.md)
 - [Verification results](RevI1_verification.json)
 - [Received IDEC STOP switch and mounting measurements](STOP_XA1E_BV302R.md)
+- [Printable S1 STOP side pod, hardware and assembly](STOP_S1_ASSEMBLY.md)
+- [S1 STOP installation preview](STOP_S1_preview.png)
 
 Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 carrier, M.4 faceplate, and unchanged Rev H bracket/wiring plate. PCB component-side-out registration aligns ARM/PULL; actual populated-board, harness, hardware and sealing checks remain.
 
