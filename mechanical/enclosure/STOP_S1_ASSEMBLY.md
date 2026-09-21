@@ -4,6 +4,8 @@ Adds the received IDEC XA1E-BV302R to the existing I1 control panel. No reprint 
 
 ## Print
 
+**HOLD POD PRINT, 2026-09-21:** the user reports that the coupon accepts the switch but appears to inhibit the red operator's push travel. This is not a successful functional fit. Cause is unconfirmed; check seating, key engagement, mounting-ring clamping and visible interference before changing dimensions. Compare normal push/latch/reset with the switch out of the coupon and with it correctly mounted, unpowered. Do not force the operator. Existing CAD clearance results do not test the internal moving mechanism or establish unobstructed actuation.
+
 1. Print `CrossWind_IPC101_STOP_Coupon_S1_PRINT.stl` first. This 40 × 40 × 2.5 mm coupon checks the keyed hole, gasket and locking ring against your actual switch. The nut must clamp the panel and the anti-rotation tab must engage without force. Check the printed hole with calipers; tune printer compensation or lightly finish it within the specified cutout tolerance if necessary.
 2. Print `CrossWind_IPC101_STOP_Pod_S1_PRINT.stl`, front down as exported: 58 × 80 × 48 mm.
 3. Print `CrossWind_IPC101_STOP_Cover_S1_PRINT.stl`, flat as exported: 44 × 60 × 3 mm.

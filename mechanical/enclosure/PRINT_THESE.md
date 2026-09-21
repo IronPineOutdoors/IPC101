@@ -26,6 +26,8 @@ Load them together in their original shared coordinates. Do not independently ce
 
 The STOP accessory reuses the printed cradle and bezel.
 
+**HOLD STOP POD PRINT:** coupon fits over the switch but the user reports restricted red-button push travel (2026-09-21). Resolve mounting/actuation interference before printing the pod; coupon fit is not yet accepted.
+
 1. [Small switch-fit coupon — print first](CrossWind_IPC101_STOP_Coupon_S1_PRINT.stl)
 2. [STOP pod](CrossWind_IPC101_STOP_Pod_S1_PRINT.stl)
 3. [Rear cover](CrossWind_IPC101_STOP_Cover_S1_PRINT.stl)
