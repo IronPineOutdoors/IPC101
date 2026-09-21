@@ -1,0 +1,31 @@
+{
+  "status": "measured XY check only; finished faceplate and function labels pending",
+  "operator_centres_mm": [
+    [
+      46.88,
+      20.75
+    ],
+    [
+      115.67,
+      20.75
+    ]
+  ],
+  "export_centres_mm": [
+    [
+      103.12,
+      20.75
+    ],
+    [
+      34.33,
+      20.75
+    ]
+  ],
+  "measurement_note": "150 mm PCB width assumed; vertical positions and opening sizes unchanged from M4",
+  "size_mm": [
+    150.0,
+    35.0,
+    2.0
+  ],
+  "watertight": true,
+  "bezel_cradle_bare_pcb_clear": true
+}
