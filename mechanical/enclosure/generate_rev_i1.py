@@ -33,7 +33,7 @@ def pcb_local():
     for x,y in h.HOLES:p-=cyl(3.2,PCB_THICKNESS+2,(x,y,FACEPLATE_TO_PCB_TOP-1))
     return p
 
-from faceplate_rev_m4_reference import plate_local
+from faceplate_rev_n1_reference import plate_local
 
 def build_box():
     # Same external hull as corrected Rev I; only interior seating/relief changes.

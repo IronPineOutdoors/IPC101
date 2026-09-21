@@ -11,18 +11,14 @@
 | **BRACKET - reuse Rev H** | Detachable mount with two T rails | [CrossWind_IPC101_Bracket_RevH_PRINT.stl](CrossWind_IPC101_Bracket_RevH_PRINT.stl) |
 | **WIRING PLATE - reuse Rev H** | Flat blank plate for the bottom service opening | [CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl](CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl) |
 
-## Faceplate - reuse M.4
+## Faceplate - print N1
 
-**HOLD M4 REPRINT:** the user reports mirrored/asymmetric button misalignment on the last print. The tree logo also needs correction. The M4 files below are historical references while the replacement's operator-view coordinates are confirmed; they are not corrected reprint files.
+**N1 replaces M4 for the reprint:** measured ARM-left/PULL-right openings and labels, corrected tree with clear separation from OUTDOORS, and hidden rear revision mark.
 
-The reported button centers are now recorded in [N1 correction progress](N1_FACEPLATE_PROGRESS.md). An optional [measured button alignment strip](CrossWind_IPC101_Button_Check_N1_PRINT.stl) checks their placement before a full faceplate reprint; ARM/PULL label assignment remains to be confirmed.
+- [N1 WHITE PETG-HF body](CrossWind_IPC101_Faceplate_RevN1_WHITE_PETGHF.stl)
+- [N1 BLACK AMS inlays](CrossWind_IPC101_Faceplate_RevN1_BLACK_AMS.stl)
 
-Use the existing faceplate for the stack test. If another print is needed, these two files form one aligned, two-material faceplate:
-
-- [WHITE PETG-HF body](CrossWind_IPC101_Faceplate_RevM4_WHITE_PETGHF.stl)
-- [BLACK AMS inlays](CrossWind_IPC101_Faceplate_RevM4_BLACK_AMS.stl)
-
-Load them together in their original shared coordinates. Do not independently center or arrange the black lettering. N.1 changes remain deferred.
+Load both together as parts of one object, preserving their shared coordinates. Do not independently center/arrange the inlays or mirror the files. See [N1 preview](N1_faceplate_preview.png) and [N1 print/fit details](REV_N1_FACEPLATE.md). Full reprint physical fit remains pending. The [optional button-check strip](CrossWind_IPC101_Button_Check_N1_PRINT.stl) uses the same measured centers.
 
 ## Received STOP switch — S1 side pod
 

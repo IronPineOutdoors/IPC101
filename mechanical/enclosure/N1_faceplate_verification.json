@@ -1,44 +1,7 @@
 {
-  "Box_INSTALLED": [
-    174.0,
-    131.912,
-    108.384
-  ],
-  "Box_PRINT": [
-    174.0,
-    131.912,
-    108.384
-  ],
-  "Cradle_INSTALLED": [
-    168.0,
-    91.074,
-    85.595
-  ],
-  "Cradle_PRINT": [
-    168.0,
-    118.0,
-    7.0
-  ],
-  "Bezel_INSTALLED": [
-    168.0,
-    88.346,
-    82.67
-  ],
-  "Bezel_PRINT": [
-    168.0,
-    118.0,
-    22.46
-  ],
-  "bezel_to_cradle_contact_mm2": [
-    46.688,
-    46.688,
-    46.688,
-    46.688
-  ],
-  "status": "TEST-FIT / PHYSICAL VALIDATION PENDING",
-  "checks": "PASS: 6 closed connected exports; R3 placement/posts; hardware envelopes and driver access; 71 rail and 66 service positions; exact Rev H interface; front membrane; floor/rear/port; spacing",
-  "faceplate_reference": "Rev N1 white and black STLs; raw Z minus 2 mm; measured operator X=46.88/115.67, ARM left/PULL right",
-  "control_coordinates": {
+  "revision": "N1",
+  "status": "CAD passed; reprint physical alignment pending",
+  "controls": {
     "ARM": {
       "operator_view_xy": [
         46.88,
@@ -100,12 +63,51 @@
       "physical_validation": "Replacement print pending"
     }
   },
-  "control_registration": "Measured operator-view button coordinates; Y retained from M4. No PCB flip assumed. OLED/NAV/LED retain wired faceplate positions. Physical reprint fit pending.",
-  "limitations": [
-    "Actual populated PCB and harness fit pending",
-    "Hardware dimensions provisional",
-    "Populated PCB and harness not modeled",
-    "Seals and structural loads unqualified",
-    "Inherited Rev H bracket pin tangency documented in README"
+  "exports": {
+    "WHITE_PETGHF": {
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          150.0,
+          100.0,
+          4.8
+        ]
+      ],
+      "watertight": true,
+      "components": 1
+    },
+    "BLACK_AMS": {
+      "bounds_mm": [
+        [
+          10.55,
+          29.5803,
+          0.0
+        ],
+        [
+          141.325,
+          96.95,
+          0.549999
+        ]
+      ],
+      "watertight": true,
+      "components": 37
+    }
+  },
+  "checks": {
+    "white and black have no volume overlap": 0.0001745,
+    "ARM full rounded opening": 0.0005552,
+    "PULL full rounded opening": 0.0002936,
+    "body difference outside edited regions_mm3": 0.0,
+    "tree_to_OUTDOORS_gap_mm": 1.0343
+  },
+  "physical_notes": [
+    "ARM left, PULL right confirmed by user",
+    "Y=20.75 retained, not remeasured",
+    "Measured spacing68.79 differs from PCB-file nominal70; verify without preload",
+    "OLED/D-pad PCB locations reported swapped; wired faceplate locations retained"
   ]
 }

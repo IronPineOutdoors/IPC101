@@ -2,7 +2,7 @@
 import numpy as np
 import struct,zlib
 import generate_rev_i1 as g
-from faceplate_rev_m4_reference import material_local
+from faceplate_rev_n1_reference import material_local
 from verify_rev_i1 import hardware
 parts=g.models()
 box=parts['Box'];cradle=parts['Cradle'];bezel=parts['Bezel']
@@ -64,7 +64,7 @@ for index,(title,eye,solids) in enumerate(views):
             target=pixels[oy+lo[1]:oy+hi[1]+1,ox+lo[0]:ox+hi[0]+1]
             target[mask]=(np.array(colors[name])*shade).astype(np.uint8)
 label('GREY SHELL   TAN CRADLE   DARK R3   GREEN PCB   IVORY BEZEL AND FACEPLATE',20,978)
-label('ACTUAL M.4 FACEPLATE   PCB COMPONENT SIDE OUT   PHYSICAL FIT PENDING',20,1005)
+label('N1 FACEPLATE   MEASURED BUTTON X   REPRINT FIT PENDING',20,1005)
 def chunk(kind,data):return struct.pack('>I',len(data))+kind+data+struct.pack('>I',zlib.crc32(kind+data)&0xffffffff)
 raw=b''.join(b'\0'+row.tobytes() for row in pixels)
 (g.ROOT/'RevI1_preview.png').write_bytes(b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>2I5B',width,height,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(raw))+chunk(b'IEND',b''))

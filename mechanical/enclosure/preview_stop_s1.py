@@ -13,7 +13,7 @@ views=[('S1 STOP POD ON CURRENT PANEL',(-1,2,1.8),assembly+accessory),
  ('SWITCH CLEARANCE SECTION',(1,0,0),[(n,s-g.cube((50,100,100),(-42,0,-40))) for n,s in [('Pod',stop.pod()),('Cover',stop.cover()),('Switch',stop.envelope())]]),
  ('PRINT CUTOUT COUPON FIRST',(0,1,3),[('Pod',stop.coupon())])]
 body='for index,(title,eye,solids) in enumerate(views):'+body
-body=body.replace('GREY SHELL   TAN CRADLE   DARK R3   GREEN PCB   IVORY BEZEL AND FACEPLATE','GOLD S1 POD   RED SWITCH ENVELOPE   EXISTING I1 AND M4 PARTS UNCHANGED')
-body=body.replace('ACTUAL M.4 FACEPLATE   PCB COMPONENT SIDE OUT   PHYSICAL FIT PENDING','SWITCH IS A CLEARANCE ENVELOPE   PHYSICAL FIT AND STIFFNESS PENDING')
+body=body.replace('GREY SHELL   TAN CRADLE   DARK R3   GREEN PCB   IVORY BEZEL AND FACEPLATE','GOLD S1 POD   RED SWITCH ENVELOPE   I1 ASSEMBLY WITH N1 FACEPLATE')
+body=body.replace('N1 FACEPLATE   MEASURED BUTTON X   REPRINT FIT PENDING','SWITCH IS A CLEARANCE ENVELOPE   PHYSICAL FIT AND STIFFNESS PENDING')
 body=body.replace('RevI1_preview.png','STOP_S1_preview.png')
 exec(body)

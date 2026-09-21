@@ -1,6 +1,6 @@
 # N1 faceplate correction in progress
 
-Not a finished faceplate release. M4 remains on reprint hold.
+Historical measurement/strip notes. The user subsequently confirmed ARM left/PULL right; the [current N1 replacement files](REV_N1_FACEPLATE.md) are now generated and CAD verified. M4 is superseded for reprinting.
 
 ## Physical button measurements, 2026-09-21
 
@@ -13,7 +13,7 @@ User measured the PCB upright, component/buttons facing the operator:
 
 These differ from M4's operator-view openings at 33.5 and 103.5 mm. Required measured shifts are +13.38 and +12.17 mm, respectively. Do not mirror the entire faceplate to fix this: that would also move the display, navigation mount and artwork.
 
-The measured spacing is 68.79 mm; the PCB file's nominal button spacing is 70 mm. Preserve the reported measurements as measurements, not as a claim that the PCB design changed. Check the strip physically before adopting them in a finished faceplate. The left/right ARM/PULL function assignment is awaiting user confirmation; no labels are assigned by the strip.
+The measured spacing is 68.79 mm; the PCB file's nominal button spacing is 70 mm. Preserve the reported measurements as measurements, not as a claim that the PCB design changed. Check the strip physically before adopting them in a finished faceplate. The user confirmed left=ARM and right=PULL. No labels are assigned by the strip; the finished N1 plate includes them.
 
 ## Optional quick alignment print
 
@@ -25,4 +25,4 @@ The strip's exported X coordinates are 103.12 and 34.33 mm. This is the existing
 
 ## Tree correction
 
-Inspection of M4 shows that the tree base extends into the OUTDOORS lettering: its connected black mesh includes part of that lettering. Planned correction is a distinct flat-bottomed trunk separated from the text. Final white recesses and black inlay must be generated and verified together. No corrected full-faceplate STL has yet been issued.
+Inspection of M4 shows that the tree base extends into the OUTDOORS lettering: its connected black mesh includes part of that lettering. N1 implements a distinct flat-bottomed trunk separated from the text. White recesses and black inlay have been generated and verified together. The corrected full N1 faceplate STLs are now issued; see the current guide above.

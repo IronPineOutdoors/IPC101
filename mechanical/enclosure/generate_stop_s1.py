@@ -46,7 +46,7 @@ def verify(parts):
     checks={}
     def clear(name,a,b):
         v=(a^b).volume();checks[name]=round(v,8);assert v<1e-4,(name,v)
-    fixed=g.models();fixed.update(PCB=face(g.pcb_local()),R3=face(g.r3_local()),M4=face(g.plate_local()))
+    fixed=g.models();fixed.update(PCB=face(g.pcb_local()),R3=face(g.r3_local()),N1=face(g.plate_local()))
     for n in ('Pod','Cover'):
         for k,s in fixed.items():clear(n+' / '+k,face(parts[n]),s)
     clear('pod / cover',parts['Pod'],parts['Cover'])

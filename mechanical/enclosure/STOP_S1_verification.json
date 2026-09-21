@@ -13,13 +13,13 @@
     "Pod / Bezel": 0.0,
     "Pod / PCB": 0.0,
     "Pod / R3": 0.0,
-    "Pod / M4": 0.0,
+    "Pod / N1": 0.0,
     "Cover / Box": 0.0,
     "Cover / Cradle": 0.0,
     "Cover / Bezel": 0.0,
     "Cover / PCB": 0.0,
     "Cover / R3": 0.0,
-    "Cover / M4": 0.0,
+    "Cover / N1": 0.0,
     "pod / cover": 0.0,
     "switch envelope / Pod": 0.0,
     "contact block rotation / Pod": 0.0,
@@ -280,14 +280,14 @@
     "bolt 20 / Bezel": 0.0,
     "bolt 20 / PCB": 0.0,
     "bolt 20 / R3": 0.0,
-    "bolt 20 / M4": 0.0,
+    "bolt 20 / N1": 0.0,
     "bolt 80 / pod": 0.0,
     "bolt 80 / Box": 0.0,
     "bolt 80 / Cradle": 0.0,
     "bolt 80 / Bezel": 0.0,
     "bolt 80 / PCB": 0.0,
     "bolt 80 / R3": 0.0,
-    "bolt 80 / M4": 0.0
+    "bolt 80 / N1": 0.0
   },
   "exports": {
     "CrossWind_IPC101_STOP_Pod_S1_INSTALLED.stl": {

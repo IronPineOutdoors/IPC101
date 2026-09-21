@@ -4,17 +4,19 @@
 
 - [Assembly order, hardware and fit measurements](REV_I1_ASSEMBLY.md)
 - [Current assembly preview](RevI1_preview.png)
-- [Actual M.4 faceplate fit audit](REV_M4_FIT_AUDIT.md)
+- [Current N1 faceplate reprint and measured alignment](REV_N1_FACEPLATE.md)
+- [N1 faceplate/updated tree preview](N1_faceplate_preview.png)
+- [Historical M4 audit, superseded by physical misalignment report](REV_M4_FIT_AUDIT.md)
 - [Verification results](RevI1_verification.json)
 - [Received IDEC STOP switch and mounting measurements](STOP_XA1E_BV302R.md)
 - [Printable S1 STOP side pod, hardware and assembly](STOP_S1_ASSEMBLY.md)
 - [S1 STOP installation preview](STOP_S1_preview.png)
 
-Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 carrier, M.4 faceplate, and unchanged Rev H bracket/wiring plate. PCB component-side-out registration aligns ARM/PULL; actual populated-board, harness, hardware and sealing checks remain.
+Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 carrier and unchanged Rev H bracket/wiring plate. N1 replaces M4 using measured ARM-left/PULL-right positions and corrected tree artwork. Cradle dry fit and STOP coupon operation were reported successful; the N1 reprint, populated-board/harness, hardware and sealing checks remain.
 
 ## Current files versus history
 
-Current I.1 parts, original R3, both M.4 material files, and the authoritative Rev H mounting baseline remain in this folder. **The Rev H box STLs are mounting-reference geometry, not the box to print for I.1.** Print the I.1 box from the guide.
+Current I.1 parts, original R3, both N1 material files (M4 retained as history), and the authoritative Rev H mounting baseline remain in this folder. **The Rev H box STLs are mounting-reference geometry, not the box to print for I.1.** Print the I.1 box from the guide.
 
 Superseded Rev G and Rev I exports, exploratory H/H1/H2 SCAD files, and their notes are under [archive](archive/README.md). They are retained for engineering history, not current printing. The earlier long README is preserved as [development history](archive/DEVELOPMENT_HISTORY.md).
 

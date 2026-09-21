@@ -2,6 +2,8 @@
 
 Adds the received IDEC XA1E-BV302R to the existing I1 control panel. No reprint or drilling of the M4 faceplate, R3 carrier, I1 bezel/cradle, shell or Rev H mounting interface is required. The pod occupies the side at face-local X=-42 mm, Y=50 mm. See `STOP_S1_preview.png` for location. Overall control-box width increases by 57 mm; check space at the actual machine.
 
+Current assembly reference: the [N1 replacement faceplate](REV_N1_FACEPLATE.md) has also passed S1 clearance checks. The pod/cover STLs already printing are unchanged.
+
 ## Print
 
 **COUPON ACCEPTED, 2026-09-21:** the user subsequently confirmed that the switch works fine, attributing the initial apparent restriction to incorrect seating. The coupon-related pod print hold is lifted; no geometry change is indicated. Full pod assembly, wiring clearance and mounting stiffness still require physical checks.

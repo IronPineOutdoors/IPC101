@@ -38,6 +38,10 @@ Hardware below is modeled for clearance, not a confirmed inventory or purchasing
 
 A modeled PCB screw reaches face-local Z=30.5 mm and clears the shell. Cassette screws reach Z=30 mm, giving 4.54 mm nominal engagement from the shell seat at Z=25.46. A washer, thicker faceplate, different head, or different insert changes this calculation. Avoid screw bottoming and PCB bending. Check copper/component clearance around the actual board mounting holes.
 
+## Current faceplate: N1
+
+Use the [N1 reprint guide](REV_N1_FACEPLATE.md). N1 corrects M4 button placement using the physical PCB measurements, with ARM left/PULL right, and separates the tree from OUTDOORS. Historical M4 orientation/alignment claims below are superseded by the physical feedback; do not use them to flip the actual PCB. The cradle, bezel and shell geometry and hardware stack are unchanged.
+
 ## Bench assembly
 
 1. Check the R3 print against the PCB. All four posts should meet the board without rocking or forcing holes into alignment.
