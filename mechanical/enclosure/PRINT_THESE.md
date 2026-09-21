@@ -13,6 +13,8 @@
 
 ## Faceplate - reuse M.4
 
+**HOLD M4 REPRINT:** the user reports mirrored/asymmetric button misalignment on the last print. The tree logo also needs correction. The M4 files below are historical references while the replacement's operator-view coordinates are confirmed; they are not corrected reprint files.
+
 Use the existing faceplate for the stack test. If another print is needed, these two files form one aligned, two-material faceplate:
 
 - [WHITE PETG-HF body](CrossWind_IPC101_Faceplate_RevM4_WHITE_PETGHF.stl)

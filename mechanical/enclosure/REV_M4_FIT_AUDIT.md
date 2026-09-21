@@ -1,6 +1,8 @@
 # Rev M.4 faceplate / Rev I.1 fit audit
 
-Status: **CAD CLEARANCE PASS - PHYSICAL VALIDATION PENDING**.
+Status: **PHYSICAL BUTTON ALIGNMENT FAILURE REPORTED - DO NOT REPRINT M4**.
+
+2026-09-21: the user reports that the last faceplate's button openings appear mirrored and do not align with the asymmetric button positions. This physical feedback supersedes the alignment conclusion below. The historical CAD comparison assumed a flipped PCB registration; it did not establish the actual assembled orientation. Confirm button centers from the operator-facing left/bottom edges before issuing corrected white and black exports. The tree artwork also remains uncorrected in M4. No corrected faceplate has yet been released.
 
 The supplied SCAD and both material STLs are retained unchanged. I.1 verification and preview now use the actual M.4 geometry rather than the plain faceplate envelope. No shell, cradle, bezel, R3 or faceplate print geometry changed in this integration.
 
