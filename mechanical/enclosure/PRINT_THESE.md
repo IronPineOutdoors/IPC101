@@ -1,10 +1,10 @@
 # PRINT THESE - IPC-101 Rev I.1
 
-**Cradle and bezel are different parts.** If the bezel is already printing, let it finish and print the cradle next.
+**2026-09-21: cradle print complete; user reports the dry fit looks good.** Reuse the printed cradle, bezel and R3 carrier. Next small print: the STOP switch-fit coupon below. Before the box print, check the populated PCB, faceplate, control travel and harness clearance in the assembled stack.
 
 | Part | How to recognize it | Exact print file |
 |---|---|---|
-| **CRADLE - next if bezel is underway** | Flat frame/nest with rear nut pockets; **168 x 118 x 7 mm** | [CrossWind_IPC101_Cradle_RevI1_PRINT.stl](CrossWind_IPC101_Cradle_RevI1_PRINT.stl) |
+| **CRADLE - printed; reuse** | Flat frame/nest with rear nut pockets; **168 x 118 x 7 mm** | [CrossWind_IPC101_Cradle_RevI1_PRINT.stl](CrossWind_IPC101_Cradle_RevI1_PRINT.stl) |
 | **BEZEL** | Faceplate support with four tall spacing posts; **168 x 118 x 22.46 mm** | [CrossWind_IPC101_Bezel_RevI1_PRINT.stl](CrossWind_IPC101_Bezel_RevI1_PRINT.stl) |
 | **R3 CARRIER - reuse the print you have** | PCB support with cross-ribs and four round posts; **156 x 106 x 7.4 mm** | [IPC101_RevA_RearCarrier_R3.stl](IPC101_RevA_RearCarrier_R3.stl) |
 | **BOX - after checking the stack** | Open-front enclosure; **174 x 131.912 x 108.384 mm** | [CrossWind_IPC101_Box_RevI1_PRINT.stl](CrossWind_IPC101_Box_RevI1_PRINT.stl) |
@@ -22,7 +22,7 @@ Load them together in their original shared coordinates. Do not independently ce
 
 ## Received STOP switch — S1 side pod
 
-Keep the current cradle/bezel print sequence. The STOP accessory reuses those parts.
+The STOP accessory reuses the printed cradle and bezel.
 
 1. [Small switch-fit coupon — print first](CrossWind_IPC101_STOP_Coupon_S1_PRINT.stl)
 2. [STOP pod](CrossWind_IPC101_STOP_Pod_S1_PRINT.stl)

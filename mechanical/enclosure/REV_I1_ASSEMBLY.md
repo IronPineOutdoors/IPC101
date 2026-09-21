@@ -54,6 +54,8 @@ Disconnect power and external wiring. Remove the four outboard long screws; supp
 
 ## What is established and what remains
 
+**Physical progress, 2026-09-21:** the user confirmed the cradle finished printing and reported that the dry fit looks good after the R3/cradle/bezel fit instructions. This records a successful general dry fit; individual hole, nut-pocket, measured gap, populated-board and harness checks were not separately reported. No geometry change is indicated by this feedback.
+
 **Established in CAD:** unchanged R3 geometry; 150 x 100 x 1.56 PCB reference; four board mounting centres; provisional 16.5 spacing; pairwise part clearance; modeled PCB, cassette and faceplate screw/nut clearance; axial driver access; independent bezel/PCB/R3 removal; unchanged outer shell bounds and exact rear mount geometry; connected closed exports; front aperture free of membrane faces.
 
 **Physical gates before calling the control box complete:**
