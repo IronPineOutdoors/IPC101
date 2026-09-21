@@ -4,11 +4,11 @@ Adds the received IDEC XA1E-BV302R to the existing I1 control panel. No reprint 
 
 ## Print
 
-**HOLD POD PRINT, 2026-09-21:** the user reports that the coupon accepts the switch but appears to inhibit the red operator's push travel. This is not a successful functional fit. Cause is unconfirmed; check seating, key engagement, mounting-ring clamping and visible interference before changing dimensions. Compare normal push/latch/reset with the switch out of the coupon and with it correctly mounted, unpowered. Do not force the operator. Existing CAD clearance results do not test the internal moving mechanism or establish unobstructed actuation.
+**COUPON ACCEPTED, 2026-09-21:** the user subsequently confirmed that the switch works fine, attributing the initial apparent restriction to incorrect seating. The coupon-related pod print hold is lifted; no geometry change is indicated. Full pod assembly, wiring clearance and mounting stiffness still require physical checks.
 
 1. Print `CrossWind_IPC101_STOP_Coupon_S1_PRINT.stl` first. This 40 × 40 × 2.5 mm coupon checks the keyed hole, gasket and locking ring against your actual switch. The nut must clamp the panel and the anti-rotation tab must engage without force. Check the printed hole with calipers; tune printer compensation or lightly finish it within the specified cutout tolerance if necessary.
-2. Print `CrossWind_IPC101_STOP_Pod_S1_PRINT.stl`, front down as exported: 58 × 80 × 48 mm.
-3. Print `CrossWind_IPC101_STOP_Cover_S1_PRINT.stl`, flat as exported: 44 × 60 × 3 mm.
+2. Print `CrossWind_IPC101_STOP_Pod_S1_PRINT.stl`, front down as exported: 68 × 80 × 48 mm.
+3. Print `CrossWind_IPC101_STOP_Cover_S1_PRINT.stl`, flat as exported: 54 × 60 × 3 mm.
 
 PETG, 0.20 mm layers, six walls, six top/bottom layers, 40% infill are starting settings. These orientations need no supports. Keep the mounting land clean of brim/elephant foot. The cover pilot holes are provisional 2.7 mm: check/tap for M3 without splitting the bosses. Engraved STOP-S1 identifies the revision. Python `generate_stop_s1.py` is the editable source; run it to regenerate STL and verification results.
 
