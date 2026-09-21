@@ -107,6 +107,3 @@ if __name__=='__main__':
         for orientation,solid in [('INSTALLED',part),('PRINT',print_part(name,part))]:
             write_binary_stl(ROOT/f'CrossWind_IPC101_{name}_RevI_{orientation}.stl',solid)
         print(name,part.bounding_box(),part.volume())
-
-
-
