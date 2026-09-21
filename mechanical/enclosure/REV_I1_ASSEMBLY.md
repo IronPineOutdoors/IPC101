@@ -66,7 +66,7 @@ Disconnect power and external wiring. Remove the four outboard long screws; supp
 
 ## Files and reproduction
 
-Sources: `generate_rev_i1.py`, `verify_rev_i1.py`, `preview_rev_i1.py`. Geometry markings use `RI1 TEST`. Original R3, Rev I and Rev H artifacts remain untouched. The six new STLs have `INSTALLED` assembly coordinates and `PRINT` bed coordinates. Results are saved in [RevI1_verification.json](RevI1_verification.json); views in [RevI1_preview.png](RevI1_preview.png).
+Sources: `generate_rev_i1.py`, `verify_rev_i1.py`, `preview_rev_i1.py`. Geometry markings use `RI1 TEST`. Original R3 and Rev H artifacts remain available. Superseded Rev I exports are preserved unchanged in `archive/superseded-rev-i/`. The six new STLs have `INSTALLED` assembly coordinates and `PRINT` bed coordinates. Results are saved in [RevI1_verification.json](RevI1_verification.json); views in [RevI1_preview.png](RevI1_preview.png).
 
 ```powershell
 python -B mechanical/enclosure/generate_rev_i1.py

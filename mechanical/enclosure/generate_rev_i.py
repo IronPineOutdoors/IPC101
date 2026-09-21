@@ -14,7 +14,8 @@ PCB_BACK = FACEPLATE_TO_PCB_TOP + PCB_THICKNESS
 CARRIER_BACK = PCB_BACK + 7
 FACE_FORWARD = 8.0  # shell development allowance; does not move docking geometry
 ATTACH = ((-5,20),(-5,80),(155,20),(155,80))
-ROOT = Path(__file__).resolve().parent
+SOURCE_ROOT = Path(__file__).resolve().parent
+ROOT = SOURCE_ROOT / "archive" / "superseded-rev-i"
 
 def face(s):
     return h.face(s).translate((0,FACE_FORWARD,0))
@@ -104,6 +105,7 @@ def print_part(name,part):
     return h.print_orientation(part)
 
 if __name__=='__main__':
+    ROOT.mkdir(parents=True, exist_ok=True)
     for name,part in models().items():
         assert part.status()==m.Error.NoError and len(part.decompose())==1
         for orientation,solid in [('INSTALLED',part),('PRINT',print_part(name,part))]:

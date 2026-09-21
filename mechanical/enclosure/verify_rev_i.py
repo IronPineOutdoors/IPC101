@@ -50,7 +50,7 @@ def run():
     # Inspect ALL actual authoritative Rev H exported parts, including print files.
     for name in ('Box','Bracket','Wiring_Plate'):
         for orientation in ('INSTALLED','PRINT'):
-            mesh=trimesh.load_mesh(g.ROOT/f'CrossWind_IPC101_{name}_RevH_{orientation}.stl')
+            mesh=trimesh.load_mesh(g.SOURCE_ROOT/f'CrossWind_IPC101_{name}_RevH_{orientation}.stl')
             if name=='Bracket':
                 # Frozen STL has a pin tangent seam at Y=-5.3, Z=40.
                 assert len(mesh.split(only_watertight=False))==1

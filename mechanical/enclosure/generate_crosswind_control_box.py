@@ -196,7 +196,8 @@ def write_binary_stl(path: Path, solid: m3d.Manifold) -> None:
 
 
 if __name__ == "__main__":
-    output = Path(__file__).resolve().parent
+    output = Path(__file__).resolve().parent / "archive" / "superseded-rev-g"
+    output.mkdir(parents=True, exist_ok=True)
     models = {
         "CrossWind_IPC101_Control_Box_RevG_PRINT.stl": orient_for_print(build_installed_box()),
         "CrossWind_IPC101_Control_Box_RevG_INSTALLED.stl": build_installed_box(),
