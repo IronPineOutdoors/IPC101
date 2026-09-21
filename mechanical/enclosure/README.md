@@ -4,7 +4,9 @@
 
 - [Assembly order, hardware and fit measurements](REV_I1_ASSEMBLY.md)
 - [Current assembly preview](RevI1_preview.png)
-- [Current N1 faceplate reprint and measured alignment](REV_N1_FACEPLATE.md)
+- [Current N1.1 faceplate and measured R1 labeled caps](R1_BUTTON_CAPS.md)
+- [Current panel/cap preview](R1_button_caps_preview.png)
+- [N1 button alignment and tree correction basis](REV_N1_FACEPLATE.md)
 - [N1 faceplate/updated tree preview](N1_faceplate_preview.png)
 - [Historical M4 audit, superseded by physical misalignment report](REV_M4_FIT_AUDIT.md)
 - [Verification results](RevI1_verification.json)
@@ -12,11 +14,11 @@
 - [Printable S1 STOP side pod, hardware and assembly](STOP_S1_ASSEMBLY.md)
 - [S1 STOP installation preview](STOP_S1_preview.png)
 
-Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 carrier and unchanged Rev H bracket/wiring plate. N1 replaces M4 using measured ARM-left/PULL-right positions and corrected tree artwork. Cradle dry fit and STOP coupon operation were reported successful; the N1 reprint, populated-board/harness, hardware and sealing checks remain.
+Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 carrier and unchanged Rev H bracket/wiring plate. N1.1 replaces M4 using measured ARM-left/PULL-right positions and corrected tree artwork, with labels on R1 caps. Cradle dry fit and STOP coupon operation were reported successful; the N1.1/R1 reprints, populated-board/harness, hardware and sealing checks remain.
 
 ## Current files versus history
 
-Current I.1 parts, original R3, both N1 material files (M4 retained as history), and the authoritative Rev H mounting baseline remain in this folder. **The Rev H box STLs are mounting-reference geometry, not the box to print for I.1.** Print the I.1 box from the guide.
+Current I.1 parts, original R3, N1.1/R1 print files (N1 compatible, M4 retained as history), and the authoritative Rev H mounting baseline remain in this folder. **The Rev H box STLs are mounting-reference geometry, not the box to print for I.1.** Print the I.1 box from the guide.
 
 Superseded Rev G and Rev I exports, exploratory H/H1/H2 SCAD files, and their notes are under [archive](archive/README.md). They are retained for engineering history, not current printing. The earlier long README is preserved as [development history](archive/DEVELOPMENT_HISTORY.md).
 

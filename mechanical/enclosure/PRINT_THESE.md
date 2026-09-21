@@ -11,14 +11,18 @@
 | **BRACKET - reuse Rev H** | Detachable mount with two T rails | [CrossWind_IPC101_Bracket_RevH_PRINT.stl](CrossWind_IPC101_Bracket_RevH_PRINT.stl) |
 | **WIRING PLATE - reuse Rev H** | Flat blank plate for the bottom service opening | [CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl](CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl) |
 
-## Faceplate - print N1
+## Faceplate and labeled buttons - N1.1 / R1
 
-**N1 replaces M4 for the reprint:** measured ARM-left/PULL-right openings and labels, corrected tree with clear separation from OUTDOORS, and hidden rear revision mark.
+For the upcoming reprint with labeled caps, use **N1.1**. It keeps the corrected button positions/tree and removes duplicate ARM/PULL text from the panel.
 
-- [N1 WHITE PETG-HF body](CrossWind_IPC101_Faceplate_RevN1_WHITE_PETGHF.stl)
-- [N1 BLACK AMS inlays](CrossWind_IPC101_Faceplate_RevN1_BLACK_AMS.stl)
+- [N1.1 WHITE faceplate](CrossWind_IPC101_Faceplate_RevN11_WHITE_PETGHF.stl)
+- [N1.1 BLACK inlay](CrossWind_IPC101_Faceplate_RevN11_BLACK_AMS.stl)
+- [R1 ARM cap body](CrossWind_IPC101_ARM_Cap_R1_WHITE_PETGHF.stl) + [ARM face label](CrossWind_IPC101_ARM_Cap_R1_BLACK_AMS.stl)
+- [R1 PULL cap body](CrossWind_IPC101_PULL_Cap_R1_WHITE_PETGHF.stl) + [PULL face label](CrossWind_IPC101_PULL_Cap_R1_BLACK_AMS.stl)
 
-Load both together as parts of one object, preserving their shared coordinates. Do not independently center/arrange the inlays or mirror the files. See [N1 preview](N1_faceplate_preview.png) and [N1 print/fit details](REV_N1_FACEPLATE.md). Full reprint physical fit remains pending. The [optional button-check strip](CrossWind_IPC101_Button_Check_N1_PRINT.stl) uses the same measured centers.
+Import each white/black pair as parts of one object. The two caps are separate objects; do not superimpose all four cap files. Preserve shared coordinates and do not mirror. Print one cap first and check movement/return before making the second. See [measured stem dimensions and assembly](R1_BUTTON_CAPS.md) and [current preview](R1_button_caps_preview.png).
+
+N1 remains mechanically compatible if already printed, with additional labels on the panel. M4 is superseded. The optional [button-position strip](CrossWind_IPC101_Button_Check_N1_PRINT.stl) shares the corrected hole centers.
 
 ## Received STOP switch — S1 side pod
 

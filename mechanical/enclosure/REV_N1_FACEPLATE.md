@@ -2,6 +2,8 @@
 
 Status: **CAD VERIFIED; PHYSICAL REPRINT FIT PENDING**. Replaces M4 for the next faceplate print. R3, I1 bezel/cradle/shell and the S1 STOP pod/cover geometry are unchanged.
 
+The subsequent [N1.1 faceplate and R1 labeled caps](R1_BUTTON_CAPS.md) are the current choice when using labels on the cap faces. N1 remains compatible and retains duplicate panel labels.
+
 ## Corrected layout
 
 Viewed from the operator/front, upright:
