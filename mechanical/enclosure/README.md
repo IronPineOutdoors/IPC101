@@ -146,7 +146,7 @@ Measure/check on the carrier print:
 
 Then print the shell and reuse the Rev H bracket/wiring plate. Check full rail engagement, pin access and positive retention, at least 70 mm available upward withdrawal travel, CrossWind projection, cassette fit, shell seat contact, and blank plate removal. Measure connector/cable/hand envelope before selecting a flush connector. Hidden recessed marks read `IPC101-ENC-RI TEST` and `IPC101-CARRIER-RI TEST`.
 
-No R3 carrier or N/M.4 faceplate source was found after searching repository filenames and content (including hidden files). Existing Rev C/D faceplate generators and coordinate files were inspected but their obsolete control layout is not claimed as N/M.4. The preview uses only a 150 x 100 x 2 faceplate envelope with four mounting holes. Actual N/M.4 back features, assembled OLED/header dimensions, harness bend radii, P504 swept movement, populated PCB underside heights and final hardware remain **PHYSICAL VALIDATION PENDING**. Known P504 body/cradle, actuator and LED dimensions supplied for this task are context, not sufficient coordinates for a complete component collision model. Central control space is unobstructed; component-level clearance is not certified. N.1 artwork/aperture/caps/LED refinements remain deferred.
+At initial Rev I generation, no R3 carrier or N/M.4 faceplate source was found. R3 was subsequently supplied and inspected; see the comparison below. N/M.4 remains unavailable. Existing Rev C/D faceplate generators and coordinate files were inspected but their obsolete control layout is not claimed as N/M.4. The preview uses only a 150 x 100 x 2 faceplate envelope with four mounting holes. Actual N/M.4 back features, assembled OLED/header dimensions, harness bend radii, P504 swept movement, populated PCB underside heights and final hardware remain **PHYSICAL VALIDATION PENDING**. Known P504 body/cradle, actuator and LED dimensions supplied for this task are context, not sufficient coordinates for a complete component collision model. Central control space is unobstructed; component-level clearance is not certified. N.1 artwork/aperture/caps/LED refinements remain deferred.
 
 Environmental shell only: rear/floor are closed except the intentional removable bottom service port. Carrier-to-shell clearance is an unsealed prototype joint, and faceplate sealing has not been engineered/qualified for this larger cassette. Keep the prototype dry; gasket lands/compression and leak testing are required before outdoor deployment. No waterproof claim is made.
 
@@ -162,3 +162,21 @@ python mechanical/enclosure/verify_rev_h.py
 Dependencies: Python, manifold3d, numpy, trimesh. Verification checks generated and exported Rev I closed, consistently wound, connected meshes, bounds and print-bed placement; exact Boolean equality of the entire preserved rear interface; zero installed and 71-position (0..70 mm) bracket interference; pin passage; carrier/PCB/faceplate clearance; 66 front cassette withdrawal positions; bare-board end insertion; four PCB seat annuli and bores; parameterized spacing; rear/floor witness solids and unobstructed service port. Export checks compare bounds and volumes to their source solids. Preview inspection supplements these checks; neither proves physical fit or loading.
 
 **Inherited Rev H export limitation:** the frozen bracket's pin bore is exactly tangent to its stem face at installed Y=-5.3, Z=40, across X=27..33. Both existing bracket STLs have one welded edge with four incident triangles, so trimesh does not classify them as watertight. The authoritative manifold model passes the original indexed-edge verification. This is explicitly reported by the Rev I audit, not silently repaired or called a new Rev I failure. Existing bracket files remain unchanged; inspect the known working bracket's slicer behavior. All newly generated Rev I exports must pass strict welded-mesh checks without exceptions.
+
+
+### Recovered R3 carrier - inspected 2026-09-21
+
+The user subsequently supplied `IPC101_RevA_RearCarrier_R3.scad` and `.stl`. Both were inspected without modification. They are the recovered reference for the previously tested rear carrier; this inspection establishes no additional physical validation.
+
+R3 has bounds (-3,-3,0)..(153,103,7.4): 156 x 106 x 7.4 mm. The source defines a 2.4 mm base, 6 mm perimeter rails, 5 mm cross-ribs, and four 8 mm diameter posts rising 5 mm above the base. Their 3.4 mm through-holes are at (5,5), (145,5), (5,95), (145,95). The STL is watertight and one connected component; its bounds agree with the source and volume is approximately 12,503.585 mm3.
+
+Hole centres agree exactly with Rev I, but fastening geometry differs: initial Rev I uses 9 mm rear pads and 4.2 mm insert pockets. Initial Rev I therefore does not inherit the full R3 board attachment geometry and must not be represented as R3-derived.
+
+For comparison at the provisional 16.5 mm faceplate-to-PCB-top spacing, reflect R3 in Z and translate by 25.46 mm in face-local Z. Post tops meet the PCB rear at 18.06 mm; the base occupies Z=23.06..25.46. Applying the existing Rev I face transform gives zero PCB-reference intersection (numerical residual below 1e-4 mm3), but 58.426 mm3 shell intersection at the carrier seats. The existing Rev I attachment datum is 25.06 mm, 0.40 mm forward of the R3 base rear. R3 is not a drop-in replacement and lacks the Rev I faceplate/support attachment structure.
+
+The next geometry integration should preserve R3 board centres, 8 mm posts and 3.4 mm through-holes, provide an explicit removable fastener arrangement, and reconcile rear frame/seat depth. Its cross-ribs require populated-PCB underside and harness clearance checks. Initial Rev I generator/STLs remain unchanged by this comparison. Do not print the current Rev I carrier expecting R3 hardware compatibility; settle this integration before another carrier fit print.
+
+Input SHA-256:
+
+- SCAD: `A941E9DEE239ED2F806CC3225EB164D02C7B2587D38E852663961E12626AAF39`
+- STL: `3D8C7A564F197CA7FEAC8A0377CF2ECFAA3A88A208E170DEBEB5657B0888346F`
