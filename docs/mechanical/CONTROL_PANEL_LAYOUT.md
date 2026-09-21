@@ -12,7 +12,7 @@ All coordinates are millimeters from the lower-left PCB corner, component/front 
 | OLED DS1 center | 50 | 27 | Hosyond B0G2RFLG1L; Crosswind fit-print geometry: 73 x 43 mm PCB, four 3.2 mm holes on 68.8 x 38.8 mm centers |
 | Navigation SW3 | 50 | 83 | verify sample; allow 24 x 24 finger zone |
 | START SW1 | 28 | 55 | B3F-4055 center; cap-dependent opening |
-| STOP operator | 72 | 55 | 22.3 mm nominal panel cutout; not PCB mounted |
+| STOP operator | 72 | 55 | Historical P0 position only; 22.3 mm cutout superseded by received IDEC XA1E-BV302R (16 mm family). Final cutout/placement pending; see [STOP hardware note](../../mechanical/enclosure/STOP_XA1E_BV302R.md). |
 | PULL SW2 | 50 | 25 | use large/high-contrast cap or overlay target |
 | J1 ordinary UI | 50 | 5 | rear/bottom edge access; strain relief required |
 | J3 STOP | 82 | 5 | rear; isolated two-wire routing |
