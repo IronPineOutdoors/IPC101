@@ -66,6 +66,23 @@ def run():
         for orientation in ('INSTALLED','PRINT'):
             mesh=trimesh.load_mesh(g.ROOT/f'CrossWind_IPC101_{name}_RevI_{orientation}.stl')
             assert mesh.is_watertight and mesh.is_winding_consistent and len(mesh.split())==1
+            if name=='Box':
+                # Test actual exported triangles, not just Boolean volume: opposite
+                # coincident faces can enclose no volume yet cap the aperture.
+                vertices=mesh.vertices.copy()
+                if orientation=='PRINT':
+                    vertices+=np.asarray(part.bounding_box()[:3])
+                vertices-=np.array([3,h.BOTTOM_Y+g.FACE_FORWARD,h.BOTTOM_Z])
+                angle=np.radians(90+h.ANGLE)
+                rotation=np.array([[1,0,0],[0,np.cos(angle),-np.sin(angle)],
+                                   [0,np.sin(angle),np.cos(angle)]])
+                local=vertices@rotation
+                tris=local[mesh.faces]
+                centre=tris.mean(axis=1)
+                caps=(np.max(np.abs(tris[:,:,2]),axis=1)<.001)
+                caps&=(centre[:,0]>-9.9)&(centre[:,0]<159.9)
+                caps&=(centre[:,1]>-9.9)&(centre[:,1]<109.9)
+                assert not np.any(caps), 'Exported front opening has coplanar membrane triangles'
             expected=part if orientation=='INSTALLED' else g.print_part(name,part)
             assert np.allclose(mesh.bounds.flatten(),expected.bounding_box(),atol=1e-4)
             assert abs(mesh.volume-expected.volume())<.1

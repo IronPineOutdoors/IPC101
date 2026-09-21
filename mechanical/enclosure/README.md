@@ -180,3 +180,10 @@ Input SHA-256:
 
 - SCAD: `A941E9DEE239ED2F806CC3225EB164D02C7B2587D38E852663961E12626AAF39`
 - STL: `3D8C7A564F197CA7FEAC8A0377CF2ECFAA3A88A208E170DEBEB5657B0888346F`
+
+
+### Rev I front-opening export correction - 2026-09-21
+
+The initial Rev I shell exports contained four large coincident, opposite-facing triangles across the nominal front aperture. These zero-volume sheets made the shell appear closed despite passing the previous volume-intersection and welded-edge checks. The cavity cutter now extends 1 mm outside the face datum rather than ending coplanar with it. This removes the spurious faces without changing the intended shell volume, carrier seats, dimensions or frozen Rev H mounting interface. Regenerated Rev I shell STLs supersede the initial defective exports; the originals remain in Git history. The verifier now checks actual exported triangles at the front aperture in both orientations.
+
+Intended attachment sequence for the initial Rev I cassette: insert the PCB into the separate carrier and fasten it to its four rear pads; insert the carrier through the open shell front and secure it to the four recessed outboard shell seats; attach the faceplate to the four front corner pads on the carrier. Faceplate screws do not attach directly to the shell. The separate carrier is required for this arrangement. Actual fastener/driver access and the recovered R3 integration remain pending; this correction alone does not make R3 compatible. Do not print the initial cassette pending that integration.

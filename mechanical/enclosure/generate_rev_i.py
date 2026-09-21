@@ -40,7 +40,9 @@ def build_box():
     front=face(cube((174,124,32),(-12,-12,0)))
     back=cube((156,3,105),(0,0,0))
     outer=m.Manifold.batch_hull([front,back])
-    cavity=face(cube((170,120,29),(-10,-10,0)))
+    # Cross the front datum: a coplanar cut can leave zero-volume sheets
+    # that pass Boolean volume checks but obstruct the exported opening.
+    cavity=face(cube((170,120,30),(-10,-10,-1)))
     cavity+=h.prism([(3,3),(h.BOTTOM_Y-3,3),(h.BOTTOM_Y-3,26),(31,96),(3,100)],(3,153))
     box=outer-cavity
     # Plane-cut the front opening and keep all new shell behind its datum.
