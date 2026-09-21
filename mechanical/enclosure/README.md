@@ -104,3 +104,61 @@ python .\generate_crosswind_control_box.py
 ```
 
 Requires `manifold3d`.
+
+---
+
+## Rev I enclosure and carrier — TEST-FIT / PHYSICAL VALIDATION PENDING
+
+This section supersedes the earlier "current redesign direction" where H-like names are ambiguous. The authoritative `generate_rev_h.py`, `CrossWind_IPC101_Box_RevH_*`, `Bracket_RevH_*`, and `Wiring_Plate_RevH_*` define the actual mounting baseline. The exploratory `Control_Box_RevH_TESTFIT.scad`, `RevH1_TESTFIT.scad`, and `RevH2_TESTFIT.scad` are **SUPERSEDED** and were not used for Rev I mounting geometry.
+
+### Preserved interface and new artifacts
+
+**FROZEN / PRESERVED:** unchanged Rev H bracket; the exact two external receiver solids extracted from the authoritative box at Y=-10..0; original rail/slot clearances, stops, transverse pin bore, installed coordinates and detachable slide concept. No Rev I bracket exists. Reuse the Rev H wiring plate too: its 44 x 18 mm port, four fastener positions and blank connector area remain. No connector family or cutout has been selected.
+
+New sources: `generate_rev_i.py`, `verify_rev_i.py`, `preview_rev_i.py`. New printable artifacts: `CrossWind_IPC101_Box_RevI_{INSTALLED,PRINT}.stl` and `CrossWind_IPC101_Carrier_RevI_{INSTALLED,PRINT}.stl`. `RevI_preview.png` shows open shell, rear with bracket, installed side, carrier/PCB, exploded stack and center cutaway. Colors: grey shell/bracket, tan carrier, green PCB, ivory faceplate envelope. Reference PCB and faceplate are verification geometry, not new production designs.
+
+### Datums, dimensions and load path
+
+Units are mm. Face-local +Z points inward; Z=0 is the back of the faceplate. Angle remains 47 degrees. Face origin is the Rev H origin shifted 8 mm outward along installed Y; this is a deliberate prototype clearance allowance, not a change to docking coordinates. Faceplate footprint and four mounting centres remain 150 x 100 and (5,5), (145,5), (5,95), (145,95).
+
+- Shell installed bounds: X=-9..165, Y=-10..121.912, Z=0..108.384; overall **174 x 131.912 x 108.384 mm**. Including the existing bracket and wiring plate: **174 x 136.912 x 111.384 mm**, excluding controls.
+- Carrier PRINT bounds: **168 x 118 x 25.06 mm**. Installed bounds: X=-6..162, Y=16.327..119.718, Z=7.534..106.338.
+- `FACEPLATE_TO_PCB_TOP = 16.5` is **PROVISIONAL**. Board rear seating plane is 18.06; carrier rear datum is 25.06. Changing the named spacing parameter moves the rear seats/frame and shell attachment seats together. Re-run all checks after any change; the shell depth is finite.
+- Board thickness uses the user's confirmed **1.56** measurement. KiCad's nominal setup is **1.60**. Board outline and mounting centres agree with repository geometry. Hole reference diameter is 3.2; verify the fabricated holes before hardware assembly.
+- Front shell aperture is 170 x 120, surrounding a 168 x 118 removable carrier bezel. Nominal opening-edge shell wall is 2 mm; rear and floor retain at least the tested 2.5 mm witness thickness outside intentional pockets/port. Carrier front/rear rails are 3 mm thick and 8 mm wide.
+
+The PCB rests on four rear corner pads, with independent front-accessible mounting screws. Separate front corner pads support the faceplate; outboard posts and rails carry loads to four shell seats at face-local (-5,20), (-5,80), (155,20), (155,80). No switch, display, wire or solder joint supports the assembly. The component area between corner mounting lands is open. The outboard rails make the visible bezel larger than the original faceplate; this is an intentional fit-validation allowance.
+
+Attachment hardware is a **prototype assumption**: M3 inserts in 4.2 mm diameter x 6 mm blind pockets; carrier attachment bores 3.4 mm with 6.5 mm head/driver clearance. Confirm actual insert OD/length, head diameter, screw engagement and driver reach before heating inserts. Faceplate pockets pass through the 6 mm front pads; PCB-seat pockets retain about 1 mm backing. Do not allow insert or screw protrusion into the PCB stack. Select screw lengths from the measured stack and chosen insert, not a generic length. Four carrier screws bear on the rear rail at the bottom of the driver recess.
+
+### Assembly, printing and measurements
+
+Print **the carrier first**, rear frame on the bed as supplied in PRINT orientation. Use PETG/PETG-HF with a 0.4 mm nozzle and inspect the slicer: the upper perimeter rail and corner pads require localized supports. Keep support scars off seating faces and clean the bores without enlarging them arbitrarily. Shell PRINT stands on its closed floor; inspect supports under receiver bottoms, internal roof and attachment seats. Both parts fit within a 256 mm build envelope. This verifies size, not printer calibration or support-free manufacture. Start with four perimeters; qualify actual walls, insert retention and rail strength on the first print.
+
+With the carrier outside the shell, slide the bare PCB in through the open end between its front and rear frames; the verifier checks this board-only path. Fasten the PCB to the rear seats from the front, install the carrier in the shell, then attach the existing faceplate to its independent front seats. For service remove faceplate, unplug harnesses, remove four outboard carrier screws, and lift the cassette normal to the face. Board removal from the cassette reverses the end-insertion path. Populated-board and attached-harness service paths still require physical testing.
+
+Measure/check on the carrier print:
+
+1. All four PCB holes and faceplate holes, flat seating, board edge clearance and insert retention; do not bow the PCB by tightening.
+2. Actual faceplate-back to PCB-top distance at all four corners, nominal 16.5. Record printed board thickness and any seat/support cleanup.
+3. OLED connector and harness bend clearance, P504 cradle/pedestal and six-lead routing, ARM/PULL motion and wiring, LED holder reserve and access to all screw heads. No final cap-stem lengths follow from this CAD alone.
+4. Side insertion/removal of the populated PCB and front cassette removal with the actual wiring disconnected.
+
+Then print the shell and reuse the Rev H bracket/wiring plate. Check full rail engagement, pin access and positive retention, at least 70 mm available upward withdrawal travel, CrossWind projection, cassette fit, shell seat contact, and blank plate removal. Measure connector/cable/hand envelope before selecting a flush connector. Hidden recessed marks read `IPC101-ENC-RI TEST` and `IPC101-CARRIER-RI TEST`.
+
+No R3 carrier or N/M.4 faceplate source was found after searching repository filenames and content (including hidden files). Existing Rev C/D faceplate generators and coordinate files were inspected but their obsolete control layout is not claimed as N/M.4. The preview uses only a 150 x 100 x 2 faceplate envelope with four mounting holes. Actual N/M.4 back features, assembled OLED/header dimensions, harness bend radii, P504 swept movement, populated PCB underside heights and final hardware remain **PHYSICAL VALIDATION PENDING**. Known P504 body/cradle, actuator and LED dimensions supplied for this task are context, not sufficient coordinates for a complete component collision model. Central control space is unobstructed; component-level clearance is not certified. N.1 artwork/aperture/caps/LED refinements remain deferred.
+
+Environmental shell only: rear/floor are closed except the intentional removable bottom service port. Carrier-to-shell clearance is an unsealed prototype joint, and faceplate sealing has not been engineered/qualified for this larger cassette. Keep the prototype dry; gasket lands/compression and leak testing are required before outdoor deployment. No waterproof claim is made.
+
+### Reproduction and verification
+
+```powershell
+python mechanical/enclosure/generate_rev_i.py
+python mechanical/enclosure/verify_rev_i.py
+python mechanical/enclosure/preview_rev_i.py
+python mechanical/enclosure/verify_rev_h.py
+```
+
+Dependencies: Python, manifold3d, numpy, trimesh. Verification checks generated and exported Rev I closed, consistently wound, connected meshes, bounds and print-bed placement; exact Boolean equality of the entire preserved rear interface; zero installed and 71-position (0..70 mm) bracket interference; pin passage; carrier/PCB/faceplate clearance; 66 front cassette withdrawal positions; bare-board end insertion; four PCB seat annuli and bores; parameterized spacing; rear/floor witness solids and unobstructed service port. Export checks compare bounds and volumes to their source solids. Preview inspection supplements these checks; neither proves physical fit or loading.
+
+**Inherited Rev H export limitation:** the frozen bracket's pin bore is exactly tangent to its stem face at installed Y=-5.3, Z=40, across X=27..33. Both existing bracket STLs have one welded edge with four incident triangles, so trimesh does not classify them as watertight. The authoritative manifold model passes the original indexed-edge verification. This is explicitly reported by the Rev I audit, not silently repaired or called a new Rev I failure. Existing bracket files remain unchanged; inspect the known working bracket's slicer behavior. All newly generated Rev I exports must pass strict welded-mesh checks without exceptions.
