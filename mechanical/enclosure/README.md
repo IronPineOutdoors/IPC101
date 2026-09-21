@@ -73,25 +73,35 @@ The current model assumes the same 101.6 mm (4 inch) wooden vertical mounting su
 
 Print the `PRINT` file with its flat wooden-mounting plane on the build plate. The rear pads and shell edges provide bed contact while the 47-degree face remains self-supporting. PETG or ASA is preferred for the outdoor prototype. Use at least four perimeters and 25 percent infill. Confirm screw length, cable bend clearance, faceplate seating, and access to all four wood screws on a fit print before outdoor service.
 
-## Current redesign direction — updated 2026-09-21
+## Current redesign direction — corrected 2026-09-21
 
-The existing physical CrossWind mount uses **channels that the enclosure fits/slides into**. This slide-channel engagement is now a **required preserved interface**.
+The newly synced local files establish the **authoritative Rev H mounting architecture**:
 
-Rev H/H1/H2 incorrectly treated the Rev G screw-hole pattern and gross rear dimensions as the complete mounting interface. That was insufficient. Rev H2 is rejected and must not be used as the mounting baseline.
+- `CrossWind_IPC101_Box_RevH_INSTALLED.stl`
+- `CrossWind_IPC101_Box_RevH_PRINT.stl`
+- `CrossWind_IPC101_Bracket_RevH_INSTALLED.stl`
+- `CrossWind_IPC101_Bracket_RevH_PRINT.stl`
+- `CrossWind_IPC101_Wiring_Plate_RevH_INSTALLED.stl`
+- `CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl`
+- `generate_rev_h.py`
+- `verify_rev_h.py`
+
+Rev H already contains the required removable mounting interface: two external T-slot receivers on the enclosure mate with two T rails on the separate bracket, with a transverse retaining-pin feature. This **box-to-bracket interface is now the preserved mounting datum** for the next enclosure revision.
+
+The files `CrossWind_IPC101_Control_Box_RevH_TESTFIT.scad`, `...RevH1_TESTFIT.scad`, and `...RevH2_TESTFIT.scad` were later exploratory test models and do **not** supersede the synced Rev H box/bracket assembly. They are retained only as development history and should not be used as the mounting baseline.
 
 Current working requirements:
 
-- Preserve the proven enclosure-to-mount **channel engagement geometry exactly** in the next revision.
-- Preserve the docking/channel region as a fixed datum; redesign the enclosure body only forward of that retained interface.
+- Preserve the Rev H bracket geometry and the enclosure's mating T-slot receiver geometry unless physical testing identifies a problem.
+- Redesign only the enclosure/control-stack region needed to fit IPC-101, OLED harness, P504 assembly, ARM/PULL controls and service wiring.
 - Preserve the established IPC-101 faceplate footprint and control layout.
-- Design the PCB carrier/chassis and enclosure as a matched assembly rather than forcing IPC-101 into the Rev G upper geometry.
-- Current nominal spacing from the **back surface of the faceplate to the top surface of IPC-101 is approximately 16.5 mm**. This is a prototype design target, not yet a fabrication-frozen dimension; it was selected to provide clearance for the OLED wiring/harness connectors.
-- The carrier/chassis should establish the PCB-to-faceplate relationship and carry the PCB mechanically. The enclosure should primarily provide structure, mounting and environmental protection.
-- Provide a rear/upper-rear flush panel connector for the IPC-101-to-CrossWind-Alpha harness after the actual connector is selected. Connector family, cutout and pin count remain **TBD**.
-- Avoid internal screw bosses or wall slopes that intrude into the IPC-101/control-component envelope.
-- Maintain service access so the control-panel/PCB assembly can be removed without disturbing the CrossWind mounting interface.
+- Current nominal spacing from the **back surface of the faceplate to the top surface of IPC-101 is approximately 16.5 mm**. This remains a prototype target pending physical carrier validation.
+- The PCB carrier/chassis should establish the PCB-to-faceplate relationship and carry the PCB mechanically.
+- Keep a removable/flush connector provision for the IPC-101-to-CrossWind-Alpha harness, but do not cut the final connector opening until the actual connector is selected.
+- Avoid internal bosses or wall slopes that intrude into the IPC-101/control-component envelope.
+- Maintain service access so the operator panel/PCB assembly can be removed without disturbing the bracket mounted to CrossWind.
 
-Do not use the approximately 16.5 mm spacing as a final drilling/fabrication dimension until the carrier fit test verifies OLED, P504, ARM/PULL switch and harness clearances.
+The next enclosure revision should start from `generate_rev_h.py`, preserving `build_bracket()` and the mating T-slot receiver geometry in `build_box()` as the known-good interface.
 
 ## Development record
 
