@@ -62,6 +62,14 @@ def run():
         for y in (9,33):floor-=g.cyl(4.2,5,(x,y,0))
     same(floor,box^floor,'Floor')
     rearwall=g.cube((150,2.5,98),(3,.25,3));same(rearwall,box^rearwall,'Rear wall')
+    from faceplate_rev_m4_reference import CENTRES,MOUNTS,control_registration
+    assert tuple(MOUNTS)==g.h.HOLES
+    for x,y in MOUNTS:
+        clear(plate,g.cyl(3,5,(x,y,-3)),'M4 mounting aperture')
+    for name,diameter in [('NAV',6),('LED',5)]:
+        x,y=CENTRES[name];clear(plate,g.cyl(diameter,3,(x,y,-2.5)),'M4 '+name+' aperture')
+    for name in ('ARM','PULL'):
+        x,y=CENTRES[name];clear(plate,g.cube((12,8,3),(x-6,y-4,-2.5)),'M4 '+name+' aperture')
     lip=g.ring(0,0,150,100,2.5,.1,0)
     same(lip,bezel^lip,'Continuous faceplate seating land')
     # Actual R3 STL, not a redrawn approximation. Only rigid reflection/placement.
@@ -108,7 +116,12 @@ def run():
     report['bezel_to_cradle_contact_mm2']=clamp_areas
     report['status']='TEST-FIT / PHYSICAL VALIDATION PENDING'
     report['checks']='PASS: 6 closed connected exports; R3 placement/posts; hardware envelopes and driver access; 71 rail and 66 service positions; exact Rev H interface; front membrane; floor/rear/port; spacing'
-    report['limitations']=['N/M.4 rear features absent','Hardware dimensions provisional','Populated PCB and harness not modeled','Seals and structural loads unqualified','Inherited Rev H bracket pin tangency documented in README']
+    report['faceplate_reference']='Supplied Rev M.4 white and black STLs; raw Z minus 2 mm; XY unchanged'
+    report['control_coordinates']=control_registration()
+    for name in ('ARM','PULL','LED'):
+        assert report['control_coordinates'][name]['delta_xy']==[0.0,0.0],name+' M4 registration'
+    report['control_registration']='PASS: PCB X=150-Xpcb, Y=Ypcb, component side outward; ARM/PULL/LED align. NAV/OLED are wired faceplate assemblies.'
+    report['limitations']=['Actual populated PCB and harness fit pending','Hardware dimensions provisional','Populated PCB and harness not modeled','Seals and structural loads unqualified','Inherited Rev H bracket pin tangency documented in README']
     (g.ROOT/'RevI1_verification.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))
 

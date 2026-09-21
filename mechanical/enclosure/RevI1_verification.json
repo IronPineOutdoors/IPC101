@@ -37,8 +37,107 @@
   ],
   "status": "TEST-FIT / PHYSICAL VALIDATION PENDING",
   "checks": "PASS: 6 closed connected exports; R3 placement/posts; hardware envelopes and driver access; 71 rail and 66 service positions; exact Rev H interface; front membrane; floor/rear/port; spacing",
+  "faceplate_reference": "Supplied Rev M.4 white and black STLs; raw Z minus 2 mm; XY unchanged",
+  "control_coordinates": {
+    "LED": {
+      "pcb_file_xy": [
+        68.5,
+        31.0
+      ],
+      "pcb_installed_xy": [
+        81.5,
+        31.0
+      ],
+      "faceplate_export_xy": [
+        81.5,
+        31
+      ],
+      "delta_xy": [
+        0.0,
+        0.0
+      ],
+      "role": "aligned control reference"
+    },
+    "OLED": {
+      "pcb_file_xy": [
+        46.5,
+        63.5
+      ],
+      "pcb_installed_xy": [
+        103.5,
+        63.5
+      ],
+      "faceplate_export_xy": [
+        46.5,
+        63.5
+      ],
+      "delta_xy": [
+        -57.0,
+        0.0
+      ],
+      "role": "wired faceplate assembly"
+    },
+    "PULL": {
+      "pcb_file_xy": [
+        103.5,
+        20.75
+      ],
+      "pcb_installed_xy": [
+        46.5,
+        20.75
+      ],
+      "faceplate_export_xy": [
+        46.5,
+        20.75
+      ],
+      "delta_xy": [
+        0.0,
+        0.0
+      ],
+      "role": "aligned control reference"
+    },
+    "NAV": {
+      "pcb_file_xy": [
+        105.0,
+        63.5
+      ],
+      "pcb_installed_xy": [
+        45.0,
+        63.5
+      ],
+      "faceplate_export_xy": [
+        105,
+        63.5
+      ],
+      "delta_xy": [
+        60.0,
+        0.0
+      ],
+      "role": "wired faceplate assembly"
+    },
+    "ARM": {
+      "pcb_file_xy": [
+        33.5,
+        20.75
+      ],
+      "pcb_installed_xy": [
+        116.5,
+        20.75
+      ],
+      "faceplate_export_xy": [
+        116.5,
+        20.75
+      ],
+      "delta_xy": [
+        0.0,
+        0.0
+      ],
+      "role": "aligned control reference"
+    }
+  },
+  "control_registration": "PASS: PCB X=150-Xpcb, Y=Ypcb, component side outward; ARM/PULL/LED align. NAV/OLED are wired faceplate assemblies.",
   "limitations": [
-    "N/M.4 rear features absent",
+    "Actual populated PCB and harness fit pending",
     "Hardware dimensions provisional",
     "Populated PCB and harness not modeled",
     "Seals and structural loads unqualified",

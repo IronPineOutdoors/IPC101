@@ -1,3 +1,5 @@
+> M.4 faceplate files are now present: [actual-faceplate fit audit](REV_M4_FIT_AUDIT.md). Enclosure clearance passes; ARM/PULL align with the component-side-out PCB orientation. Physical fit is pending.
+
 > **Current R3-compatible fit build: Rev I.1.** See [print order, hardware and assembly guide](REV_I1_ASSEMBLY.md) and [preview](RevI1_preview.png). Reuses the original R3 print. Earlier revisions below are historical; physical validation is pending.
 
 # Crosswind IPC-101 enclosure Rev H ? fit prototype

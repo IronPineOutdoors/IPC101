@@ -2,6 +2,8 @@
 
 **TEST-FIT - PHYSICAL VALIDATION PENDING.** This is the current R3-compatible fit assembly. Rev I remains historical. Continue the original R3 print already underway; it is reused unchanged.
 
+**M.4 update:** enclosure/faceplate clearance passes, and ARM/PULL/LED positions match with the PCB component side facing the faceplate. The I.1 cradle print is unaffected. See [fit audit](REV_M4_FIT_AUDIT.md).
+
 ## Print order
 
 1. Finish `IPC101_RevA_RearCarrier_R3.stl`. Check PCB hole alignment, seating and underside component clearance.
@@ -40,7 +42,7 @@ A modeled PCB screw reaches face-local Z=30.5 mm and clears the shell. Cassette 
 
 1. Check the R3 print against the PCB. All four posts should meet the board without rocking or forcing holes into alignment.
 2. Fit four nuts into the cradle rear pockets. Hold them in place during bench assembly; they are slip pockets, not guaranteed press fits.
-3. Place R3 in the cradle, posts toward the PCB. Place the PCB on R3 and install the four M3 x 14 screws from the component side. Tighten only enough to seat the stack.
+3. Place R3 in the cradle, posts toward the PCB. Place the PCB on R3 with its component side toward the faceplate and ARM/PULL beneath their labeled openings (see the M.4 audit), and install the four M3 x 14 screws from the component side. Tighten only enough to seat the stack.
 4. Rest the bezel posts on the cradle's four front lands. Fit the existing faceplate to the bezel. Before heat-setting anything, confirm the faceplate model/thickness and insert sizes. This bench stack can be measured before printing the shell; hold it gently together for the measurement.
 5. Measure the back-of-faceplate to PCB-top gap at all four corners: target **16.5 mm**. Check OLED connector/harness routing, P504 body and six wires, ARM/PULL travel, LED reserve, and PCB underside clearance over R3 ribs. Check with the actual populated board; the reference board in CAD is bare.
 6. Once these pass, install the shell inserts, place the cradle/R3/PCB in the shell, add the bezel, and insert four M3 x 30 screws through the exposed outboard holes. The modeled faceplate does not cover these heads, so faceplate and bezel may be handled as one unit. Attach/connect actual controls without pinching wires.
@@ -57,7 +59,7 @@ Disconnect power and external wiring. Remove the four outboard long screws; supp
 **Physical gates before calling the control box complete:**
 
 - R3 and cradle fit, hardware dimensions/retention, actual populated-board and harness clearance, measured stack and control travel.
-- The N/M.4 faceplate rear geometry and actual thickness. The preview still shows a plain 150 x 100 x 2 mm reference, not a redesigned faceplate. P504/LED/cap refinements wait for the measured stack.
+- The supplied M.4 source confirms 2 mm faceplate thickness and its actual rear cradle clears I.1. Verification and preview now use both supplied material STLs. PCB registration is explicitly X=150-Xpcb, Y=Ypcb, with the component side facing the faceplate; see [M.4 fit audit](REV_M4_FIT_AUDIT.md). P504/LED/cap refinements wait for the measured stack.
 - Connector selection and environmental sealing. This fit assembly has unsealed bezel/shell and faceplate/bezel joints; the bezel now has a nominal 3 mm overlap beneath the faceplate edge (verified uninterrupted over 2.5 mm), but gasket section/compression and the shell-to-bezel seal are not designed. A sealing revision and leak test are required before outdoor use. The removable wiring plate avoids reprinting the shell when a connector is selected.
 
 **Do not claim physical fit, weather resistance or load qualification from these checks.** The remaining work is measured fit and sealing closeout.
