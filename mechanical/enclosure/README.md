@@ -2,6 +2,8 @@
 
 **Start with [PRINT THESE](PRINT_THESE.md).** It identifies the cradle versus bezel and links only the current print choices.
 
+[New N1.3 compact tree + IPO option and comparison preview](REV_N13_FACEPLATE.md).
+
 - [Assembly order, hardware and fit measurements](REV_I1_ASSEMBLY.md)
 - [I1 structure/service preview with earlier faceplate](RevI1_preview.png)
 - [Current N1.2 faceplate and measured R1 labeled caps](R1_BUTTON_CAPS.md)

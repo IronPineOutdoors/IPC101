@@ -7,7 +7,7 @@ from pathlib import Path
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--openscad',default=shutil.which('openscad.com') or shutil.which('openscad'))
-    parser.add_argument('--revision',choices=['N1','N11','N12'],default='N1')
+    parser.add_argument('--revision',choices=['N1','N11','N12','N13'],default='N1')
     args=parser.parse_args()
     if not args.openscad:parser.error('Specify --openscad PATH to the OpenSCAD command-line executable')
     root=Path(__file__).resolve().parent

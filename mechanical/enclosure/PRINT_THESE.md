@@ -13,6 +13,8 @@
 
 ## Faceplate and labeled buttons - N1.2 / R1
 
+**New compact-brand option:** [N1.3 tree + IPO, preview and print files](REV_N13_FACEPLATE.md). It uses the same mechanical fit and R1 caps while giving CrossWind more visual prominence. N1.2 below retains the full wordmark.
+
 For the upcoming reprint with labeled caps, use **N1.2**. It uses the tree traced from your actual wordmark, keeps the corrected button positions, and leaves ARM/PULL labels on the caps. See the [N1.2 tree close-up and details](REV_N12_FACEPLATE.md).
 
 - [N1.2 WHITE faceplate](CrossWind_IPC101_Faceplate_RevN12_WHITE_PETGHF.stl)

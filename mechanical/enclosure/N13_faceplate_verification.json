@@ -1,0 +1,15 @@
+{
+  "revision": "N1.3",
+  "status": "CAD verified compact branding option; print legibility pending",
+  "badge_width_mm": 13.50799560546875,
+  "badge_height_mm": 16.83740234375,
+  "tree_height_mm": 12.5,
+  "IPO_font_size_mm": 3.2,
+  "IPO_glyph_height_mm": 3.1464996337890625,
+  "tree_to_IPO_gap_mm": 1.1909027099609375,
+  "white_components": 1,
+  "black_components": 16,
+  "mechanical_change_outside_revision_mark_mm3": 0.0,
+  "cap_motion_checks": 42,
+  "preserved": "Actual traced tree, CrossWind artwork, all N1.2 mechanical interfaces and R1 caps"
+}
