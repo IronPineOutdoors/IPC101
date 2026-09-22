@@ -11,12 +11,12 @@
 | **BRACKET - reuse Rev H** | Detachable mount with two T rails | [CrossWind_IPC101_Bracket_RevH_PRINT.stl](CrossWind_IPC101_Bracket_RevH_PRINT.stl) |
 | **WIRING PLATE - reuse Rev H** | Flat blank plate for the bottom service opening | [CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl](CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl) |
 
-## Faceplate and labeled buttons - N1.1 / R1
+## Faceplate and labeled buttons - N1.2 / R1
 
-For the upcoming reprint with labeled caps, use **N1.1**. It keeps the corrected button positions/tree and removes duplicate ARM/PULL text from the panel.
+For the upcoming reprint with labeled caps, use **N1.2**. It uses the tree traced from your actual wordmark, keeps the corrected button positions, and leaves ARM/PULL labels on the caps. See the [N1.2 tree close-up and details](REV_N12_FACEPLATE.md).
 
-- [N1.1 WHITE faceplate](CrossWind_IPC101_Faceplate_RevN11_WHITE_PETGHF.stl)
-- [N1.1 BLACK inlay](CrossWind_IPC101_Faceplate_RevN11_BLACK_AMS.stl)
+- [N1.2 WHITE faceplate](CrossWind_IPC101_Faceplate_RevN12_WHITE_PETGHF.stl)
+- [N1.2 BLACK inlay](CrossWind_IPC101_Faceplate_RevN12_BLACK_AMS.stl)
 - [R1 ARM cap body](CrossWind_IPC101_ARM_Cap_R1_WHITE_PETGHF.stl) + [ARM face label](CrossWind_IPC101_ARM_Cap_R1_BLACK_AMS.stl)
 - [R1 PULL cap body](CrossWind_IPC101_PULL_Cap_R1_WHITE_PETGHF.stl) + [PULL face label](CrossWind_IPC101_PULL_Cap_R1_BLACK_AMS.stl)
 

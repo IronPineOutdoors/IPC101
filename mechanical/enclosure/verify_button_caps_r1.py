@@ -1,4 +1,4 @@
-"""R1 cap geometry, measured release clearance and N1/N1.1 interface checks."""
+"""R1 cap geometry, measured release clearance and current N1.2 interface checks."""
 from functools import lru_cache
 import json
 import numpy as np
@@ -28,12 +28,13 @@ def installed(label,material=None,travel=0):
     return cap(label,material).translate((x,y,-GUIDE_DEPTH+travel))
 
 def n11(material=None):
-    if material:return load(f'CrossWind_IPC101_Faceplate_RevN11_{material}.stl').translate((0,0,-2))
+    # Retained helper name for existing preview imports; now loads current N1.2.
+    if material:return load(f'CrossWind_IPC101_Faceplate_RevN12_{material}.stl').translate((0,0,-2))
     return n11('WHITE_PETGHF')+n11('BLACK_AMS')
 
 def run():
     checks={};exports={}
-    fixed=[('N11',n11()),('N1',fp.plate_local()),('Bezel',g.bezel_local()),('Cradle',g.cradle_local()),('R3',g.r3_local()),('PCB',g.pcb_local())]
+    fixed=[('N12',n11()),('N1',fp.plate_local()),('Bezel',g.bezel_local()),('Cradle',g.cradle_local()),('R3',g.r3_local()),('PCB',g.pcb_local())]
     shell=g.build_box()
     def clear(name,a,b):
         v=(a^b).volume();checks[name]=round(v,7);assert v<.001,(name,v)
@@ -64,11 +65,11 @@ def run():
     # Variant removes redundant artwork only; preserve all N1 apertures/interfaces.
     mark_zone=g.cube((70,8,4),(40,9,-2))
     a=n11()-mark_zone;b=fp.plate_local()-mark_zone
-    assert (a-b).volume()+(b-a).volume()<.01,'N1.1 structural geometry changed'
-    clear('N11 body/inlay',n11('WHITE_PETGHF'),n11('BLACK_AMS'))
+    assert (a-b).volume()+(b-a).volume()<.01,'N1.2 structural geometry changed'
+    clear('N12 body/inlay',n11('WHITE_PETGHF'),n11('BLACK_AMS'))
     assert len(n11('WHITE_PETGHF').decompose())==1
     for material in ('WHITE_PETGHF','BLACK_AMS'):
-        name=f'CrossWind_IPC101_Faceplate_RevN11_{material}.stl'
+        name=f'CrossWind_IPC101_Faceplate_RevN12_{material}.stl'
         mesh=trimesh.load_mesh(g.ROOT/name)
         exports[name]={'bounds_mm':mesh.bounds.tolist(),'components':len(mesh.split()),'watertight':True}
     report={'status':'CAD verified; physical fit, free return and switch travel pending',
@@ -79,6 +80,6 @@ def run():
             'geometric_motion_checked_mm':1.0,'checks':checks,'exports':exports,
             'limitations':['Shared measurement applied to both buttons; verify each','21 geometric positions do not establish switch rated travel or force','Floating flange-retained plunger; not a press-fit socket or spring','No positive overtravel stop or environmental seal added','PCB remains nominal16.5; cap reach uses measured10.77 from plate back']}
     (g.ROOT/'R1_button_caps_verification.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('PASS',len(checks),'checks; labeled caps and N1.1 compatible')
+    print('PASS',len(checks),'checks; labeled caps and N1.2 compatible')
 
 if __name__=='__main__':run()

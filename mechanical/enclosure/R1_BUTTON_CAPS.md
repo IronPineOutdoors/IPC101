@@ -1,4 +1,4 @@
-# ARM/PULL caps R1 and matching N1.1 faceplate
+# ARM/PULL caps R1 and matching N1.2 faceplate
 
 Status: **PRINTABLE FIT PROTOTYPE — CAD VERIFIED; PHYSICAL FIT PENDING**.
 
@@ -39,23 +39,25 @@ Confirm each cap slides without binding, the switch is unpressed at rest, and li
 
 ## Faceplate with labels on caps only
 
-The matching **N1.1** faceplate removes the duplicate ARM/PULL text above the openings. It retains N1's measured button locations, corrected tree, OLED/D-pad locations, mounting holes and rear cradle. Its hidden rear mark reads `IPC101-FP-N1.1`. Existing N1 remains mechanically compatible with these caps if already printed.
+The [N1.2 tree correction](REV_N12_FACEPLATE.md) supersedes the generic tree in N1.1. R1 cap geometry is unchanged.
 
-- [N1.1 white faceplate](CrossWind_IPC101_Faceplate_RevN11_WHITE_PETGHF.stl)
-- [N1.1 black inlay](CrossWind_IPC101_Faceplate_RevN11_BLACK_AMS.stl)
+The matching **N1.2** faceplate removes the duplicate ARM/PULL text above the openings. It retains N1's measured button locations and uses the tree traced from the supplied wordmark, with unchanged OLED/D-pad locations, mounting holes and rear cradle. Its hidden rear mark reads `IPC101-FP-N1.2`. Existing N1 remains mechanically compatible with these caps if already printed.
+
+- [N1.2 white faceplate](CrossWind_IPC101_Faceplate_RevN12_WHITE_PETGHF.stl)
+- [N1.2 black inlay](CrossWind_IPC101_Faceplate_RevN12_BLACK_AMS.stl)
 - [Caps and panel preview](R1_button_caps_preview.png)
 
-Use the N1.1 pair for the upcoming full faceplate reprint with labeled caps. Import them together as one object, just like the N1 pair. Do not combine N1 and N1.1 materials.
+Use the N1.2 pair for the upcoming full faceplate reprint with labeled caps. Import them together as one object, just like the N1 pair. Do not combine N1 and N1.2 materials.
 
 ## Verification and source
 
-`R1_button_caps_verification.json` records 332 checks: closed/wound cap bodies and inlays; release gap; flange retention; 21 positions over 1 mm of geometric inward travel for each cap against both faceplates, bezel, cradle, R3, bare PCB and shell; hardware clearance; and preserved N1.1 structural geometry. Actual switch movement, component envelopes, fit of both printed caps and environmental sealing remain physical checks.
+`R1_button_caps_verification.json` records 332 checks: closed/wound cap bodies and inlays; release gap; flange retention; 21 positions over 1 mm of geometric inward travel for each cap against both faceplates, bezel, cradle, R3, bare PCB and shell; hardware clearance; and preserved N1.2 structural geometry. Actual switch movement, component envelopes, fit of both printed caps and environmental sealing remain physical checks.
 
-Sources: `CrossWind_IPC101_Button_Caps_R1.scad`, `CrossWind_IPC101_Faceplate_RevN11.scad`.
+Sources: `CrossWind_IPC101_Button_Caps_R1.scad`, `CrossWind_IPC101_Faceplate_RevN12.scad`.
 
 ```powershell
 python -B mechanical/enclosure/render_button_caps_r1.py --openscad "C:\path\to\openscad.com"
-python -B mechanical/enclosure/render_faceplate_n1.py --revision N11 --openscad "C:\path\to\openscad.com"
+python -B mechanical/enclosure/render_faceplate_n1.py --revision N12 --openscad "C:\path\to\openscad.com"
 python -B mechanical/enclosure/verify_button_caps_r1.py
 python -B mechanical/enclosure/preview_button_caps_r1.py
 ```

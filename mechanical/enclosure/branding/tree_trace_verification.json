@@ -1,0 +1,35 @@
+{
+  "source": "iron_pine_transparent_wordmark.png",
+  "sha256": "bdae3d7f0f85f1dbc2cd112ac4669e6a1da0e09d6b2eaf3fda671056e217db00",
+  "alpha_threshold": 180,
+  "crop_xyxy": [
+    630,
+    280,
+    906,
+    516
+  ],
+  "seed_pixels_xy": [
+    [
+      768,
+      300
+    ],
+    [
+      768,
+      490
+    ]
+  ],
+  "original_pixel_bounds": [
+    645.0,
+    288.0,
+    886.0,
+    511.0
+  ],
+  "selected_components": 2,
+  "simplification_tolerance_pixels": 0.7,
+  "removed_raster_pinholes_max_area_pixels": 4,
+  "hausdorff_error_pixels": 1.4142135623730951,
+  "silhouette_iou": 0.9893236552537281,
+  "faceplate_tree_height_mm": 13.26,
+  "faceplate_tree_width_mm": 14.330313901345292,
+  "maximum_trace_error_mm": 0.08409180195994279
+}
