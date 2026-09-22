@@ -14,6 +14,12 @@ Each boss has a 7 mm diameter, 2 mm high locating shoulder. Its roof socket is 7
 
 A two-slot tie tab on the roof underside supports the harness independently of the switch terminals. A 20 x 20 x 10 mm wire reserve and a 36 mm diameter mounting-nut access envelope are checked. Real leads, bends and populated board components remain to be measured. Allow enough service slack or a suitable disconnect to lift the roof; the CAD withdrawal check does not simulate flexible wires.
 
+## Physical feedback
+
+The user reports that the locator coupons slide together well. Keep the current locator clearance. Screw engagement and full clamp-up remain untested; M3 x 30 screws were not available.
+
+A [rear-entry base variant](../../../mounting/rear-tunnel-r1/README.md) now reuses this roof and closes the old bottom wiring port. It is a fit prototype pending actual harness-motion checks.
+
 ## Print and fit order
 
 1. Print the [pilot coupon](CrossWind_IPC101_Top_STOP_Pilot_Coupon_R1_PRINT.stl) and [roof coupon](CrossWind_IPC101_Top_STOP_Roof_Coupon_R1_PRINT.stl). Check the locator slip fit, screw-head recess, M3 x 30 engagement and clamp-up. Stop if the boss cracks, the screw bottoms or the thread strips.

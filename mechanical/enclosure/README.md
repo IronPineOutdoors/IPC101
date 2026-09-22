@@ -44,6 +44,10 @@ Dependencies: Python, manifold3d, numpy and trimesh. `INSTALLED` files share ass
 
 [Removable roof R1 fit prototype, preview and coupon-first instructions](controls/stop/top-mounted/TOP_STOP_R1.md). Requires its matching replacement base; physical fit and sealing remain pending.
 
+## Rear harness entry development
+
+[Rear tunnel R1: bore ring, bracket, plywood collar and matching base](mounting/rear-tunnel-r1/README.md). Preserves the sliding mount, with front-access manual disconnect. Start with the bore ring; actual harness motion and weather sealing remain unverified.
+
 ## Folder guide
 
 - `structure/`: I.1 box, cradle and bezel; print and assembly-view exports.
