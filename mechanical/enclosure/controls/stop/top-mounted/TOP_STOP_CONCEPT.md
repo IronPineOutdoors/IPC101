@@ -1,5 +1,7 @@
 # Integrated top STOP - packaging concept
 
+The next iteration is the [R1 removable-roof fit prototype](TOP_STOP_R1.md), with attachment bosses, locating shoulders and a harness tie tab. This document preserves the initial packaging study.
+
 User direction (2026-09-22): move the received IDEC XA1E-BV302R onto the top behind the sloped faceplate. Enclosure and/or faceplate may grow. The plywood/cardboard mock-up shape is not a styling constraint. Design should look intentional, with the red stop prominent. Preserve the working carrier and proven detachable mount where practical.
 
 [Three-view concept](TOP_STOP_concept_preview.png). This is a packaging study, not a printable enclosure release or final industrial design. The preview uses older faceplate artwork solely as a geometric reference; the approved stacked tree and traced CrossWind artwork remain selected.

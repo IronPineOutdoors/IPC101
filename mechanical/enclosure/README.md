@@ -40,6 +40,10 @@ python -B mechanical/enclosure/tooling/preview_rev_i1.py
 
 Dependencies: Python, manifold3d, numpy and trimesh. `INSTALLED` files share assembly coordinates; use the guide's `PRINT` files in the slicer. Archive cleanup changes file organization only, not current print geometry.
 
+## Integrated top STOP development
+
+[Removable roof R1 fit prototype, preview and coupon-first instructions](controls/stop/top-mounted/TOP_STOP_R1.md). Requires its matching replacement base; physical fit and sealing remain pending.
+
 ## Folder guide
 
 - `structure/`: I.1 box, cradle and bezel; print and assembly-view exports.
