@@ -1,0 +1,13 @@
+{
+  "status": "Fit coupon only; directional travel not physically verified",
+  "aperture_mm": 8.0,
+  "prior_aperture_mm": 6.2,
+  "size_mm": [
+    30.0,
+    30.0,
+    4.800000190734863
+  ],
+  "rear_cradle": "Exact N1.3 geometry retained",
+  "watertight": true,
+  "purpose": "Distinguish cap/hub aperture interference from rear mounting or switch restriction"
+}

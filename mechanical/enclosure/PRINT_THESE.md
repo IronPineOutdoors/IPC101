@@ -1,5 +1,7 @@
 # PRINT THESE - IPC-101 Rev I.1
 
+**2026-09-22 P504 fit issue:** center/select works but directions are restricted. Before another full faceplate print, use the [P504 diagnostic and 8 mm clearance coupon](P504_DIRECTIONAL_FIT.md). The current full faceplates still have the inherited 6.2 mm opening.
+
 **2026-09-21: cradle print complete; user reports the dry fit looks good.** Reuse the printed cradle, bezel and R3 carrier. Next small print: the STOP switch-fit coupon below. Before the box print, check the populated PCB, faceplate, control travel and harness clearance in the assembled stack.
 
 | Part | How to recognize it | Exact print file |
