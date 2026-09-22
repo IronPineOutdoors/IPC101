@@ -1,8 +1,8 @@
 > ARCHIVED DEVELOPMENT RECORD. Printing directions below describe earlier revisions. Use [PRINT THESE](../PRINT_THESE.md) for the current assembly. Historical filenames are relative to their original enclosure folder; see [archive index](README.md) for relocated artifacts.
 
-> M.4 faceplate files are now present: [actual-faceplate fit audit](../REV_M4_FIT_AUDIT.md). Enclosure clearance passes; ARM/PULL align with the component-side-out PCB orientation. Physical fit is pending.
+> M.4 faceplate files are now present: [actual-faceplate fit audit](../faceplate/history/REV_M4_FIT_AUDIT.md). Enclosure clearance passes; ARM/PULL align with the component-side-out PCB orientation. Physical fit is pending.
 
-> **Current R3-compatible fit build: Rev I.1.** See [print order, hardware and assembly guide](../REV_I1_ASSEMBLY.md) and [preview](../RevI1_preview.png). Reuses the original R3 print. Earlier revisions below are historical; physical validation is pending.
+> **Current R3-compatible fit build: Rev I.1.** See [print order, hardware and assembly guide](../structure/REV_I1_ASSEMBLY.md) and [preview](../structure/RevI1_preview.png). Reuses the original R3 print. Earlier revisions below are historical; physical validation is pending.
 
 # Crosswind IPC-101 enclosure Rev H ? fit prototype
 
@@ -49,8 +49,8 @@ Keep the top and sides available for a separate cover hinge/latch design. No hin
 Regenerate and verify with Python plus `manifold3d` and `numpy`:
 
 ```powershell
-python mechanical/enclosure/generate_rev_h.py
-python mechanical/enclosure/verify_rev_h.py
+python mechanical/enclosure/tooling/generate_rev_h.py
+python mechanical/enclosure/tooling/verify_rev_h.py
 ```
 
 Verification checks connected closed meshes, zero box/bracket and box/port-plate interference, the actual Rev C faceplate against the enclosure, all four coplanar seating annuli, and bracket withdrawal at 71 positions. It also regenerates the preview. Physical print tolerances, component stack, mounting loads, and waterproofing remain unverified.
@@ -79,7 +79,7 @@ The current model assumes the same 101.6 mm (4 inch) wooden vertical mounting su
 
 Print the `PRINT` file with its flat wooden-mounting plane on the build plate. The rear pads and shell edges provide bed contact while the 47-degree face remains self-supporting. PETG or ASA is preferred for the outdoor prototype. Use at least four perimeters and 25 percent infill. Confirm screw length, cable bend clearance, faceplate seating, and access to all four wood screws on a fit print before outdoor service.
 
-## Current redesign direction — updated 2026-09-21
+## Current redesign direction â€” updated 2026-09-21
 
 The existing physical CrossWind mount uses **channels that the enclosure fits/slides into**. This slide-channel engagement is now a **required preserved interface**.
 
@@ -113,7 +113,7 @@ Requires `manifold3d`.
 
 ---
 
-## Rev I enclosure and carrier � TEST-FIT / PHYSICAL VALIDATION PENDING
+## Rev I enclosure and carrier — TEST-FIT / PHYSICAL VALIDATION PENDING
 
 This section supersedes the earlier "current redesign direction" where H-like names are ambiguous. The authoritative `generate_rev_h.py`, `CrossWind_IPC101_Box_RevH_*`, `Bracket_RevH_*`, and `Wiring_Plate_RevH_*` define the actual mounting baseline. The exploratory `Control_Box_RevH_TESTFIT.scad`, `RevH1_TESTFIT.scad`, and `RevH2_TESTFIT.scad` are **SUPERSEDED** and were not used for Rev I mounting geometry.
 
@@ -159,10 +159,10 @@ Environmental shell only: rear/floor are closed except the intentional removable
 ### Reproduction and verification
 
 ```powershell
-python mechanical/enclosure/generate_rev_i.py
-python mechanical/enclosure/verify_rev_i.py
-python mechanical/enclosure/preview_rev_i.py
-python mechanical/enclosure/verify_rev_h.py
+python mechanical/enclosure/tooling/generate_rev_i.py
+python mechanical/enclosure/tooling/verify_rev_i.py
+python mechanical/enclosure/tooling/preview_rev_i.py
+python mechanical/enclosure/tooling/verify_rev_h.py
 ```
 
 Dependencies: Python, manifold3d, numpy, trimesh. Verification checks generated and exported Rev I closed, consistently wound, connected meshes, bounds and print-bed placement; exact Boolean equality of the entire preserved rear interface; zero installed and 71-position (0..70 mm) bracket interference; pin passage; carrier/PCB/faceplate clearance; 66 front cassette withdrawal positions; bare-board end insertion; four PCB seat annuli and bores; parameterized spacing; rear/floor witness solids and unobstructed service port. Export checks compare bounds and volumes to their source solids. Preview inspection supplements these checks; neither proves physical fit or loading.

@@ -7,7 +7,7 @@ excluding neighboring IRON/PINE glyphs. Units in generated SCAD: tree height=1.
 from pathlib import Path
 import hashlib,json,sys
 import manifold3d as m
-sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent/"tooling"))
 from generate_crosswind_control_box import write_binary_stl
 import numpy as np
 import pymupdf
