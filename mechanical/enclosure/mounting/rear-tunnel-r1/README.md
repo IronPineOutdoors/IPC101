@@ -6,16 +6,18 @@ The bracket now carries a stationary tunnel through the CrossWind alpha base's n
 
 ## Confirmed design inputs
 
-- User's existing 12-way DT-style pair: 41 mm wide, 22.16 mm high, approximately 73 mm long **when connected**. Width/height including all latch protrusions still needs the physical ring check. The rectangular cross-section diagonal is 46.605 mm.
+- User's existing 12-way DT-style pair: 41 mm wide, 22.16 mm high, approximately 73 mm long **when connected**. The user reports plenty of clearance through the printed 50 mm bore ring; retain the 50 mm bore. The rectangular cross-section diagonal is 46.605 mm.
 - Three board branches total 11 positions: keypad 4, OLED 5, isolated STOP 2. One position remains spare; no pin assignment or wiring release is made here.
 - Access inside the base requires removing the thrower deck. Routine disconnect must therefore be reachable from the front after undocking the control box.
 - Roof locator coupons slide together well, per user. M3 x 30 clamp-up is untested because the user does not yet have screws that long.
 
-## Print this first
+## Bore fit confirmed
 
 [50 mm bore test ring](CrossWind_IPC101_Rear_Tunnel_Bore_Ring_R1_PRINT.stl): 56 mm outside diameter, 50 mm clear bore, 6 mm thick. Print flat. Pass both unplugged connector halves through it with the latch untouched; also try the connected pair. It should pass without forcing or scraping. This tests cross-section only, not harness bend radius or removal motion.
 
-**Do not cut the plywood yet.** The proposed hole is 58 mm for a 56 mm sleeve, subject to ring fit, actual wall thickness, and a physical harness-motion mock-up.
+**Physical feedback:** the user reports "plenty of clearance" through the printed ring. The connector passage fit is accepted; this does not verify the wired service loop during removal.
+
+**Do not cut the plywood yet.** The proposed hole is 58 mm for a 56 mm sleeve, subject to actual wall thickness and a physical harness-motion mock-up. Next, trial-fit the bracket and collar and check the actual harness through the full slide-and-pull motion.
 
 ## Prototype parts
 
