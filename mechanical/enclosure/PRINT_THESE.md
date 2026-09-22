@@ -13,6 +13,12 @@
 | **BRACKET - reuse Rev H** | Detachable mount with two T rails | [CrossWind_IPC101_Bracket_RevH_PRINT.stl](CrossWind_IPC101_Bracket_RevH_PRINT.stl) |
 | **WIRING PLATE - reuse Rev H** | Flat blank plate for the bottom service opening | [CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl](CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl) |
 
+## LED bubble test prints
+
+Start with [bubble 2 and the panel-hole strip](LED_R1_TEST_PRINTS.md). Select LED-pocket fit and panel-hole size before another full faceplate revision. The current 5.2 mm LED hole is not sized for these bubbles.
+
+**ARM/PULL cap update:** user reports the R1 shafts preload the actuators when assembled. Final shaft lengths await trimming measurements; do not reprint unchanged R1 caps expecting that issue to be fixed.
+
 ## Faceplate and labeled buttons - N1.4 / R1
 
 Use **N1.4** for the reprint: enlarged P504 opening, compact traced tree + IPO, corrected ARM-left/PULL-right positions, and labels on the existing R1 caps. See [preview and details](REV_N14_FACEPLATE.md).

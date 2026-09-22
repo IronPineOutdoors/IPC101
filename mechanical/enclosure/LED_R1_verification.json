@@ -1,0 +1,63 @@
+{
+  "status": "Test samples only; optical quality, actual fit and final retention pending",
+  "recorded_LED_body_mm": [
+    5.1,
+    8.88
+  ],
+  "bubble_outer_diameter_mm": 7.8,
+  "sample_bores_mm": [
+    5.3,
+    5.5,
+    5.7
+  ],
+  "strip_holes_mm": [
+    8.0,
+    8.2,
+    8.4
+  ],
+  "plate_thickness_mm": 2.05,
+  "bubble_wall_mm": [
+    1.25,
+    1.15,
+    1.0499999999999998
+  ],
+  "panel_fit_checks": 9,
+  "files": [
+    {
+      "file": "CrossWind_IPC101_LED_R1_Bubble_1_Bore5.3_PRINT.stl",
+      "size_mm": [
+        19.0,
+        10.0,
+        6.949999809265137
+      ],
+      "watertight": true
+    },
+    {
+      "file": "CrossWind_IPC101_LED_R1_Bubble_2_Bore5.5_PRINT.stl",
+      "size_mm": [
+        19.0,
+        10.0,
+        6.949999809265137
+      ],
+      "watertight": true
+    },
+    {
+      "file": "CrossWind_IPC101_LED_R1_Bubble_3_Bore5.7_PRINT.stl",
+      "size_mm": [
+        19.0,
+        10.0,
+        6.949999809265137
+      ],
+      "watertight": true
+    },
+    {
+      "file": "CrossWind_IPC101_LED_R1_Hole_Strip_PRINT.stl",
+      "size_mm": [
+        72.0,
+        25.0,
+        2.049999952316284
+      ],
+      "watertight": true
+    }
+  ]
+}
