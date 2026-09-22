@@ -1,0 +1,25 @@
+{
+  "status": "Packaging study only; raised concept not print-ready",
+  "flush_mount_surface_z_mm": 106.08,
+  "candidate_surface_z_mm": 141,
+  "old_shell_top_z_mm": 108.38381632699983,
+  "roof_height_increase_mm": 32.616183673000165,
+  "flush_body_intersections_mm3": {
+    "PCB": 0,
+    "R3": 460.6554889581771,
+    "Cradle": 2083.200000000003,
+    "Bezel": 0,
+    "Faceplate": 0
+  },
+  "candidate_static_intersections_mm3": {
+    "PCB": 0,
+    "R3": 0,
+    "Cradle": 0,
+    "Bezel": 0,
+    "Faceplate": 0
+  },
+  "rear_mount_unchanged": true,
+  "service_path_collisions_mm": [],
+  "roof_removed_for_cassette_service": true,
+  "limitation": "Static and service envelope checks pass with removable upper housing. Roof fasteners, gasket, populated-board components and actual soldered harness remain to be designed/checked; no print release."
+}
