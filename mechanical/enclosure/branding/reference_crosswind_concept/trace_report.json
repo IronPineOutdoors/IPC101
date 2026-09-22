@@ -1,0 +1,20 @@
+{
+  "source_sha256": "40386483d2b0926cee570ee4a63f3fd6fca574436560eef1f15a6ddb98c80890",
+  "alpha_threshold": 180,
+  "minimum_component_pixels": 100,
+  "components": 11,
+  "source_bounds": [
+    334.0,
+    353.0,
+    1254.0,
+    562.0
+  ],
+  "silhouette_iou": 0.9909993965249724,
+  "width_mm": 58,
+  "height_mm": 13.176086956521738,
+  "position_from_top_left_mm": [
+    78,
+    3
+  ],
+  "status": "visual concept; print detail and production CAD pending"
+}
