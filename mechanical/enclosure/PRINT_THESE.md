@@ -1,6 +1,6 @@
 # PRINT THESE - IPC-101 Rev I.1
 
-**2026-09-22 P504 fit issue:** center/select works but directions are restricted. Before another full faceplate print, use the [P504 diagnostic and 8 mm clearance coupon](P504_DIRECTIONAL_FIT.md). The current full faceplates still have the inherited 6.2 mm opening.
+**2026-09-22: user confirmed P504 contact at the hole edge. Use the [N1.4 faceplate](REV_N14_FACEPLATE.md), with an 8 mm opening instead of 6.2 mm.** Actual directional travel still needs a physical check; the optional [small coupon](P504_DIRECTIONAL_FIT.md) checks the same opening before a full print.
 
 **2026-09-21: cradle print complete; user reports the dry fit looks good.** Reuse the printed cradle, bezel and R3 carrier. Next small print: the STOP switch-fit coupon below. Before the box print, check the populated PCB, faceplate, control travel and harness clearance in the assembled stack.
 
@@ -13,20 +13,18 @@
 | **BRACKET - reuse Rev H** | Detachable mount with two T rails | [CrossWind_IPC101_Bracket_RevH_PRINT.stl](CrossWind_IPC101_Bracket_RevH_PRINT.stl) |
 | **WIRING PLATE - reuse Rev H** | Flat blank plate for the bottom service opening | [CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl](CrossWind_IPC101_Wiring_Plate_RevH_PRINT.stl) |
 
-## Faceplate and labeled buttons - N1.2 / R1
+## Faceplate and labeled buttons - N1.4 / R1
 
-**New compact-brand option:** [N1.3 tree + IPO, preview and print files](REV_N13_FACEPLATE.md). It uses the same mechanical fit and R1 caps while giving CrossWind more visual prominence. N1.2 below retains the full wordmark.
+Use **N1.4** for the reprint: enlarged P504 opening, compact traced tree + IPO, corrected ARM-left/PULL-right positions, and labels on the existing R1 caps. See [preview and details](REV_N14_FACEPLATE.md).
 
-For the upcoming reprint with labeled caps, use **N1.2**. It uses the tree traced from your actual wordmark, keeps the corrected button positions, and leaves ARM/PULL labels on the caps. See the [N1.2 tree close-up and details](REV_N12_FACEPLATE.md).
-
-- [N1.2 WHITE faceplate](CrossWind_IPC101_Faceplate_RevN12_WHITE_PETGHF.stl)
-- [N1.2 BLACK inlay](CrossWind_IPC101_Faceplate_RevN12_BLACK_AMS.stl)
+- [N1.4 WHITE faceplate](CrossWind_IPC101_Faceplate_RevN14_WHITE_PETGHF.stl)
+- [N1.4 BLACK inlay](CrossWind_IPC101_Faceplate_RevN14_BLACK_AMS.stl)
 - [R1 ARM cap body](CrossWind_IPC101_ARM_Cap_R1_WHITE_PETGHF.stl) + [ARM face label](CrossWind_IPC101_ARM_Cap_R1_BLACK_AMS.stl)
 - [R1 PULL cap body](CrossWind_IPC101_PULL_Cap_R1_WHITE_PETGHF.stl) + [PULL face label](CrossWind_IPC101_PULL_Cap_R1_BLACK_AMS.stl)
 
 Import each white/black pair as parts of one object. The two caps are separate objects; do not superimpose all four cap files. Preserve shared coordinates and do not mirror. Print one cap first and check movement/return before making the second. See [measured stem dimensions and assembly](R1_BUTTON_CAPS.md) and [current preview](R1_button_caps_preview.png).
 
-N1 remains mechanically compatible if already printed, with additional labels on the panel. M4 is superseded. The optional [button-position strip](CrossWind_IPC101_Button_Check_N1_PRINT.stl) shares the corrected hole centers.
+Earlier N1 through N1.3 faceplates retain the restrictive 6.2 mm P504 opening; do not select them for this reprint. M4 is superseded. The optional [button-position strip](CrossWind_IPC101_Button_Check_N1_PRINT.stl) shares the corrected hole centers.
 
 ## Received STOP switch — S1 side pod
 

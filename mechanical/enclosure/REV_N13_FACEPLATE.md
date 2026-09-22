@@ -1,5 +1,7 @@
 # N1.3 — compact tree and IPO option
 
+**Superseded for reprinting by [N1.4](REV_N14_FACEPLATE.md): same artwork, enlarged 8 mm P504 aperture. N1.3 retains the restrictive 6.2 mm opening.**
+
 This option replaces the full IRON PINE / OUTDOORS group with the actual traced tree and bold **IPO** below it. CrossWind keeps its existing size and graphics, making the product name more prominent. N1.2 remains available with the full wordmark.
 
 - [Side-by-side and badge close-up](N13_faceplate_preview.png)

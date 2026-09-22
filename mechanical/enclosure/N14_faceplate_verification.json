@@ -1,0 +1,17 @@
+{
+  "revision": "N1.4",
+  "status": "CAD verified; actual P504 directional test pending",
+  "P504_aperture_mm": 8.0,
+  "prior_aperture_mm": 6.2,
+  "added_radial_clearance_mm": 0.9,
+  "only_allowed_change_difference_mm3": 0.00658206164840368,
+  "white_components": 1,
+  "black_components": 16,
+  "rear_cradle_unchanged": true,
+  "artwork_unchanged": true,
+  "reference_hub_mm": 5,
+  "reference_hub_radial_offset_checked_mm": 1.4,
+  "reference_hub_direction_checks": 8,
+  "ARM_PULL_motion_checks": 42,
+  "limitation": "Reference hub sweep is not a measurement of the installed cap or proof of physical switch travel"
+}

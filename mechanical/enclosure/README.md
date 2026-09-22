@@ -2,13 +2,13 @@
 
 **Start with [PRINT THESE](PRINT_THESE.md).** It identifies the cradle versus bezel and links only the current print choices.
 
-[New N1.3 compact tree + IPO option and comparison preview](REV_N13_FACEPLATE.md).
+[Current N1.4 faceplate: 8 mm P504 opening, compact tree + IPO and preview](REV_N14_FACEPLATE.md).
 
 - [Assembly order, hardware and fit measurements](REV_I1_ASSEMBLY.md)
 - [I1 structure/service preview with earlier faceplate](RevI1_preview.png)
-- [Current N1.2 faceplate and measured R1 labeled caps](R1_BUTTON_CAPS.md)
+- [Measured R1 labeled caps (guide shows earlier N1.2 faceplate)](R1_BUTTON_CAPS.md)
 - [Tree traced from supplied wordmark and N1.2 reprint files](REV_N12_FACEPLATE.md)
-- [Current panel/cap preview](R1_button_caps_preview.png)
+- [Current panel/cap preview](N14_faceplate_preview.png)
 - [N1 button alignment and tree correction basis](REV_N1_FACEPLATE.md)
 - [Historical M4 audit, superseded by physical misalignment report](REV_M4_FIT_AUDIT.md)
 - [Verification results](RevI1_verification.json)
@@ -16,11 +16,11 @@
 - [Printable S1 STOP side pod, hardware and assembly](STOP_S1_ASSEMBLY.md)
 - [S1 STOP installation preview](STOP_S1_preview.png)
 
-Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 carrier and unchanged Rev H bracket/wiring plate. N1.2 replaces M4 using measured ARM-left/PULL-right positions and tree traced from supplied artwork, with labels on R1 caps. Cradle dry fit and STOP coupon operation were reported successful; the N1.2/R1 reprints, populated-board/harness, hardware and sealing checks remain.
+Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 carrier and unchanged Rev H bracket/wiring plate. N1.4 uses measured ARM-left/PULL-right positions, compact traced tree + IPO, and an enlarged 8 mm P504 opening, with labels on R1 caps. Cradle dry fit and STOP coupon operation were reported successful; N1.4 directional travel, R1 cap operation, populated-board/harness, hardware and sealing checks remain.
 
 ## Current files versus history
 
-Current I.1 parts, original R3, N1.2/R1 print files (N1 compatible, M4 retained as history), and the authoritative Rev H mounting baseline remain in this folder. **The Rev H box STLs are mounting-reference geometry, not the box to print for I.1.** Print the I.1 box from the guide.
+Current I.1 parts, original R3, N1.4/R1 print files (earlier faceplates retained as history), and the authoritative Rev H mounting baseline remain in this folder. **The Rev H box STLs are mounting-reference geometry, not the box to print for I.1.** Print the I.1 box from the guide.
 
 Superseded Rev G and Rev I exports, exploratory H/H1/H2 SCAD files, and their notes are under [archive](archive/README.md). They are retained for engineering history, not current printing. The earlier long README is preserved as [development history](archive/DEVELOPMENT_HISTORY.md).
 
