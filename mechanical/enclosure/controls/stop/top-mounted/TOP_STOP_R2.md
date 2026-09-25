@@ -6,7 +6,11 @@ User feedback: the printed R1 roof fits the enclosure, and the retaining nut can
 
 R2 opens a continuous 41 mm diameter path from below the roof to the underside of its 2.5 mm top mounting land. A centrally rotating 27.3 mm square sweeps 38.608 mm diameter, leaving approximately 1.196 mm nominal radial clearance. A 47 mm outside-diameter reinforcement surrounds the upper pocket from Z109 to Z138.5; the lower entry is relieved to preserve the base fit. This slightly changes the outside shape near the switch pocket. The top keyed hole, top mounting land, four screw mounts and locating shoulders remain unchanged.
 
-## Print the central coupon first
+## Physical feedback and next revision
+
+The user confirmed that the switch mounts successfully in R2. Release is difficult because the lower white tab must be reached and pushed upward before twisting off. The R2 coupon also produced loose strands at upper features. Use the [R3 paired-access roof and simplified release coupon](TOP_STOP_R3.md) for the next print.
+
+## Historical R2 coupon instructions
 
 [Access coupon R2 PRINT](CrossWind_IPC101_Top_STOP_Access_Coupon_R2_PRINT.stl) reproduces the central roof section, including the full access pocket and keyed mounting hole. Use the exported orientation: top face against the bed, underside access upward. Inspect the support preview; avoid filling the vertical access pocket with unnecessary support. The user restored PETG support Top Z distance to 0.20 mm after prior prints used 0 mm and were difficult to separate. Do not restore zero gap for PETG-on-PETG supports.
 
