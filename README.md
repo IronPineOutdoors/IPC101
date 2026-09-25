@@ -17,6 +17,10 @@ The Rev C board is 150 x 100 mm. Physical control/display/faceplate fit remains 
 - Display: Hosyond 2.42-inch 128x64 I2C SSD1309 module (Amazon ASIN B0G2RFLG1L), mounted to the faceplate using the corrected Crosswind geometry and connected through IPC-101 J2/J4 to IPC-100 J6.
 - IPC-100 ordinary-control link: J10, JST GH 4-pin, 3.3 V / 100 mA / 100 kHz I2C.
 
+## Next-board planning
+
+[IPC-101 Rev 2 planning notes](docs/requirements/IPC101_REV2_PLANNING.md) capture BME280 support, corrected 504 pin alignment, rear input-connector evaluation, direct PCB-mounted OLED, and complete silkscreen/board identification. This is a requirements backlog; current fabrication files are unchanged.
+
 ## Repository map
 
 - `docs/` — controlled requirements, decisions, interfaces, mechanics, and test plan.
