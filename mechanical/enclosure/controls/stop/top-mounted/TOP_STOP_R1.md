@@ -14,6 +14,10 @@ Each boss has a 7 mm diameter, 2 mm high locating shoulder. Its roof socket is 7
 
 A two-slot tie tab on the roof underside supports the harness independently of the switch terminals. A 20 x 20 x 10 mm wire reserve and a 36 mm diameter mounting-nut access envelope are checked. Real leads, bends and populated board components remain to be measured. Allow enough service slack or a suitable disconnect to lift the roof; the CAD withdrawal check does not simulate flexible wires.
 
+## R2 access correction
+
+The user found that the contact block cannot enter the R1 underside opening. Use the [R2 access coupon and revised roof](TOP_STOP_R2.md) for the correction. The roof-to-base fit and nut installation were reported workable.
+
 ## Physical feedback
 
 The user reports that the locator coupons slide together well. Keep the current locator clearance. Screw engagement and full clamp-up remain untested; M3 x 30 screws were not available.

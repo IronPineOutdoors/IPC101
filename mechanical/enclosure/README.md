@@ -42,6 +42,8 @@ Dependencies: Python, manifold3d, numpy and trimesh. `INSTALLED` files share ass
 
 ## Integrated top STOP development
 
+[Current roof R2: corrected underside access and insertion/twist coupon](controls/stop/top-mounted/TOP_STOP_R2.md). Reuses the existing bases; print the central access coupon before the full roof.
+
 [Removable roof R1 fit prototype, preview and coupon-first instructions](controls/stop/top-mounted/TOP_STOP_R1.md). Requires its matching replacement base; physical fit and sealing remain pending.
 
 ## Rear harness entry development
