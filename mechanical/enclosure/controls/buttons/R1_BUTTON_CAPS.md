@@ -2,6 +2,13 @@
 
 Status: **PRINTABLE FIT PROTOTYPE — CAD VERIFIED; PHYSICAL FIT PENDING**.
 
+## Physical stem-trim feedback
+
+The user reports removing approximately **1.5 mm from the button stem length**, after which operation works well. It is not yet confirmed whether this was ARM, PULL, or both. Preserve the working trimmed part. This is an approximate successful physical correction, not a calibrated new stack measurement or approval of both buttons.
+
+Relative to the R1 source, a 1.5 mm trim would give an **8.07 mm stem beyond the rear flange** and **12.62 mm total cap depth** (previously 9.57 and 14.12 mm). These are nominal CAD arithmetic, not measurements of the trimmed print. Original R1 source and exports remain unchanged; carry the confirmed correction into a separately identified revision once the affected cap(s) are known. Do not infer a 1.70 mm actual resting gap from the old provisional stack estimate.
+
+
 The user measured 12.82 mm from the front of the faceplate to the unpressed button face, with approximately 2.05 mm faceplate thickness. That gives 10.77 mm from the back of the plate to the button. This replaces the earlier estimate for cap reach; it does not alter the printed cradle or nominal PCB CAD spacing.
 
 R1 is a sliding plunger with a retaining flange behind the faceplate. Its flat 5.5 mm diameter stem tip contacts the reported 6 mm actuator; it is not a socket or press fit. Both caps use the supplied shared measurement. Confirm both actual switches during assembly.

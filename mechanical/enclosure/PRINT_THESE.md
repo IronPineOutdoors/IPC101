@@ -17,7 +17,7 @@
 
 Start with [bubble 2 and the panel-hole strip](controls/led/LED_R1_TEST_PRINTS.md). Select LED-pocket fit and panel-hole size before another full faceplate revision. The current 5.2 mm LED hole is not sized for these bubbles.
 
-**ARM/PULL cap update:** user reports the R1 shafts preload the actuators when assembled. Final shaft lengths await trimming measurements; do not reprint unchanged R1 caps expecting that issue to be fixed.
+**ARM/PULL cap update:** user reports the R1 shafts preload the actuators when assembled. The user subsequently reported that removing approximately 1.5 mm from the stem restored good operation; whether this applies to ARM, PULL, or both is not yet confirmed. See [trim feedback](controls/buttons/R1_BUTTON_CAPS.md#physical-stem-trim-feedback). Original R1 files are unchanged; do not reprint them expecting the length correction.
 
 ## Faceplate and labeled buttons - N1.4 / R1
 
