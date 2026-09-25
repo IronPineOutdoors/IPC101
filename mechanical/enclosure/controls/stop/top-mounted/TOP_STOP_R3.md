@@ -6,7 +6,11 @@ The user confirmed that the R2 pocket accepts and mounts the contact block. The 
 
 Two opposed 14 mm wide slots run from the underside to Z136.5. They leave 4.5 mm of material to the exterior top face, including the unchanged 2.5 mm mounting land. The keyed hole, four roof attachments, locating shoulders and compatibility with both existing bases remain unchanged. Slots do not imply a weather seal; sealing remains unfinished.
 
-## Next print: one small release coupon
+## Superseded release-slot alignment
+
+Physical R3 testing found release difficult even with a small screwdriver. The user identified a roughly 45-degree clockwise slot correction viewed from underneath. Use the [R4 coupon and roof](TOP_STOP_R4.md) for the next trial.
+
+## Historical R3 coupon instructions
 
 [Release coupon R3 PRINT](CrossWind_IPC101_Top_STOP_Release_Coupon_R3_PRINT.stl)
 
