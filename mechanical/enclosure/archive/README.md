@@ -1,5 +1,8 @@
 # Archive - superseded IPC-101 enclosure development
 
+> Historical design: superseded print exports were removed on 2026-09-26. Use `mechanical/enclosure/PRINT_THESE.md` for the current assembly; recover historical exports from Git or regenerate them.
+
+
 **NOT FOR CURRENT PRINTING.** Use [PRINT THESE](../PRINT_THESE.md).
 
 | Folder / file | Contents | Status |

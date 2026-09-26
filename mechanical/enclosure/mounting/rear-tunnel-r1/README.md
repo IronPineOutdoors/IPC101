@@ -1,5 +1,7 @@
 # Rear harness tunnel R1 ? fit prototype
 
+> Export cleanup, 2026-09-26: superseded print links below are historical. Use `mechanical/enclosure/PRINT_THESE.md` for current parts. Source and Git history retain regeneration/recovery information.
+
 [Three-view preview](REAR_TUNNEL_R1_preview.png) ? [CAD verification](REAR_TUNNEL_R1_verification.json)
 
 The bracket now carries a stationary tunnel through the CrossWind alpha base's nominal 1/2-inch (12.7 mm) plywood wall. A removable rear collar overlaps the sleeve and sandwiches the wall. The enclosure retains its upward sliding mount and lifts away from the tunnel. The matching enclosure base closes the original bottom wiring port and adds a 52 mm rear opening; it retains the top STOP roof R1 attachment geometry.
@@ -13,7 +15,7 @@ The bracket now carries a stationary tunnel through the CrossWind alpha base's n
 
 ## Bore fit confirmed
 
-[50 mm bore test ring](CrossWind_IPC101_Rear_Tunnel_Bore_Ring_R1_PRINT.stl): 56 mm outside diameter, 50 mm clear bore, 6 mm thick. Print flat. Pass both unplugged connector halves through it with the latch untouched; also try the connected pair. It should pass without forcing or scraping. This tests cross-section only, not harness bend radius or removal motion.
+50 mm bore test ring (retired export; recover from Git history): 56 mm outside diameter, 50 mm clear bore, 6 mm thick. Print flat. Pass both unplugged connector halves through it with the latch untouched; also try the connected pair. It should pass without forcing or scraping. This tests cross-section only, not harness bend radius or removal motion.
 
 **Physical feedback:** the user reports "plenty of clearance" through the printed ring. The connector passage fit is accepted; this does not verify the wired service loop during removal.
 

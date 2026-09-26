@@ -1,5 +1,7 @@
 # Top STOP roof R2 - underside insertion correction
 
+> Export cleanup, 2026-09-26: superseded print links below are historical. Use `mechanical/enclosure/PRINT_THESE.md` for current parts. Source and Git history retain regeneration/recovery information.
+
 [Preview](TOP_STOP_R2_preview.png) | [Verification](TOP_STOP_R2_verification.json)
 
 User feedback: the printed R1 roof fits the enclosure, and the retaining nut can be installed by hand. The rear contact block cannot enter the underside opening. Its measured maximum cross-section is 27.3 x 27.3 mm, rotates about its center, and has no reported protrusions beyond that measurement. The earlier checks tested the stationary body in its final position and missed the restrictive underside access path.
@@ -12,11 +14,11 @@ The user confirmed that the switch mounts successfully in R2. Release is difficu
 
 ## Historical R2 coupon instructions
 
-[Access coupon R2 PRINT](CrossWind_IPC101_Top_STOP_Access_Coupon_R2_PRINT.stl) reproduces the central roof section, including the full access pocket and keyed mounting hole. Use the exported orientation: top face against the bed, underside access upward. Inspect the support preview; avoid filling the vertical access pocket with unnecessary support. The user restored PETG support Top Z distance to 0.20 mm after prior prints used 0 mm and were difficult to separate. Do not restore zero gap for PETG-on-PETG supports.
+Access coupon R2 PRINT (retired export; recover from Git history) reproduces the central roof section, including the full access pocket and keyed mounting hole. Use the exported orientation: top face against the bed, underside access upward. Inspect the support preview; avoid filling the vertical access pocket with unnecessary support. The user restored PETG support Top Z distance to 0.20 mm after prior prints used 0 mm and were difficult to separate. Do not restore zero gap for PETG-on-PETG supports.
 
 Fit the operator and nut to this coupon, then insert the actual contact block from the underside and twist it into lock. Confirm removal as well, and verify terminals and wires do not catch. This is a test of the complete insertion-and-turn sequence, not just passage through a ring. Report any contact point before another full roof print.
 
-Once that physical test passes, use [Roof R2 PRINT](CrossWind_IPC101_Top_STOP_Roof_R2_PRINT.stl). Assemble the switch/contact block with the roof removed from the enclosure, then attach the roof. The base's smaller cable passage is not an installation opening for the contact block.
+Once that physical test passes, use Roof R2 PRINT (retired export; recover from Git history). Assemble the switch/contact block with the roof removed from the enclosure, then attach the roof. The base's smaller cable passage is not an installation opening for the contact block.
 
 R2 reuses both the original top STOP R1 base and the rear-tunnel R1 enclosure base, plus the same four provisional M3 x 30 screws. No replacement base or locator coupon is needed for this correction. R1 roof files remain for history and should not be selected for this switch installation.
 

@@ -1,5 +1,7 @@
 # Rev I.1 assembly and next print
 
+> Export cleanup, 2026-09-26: superseded print links below are historical. Use `mechanical/enclosure/PRINT_THESE.md` for current parts. Source and Git history retain regeneration/recovery information.
+
 **TEST-FIT - PHYSICAL VALIDATION PENDING.** This is the current R3-compatible fit assembly. Rev I remains historical. Continue the original R3 print already underway; it is reused unchanged.
 
 **M.4 update:** enclosure/faceplate clearance passes, and ARM/PULL/LED positions match with the PCB component side facing the faceplate. The I.1 cradle print is unaffected. See [fit audit](../faceplate/history/REV_M4_FIT_AUDIT.md).
@@ -9,7 +11,7 @@
 1. Finish `IPC101_RevA_RearCarrier_R3.stl`. Check PCB hole alignment, seating and underside component clearance.
 2. Print [Cradle Rev I.1](CrossWind_IPC101_Cradle_RevI1_PRINT.stl), **168 x 118 x 7 mm**. It accepts the unmodified R3 part and holds four PCB mounting nuts. Dry-fit R3 before adding hardware.
 3. Print [Bezel Rev I.1](CrossWind_IPC101_Bezel_RevI1_PRINT.stl), **168 x 118 x 22.46 mm**. It provides faceplate mounting pads and four structural spacing posts. With the cradle, R3 and PCB, this establishes the provisional **16.5 mm faceplate-back to PCB-top** spacing.
-4. After the stack fits, print [Box Rev I.1](CrossWind_IPC101_Box_RevI1_PRINT.stl), **174 x 131.912 x 108.384 mm**. Reuse the Rev H bracket and wiring plate.
+4. After the stack fits, print Box Rev I.1 (retired export; recover from Git history), **174 x 131.912 x 108.384 mm**. Reuse the Rev H bracket and wiring plate.
 
 Use the PRINT orientations with the established PETG/PETG-HF profile. Cradle prints rear-down: inspect the small nut-pocket bridges and supports below the relieved attachment lands. Bezel prints face-down with its posts upward; its corner pads start on the bed. Shell prints floor-down; inspect supports for receivers, roof and internal seats. All new parts fit the 256 mm build envelope. Mesh validation is not slicer validation. Check the actual slice before starting; keep support scars off datum faces and clear screw passages.
 

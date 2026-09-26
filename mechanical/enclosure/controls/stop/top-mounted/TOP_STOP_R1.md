@@ -1,5 +1,7 @@
 # Integrated top STOP housing R1 ? fit prototype
 
+> Export cleanup, 2026-09-26: superseded print links below are historical. Use `mechanical/enclosure/PRINT_THESE.md` for current parts. Source and Git history retain regeneration/recovery information.
+
 [Assembly, section and roof-removal preview](TOP_STOP_R1_preview.png).
 
 R1 develops the top STOP concept into a two-piece housing with four top-access screws, locating shoulders and an internal harness tie tab. The roof retains the rounded full-width profile and sloped front transition. The STOP mounting surface is Z141 mm, 32.616 mm above the I.1 shell maximum. The conservative switch envelope and 2.5 mm keyed mounting land are retained from the packaging study. This is an engineering fit prototype, not a weather-sealed final release.
@@ -26,9 +28,9 @@ A [rear-entry base variant](../../../mounting/rear-tunnel-r1/README.md) now reus
 
 ## Print and fit order
 
-1. Print the [pilot coupon](CrossWind_IPC101_Top_STOP_Pilot_Coupon_R1_PRINT.stl) and [roof coupon](CrossWind_IPC101_Top_STOP_Roof_Coupon_R1_PRINT.stl). Check the locator slip fit, screw-head recess, M3 x 30 engagement and clamp-up. Stop if the boss cracks, the screw bottoms or the thread strips.
-2. Print the [roof](CrossWind_IPC101_Top_STOP_Roof_R1_PRINT.stl) to check the actual STOP body, mounting nut, terminal access and tie tab. The export places the top surface on the bed; inspect support requirements for the recessed locating sockets and tie tab in the slicer.
-3. Print the [replacement base](CrossWind_IPC101_Top_STOP_Base_R1_PRINT.stl) after the small fits pass. It sits on its bottom; inspect supports under the sloped shell and added bosses.
+1. Print the [pilot coupon](CrossWind_IPC101_Top_STOP_Pilot_Coupon_R1_PRINT.stl) and roof coupon (retired export; recover from Git history). Check the locator slip fit, screw-head recess, M3 x 30 engagement and clamp-up. Stop if the boss cracks, the screw bottoms or the thread strips.
+2. Print the roof (retired export; recover from Git history) to check the actual STOP body, mounting nut, terminal access and tie tab. The export places the top surface on the bed; inspect support requirements for the recessed locating sockets and tie tab in the slicer.
+3. Print the replacement base (retired export; recover from Git history) after the small fits pass. It sits on its bottom; inspect supports under the sloped shell and added bosses.
 4. Dry assemble all four shoulders and screws, then verify roof removal, complete cassette withdrawal, mount sliding, actual wire routing, STOP actuation and reset access.
 
 `INSTALLED` exports retain shared assembly coordinates and are for assembly review. `PRINT` exports are moved to the bed and fit within a 256 mm cube. Existing I.1 and side-pod S1 print files remain available; the older PRINT THESE guide continues to identify the established fit build.

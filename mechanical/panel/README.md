@@ -1,5 +1,8 @@
 # Rev D OLED fit correction
 
+> Historical design: superseded print exports were removed on 2026-09-26. Use `mechanical/enclosure/PRINT_THESE.md` for the current assembly; recover historical exports from Git or regenerate them.
+
+
 For the next enclosure fit trial, print **`CrossWind_ControlPanel_RevD_OLED_8mm_Right_IPC101.stl`**. This addresses the reported OLED collision with the enclosure's left sidewall by shifting the display window and all four OLED mounting holes 8 mm right as viewed from the front.
 
 - Faceplate remains 150 x 100 x 2 mm; its four enclosure mounting holes are unchanged.

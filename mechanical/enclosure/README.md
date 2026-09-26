@@ -1,6 +1,6 @@
 # IPC-101 enclosure - current Rev I.1 fit build
 
-**Start with [PRINT THESE](PRINT_THESE.md).** It identifies the cradle versus bezel and links only the current print choices.
+**Start with [PRINT THESE](PRINT_THESE.md).** The current build uses the rear-entry base and R4 roof. The guide records the export cleanup, retained CAD references and next LED tests.
 
 [Current N1.4 faceplate: 8 mm P504 opening, compact tree + IPO and preview](faceplate/REV_N14_FACEPLATE.md).
 
@@ -20,7 +20,7 @@ Status: **TEST-FIT / PHYSICAL VALIDATION PENDING**. I.1 reuses the original R3 c
 
 ## Current files versus history
 
-Current I.1 parts, original R3, N1.4/R1 print files (earlier faceplates retained as history), and the authoritative Rev H mounting baseline are grouped by component in the subfolders below. **The Rev H box STLs are mounting-reference geometry, not the box to print for I.1.** Print the I.1 box from the guide.
+Current I.1 parts, original R3, N1.4/R1 print files (earlier faceplates retained as history), and the authoritative Rev H mounting baseline are grouped by component in the subfolders below. **The Rev H and older I.1 box geometry are references.** Print the rear-entry base from the current guide when replacement is needed.
 
 Superseded Rev G and Rev I exports, exploratory H/H1/H2 SCAD files, and their notes are under [archive](archive/README.md). They are retained for engineering history, not current printing. The earlier long README is preserved as [development history](archive/DEVELOPMENT_HISTORY.md).
 
@@ -42,13 +42,13 @@ Dependencies: Python, manifold3d, numpy and trimesh. `INSTALLED` files share ass
 
 ## Integrated top STOP development
 
-[Current roof R4: rotated release access and simplified coupon](controls/stop/top-mounted/TOP_STOP_R4.md). Insertion fit is confirmed; R3 release was difficult. Test the 45-degree clockwise access correction with the R4 coupon before the full roof. Reuses the existing bases.
+[Current roof R4: rotated release access and simplified coupon](controls/stop/top-mounted/TOP_STOP_R4.md). Insertion fit is confirmed; R3 release was difficult. The user reports the R4 coupon fit is perfect and the roof is printed. The completed coupon exports have been retired; full clamp-up remains to be checked. Use the rear-entry base.
 
 [Removable roof R1 fit prototype, preview and coupon-first instructions](controls/stop/top-mounted/TOP_STOP_R1.md). Requires its matching replacement base; physical fit and sealing remain pending.
 
 ## Rear harness entry development
 
-[Rear tunnel R1: bore ring, bracket, plywood collar and matching base](mounting/rear-tunnel-r1/README.md). Preserves the sliding mount, with front-access manual disconnect. Start with the bore ring; actual harness motion and weather sealing remain unverified.
+[Rear tunnel R1: bore ring, bracket, plywood collar and matching base](mounting/rear-tunnel-r1/README.md). Preserves the sliding mount, with front-access manual disconnect. The bore ring passed and the bracket/collar/base are printed; actual harness motion and weather sealing remain unverified.
 
 ## Folder guide
 
