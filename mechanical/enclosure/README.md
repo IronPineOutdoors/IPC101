@@ -60,3 +60,16 @@ Dependencies: Python, manifold3d, numpy and trimesh. `INSTALLED` files share ass
 - `branding/`: artwork and branding studies.
 - `tooling/`: generation, preview and verification scripts; `artifact_paths.json` maps their outputs.
 - `archive/`: superseded enclosure designs and development history.
+
+
+## Preserved mounting and development guidance
+
+The synced Rev H bracket and mating T-slot receivers remain the mounting baseline, not the exploratory H/H1/H2 test models. Preserve this interface unless physical testing identifies a problem; the rear-tunnel variant documents its local pin-bore correction. Keep the PCB/panel cassette removable without disturbing the fixed bracket, verify the provisional 16.5 mm faceplate-back to PCB-top spacing with actual components, and keep bosses clear of the populated stack. Historical Rev H construction instructions remain in [development history](archive/DEVELOPMENT_HISTORY.md); use the current component guides for print orientation and hardware.
+
+Record confirmed measurements, physical feedback, superseded assumptions and design decisions alongside source and revision-marked exports. Distinguish concepts, fit prototypes, physical validation and released designs.
+
+## Physical checkpoint - 2026-09-26
+
+The user reports the R4 STOP coupon fit is perfect and the R4 roof, rear-tunnel bracket, collar and rear-entry base are printed. The base sidewall broke during support removal; the user reports that it remains usable for all fit tests but cannot serve as the completed sealed enclosure. Retain it for dry assembly and harness-motion checks before printing a replacement. Full screw clamp-up, wired removal motion and sealing are not yet confirmed.
+
+Next small print: [clear LED bubble 2 and the panel-hole strip](controls/led/LED_R1_TEST_PRINTS.md). These establish fit and optical appearance, not final LED retention or sealing. The current PCB LED holes do not accept the received leads; see the [Rev 2 requirements and current-board workaround](../../docs/requirements/IPC101_REV2_PLANNING.md). Rev 2 is to carry the LED and other front-panel electronics directly on the PCB; clear-lens tests do not change that direction.
